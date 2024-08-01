@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+h2 {
+  text-align: center;
+}
+span.rq {color: red;}
+
+div#top-border {
+	width: 550px;
+	text-align: right;
+	border-bottom: 1.8px solid rgb(51, 51, 51);
+	margin: 30px auto;
+	padding: 10px 0;
+	font-size: 14px;
+}
+
+form {
+	width: max-content;
+	margin: auto;
+	
+}
+form > div {
+	margin-bottom: 15px;
+	height: 35px;
+}
+
+label {
+	display: inline-block;
+	width: 120px;
+	text-align: left;
+	font-weight: 600;
+}
+
+input {
+	width: 300px;
+	height: 35px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #D9D9D9;
+	background-color: transparent;
+}
+
+button {
+	width: 100px;
+	height: 35px;
+	background: none;
+	border: 1px solid #393939;
+	border-radius: 3px;
+}
+
+div#useAdrDiv {
+	height: 100%;
+}
+
+div#useAdrDiv p {
+	margin-left: 125px;
+	font-size: 12px;
+}
+
+button#userAdr {
+	width: 300px;
+	height: 35px;
+}
+
+div#userBirthDiv {
+	display: inline-block;
+	width: 300px;
+	height: 35px;
+	border-radius: 3px;
+	border: 1px solid #D9D9D9;
+	color: #D9D9D9;
+	text-align: center;
+}
+
+input.userBirth {
+	border: none;
+	text-align: center;
+	width: 80px;
+}
+
+button#signupBtn {
+	display: block;
+	width: 230px;
+	height: 50px;
+	background-color: #393939;
+	color: white;
+	font-weight: bolder;
+	font-size: 15px;
+	margin: 30px auto;
+	border-radius: 3PX;
+}
