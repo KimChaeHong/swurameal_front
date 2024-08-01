@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입</title>
+	<link rel="stylesheet" href="css/signup.css" />
+</head>
+
+<body>
+	<h2>회원가입</h2>
+	<div id="top-border"><span class="rq">*</span> 필수입력사항</div>
+	<form action="">
+		<div>
+			<label for="userId">아이디<span class="rq">*</span></label>
+			<input type="text" id="userId" placeholder="아이디를 입력해주세요" />
+			<button>중복확인</button>
+		</div>
+		<div>
+			<label for="userPw">비밀번호<span class="rq">*</span></label>
+			<input type="password" id="userPw" placeholder="비밀번호를 입력해주세요" />
+		</div>
+		<div>
+			<label for="userPwChk">비밀번호확인<span class="rq">*</span></label>
+			<input type="password" id="userPwChk" placeholder="비밀번호를 한번 더 입력해주세요" />
+		</div>
+		<div>
+			<label for="userName">이름<span class="rq">*</span></label>
+			<input type="text" id="userName" placeholder="이름을 입력해 주세요" />
+		</div>
+		<div>
+			<label for="userMail">이메일<span class="rq">*</span></label>
+			<input type="email" id="userMail" placeholder="예: swura@meal.com" />
+			<button>인증번호 받기</button>
+		</div>
+		<div>
+			<label for="userPhone">휴대폰<span class="rq">*</span></label>
+			<input type="text" id="userPhone" placeholder="슷자만 입력해 주세요" />
+		</div>
+		<div id="useAdrDiv">
+			<label>주소<span class="rq">*</span></label>
+			<button id="userAdr">주소 검색</button>
+			<p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+		</div>
+		<div>
+			<label>생년월일<span class="rq">*</span></label>
+			<div id="userBirthDiv">
+				<input type="text" class="userBirth" placeholder="YYYY">
+				<span>/</span>
+				<input type="text" class="userBirth" placeholder="MM">
+				<span>/</span>
+				<input type="text" class="userBirth" placeholder="DD">
+			</div>
+		</div>
+		<button id="signupBtn">가입하기</button>
+		</div>
+	</form>
+</body>
+
+</html>
