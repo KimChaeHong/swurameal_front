@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+h2 {
+  text-align: center;
+}
+
+/* form 설정 */
+form {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form > * {
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+form > input {
+  border: 1px solid #d9d9d9;
+}
+
+/* 아이디, 비밀번호 찾기 */
+#id-pw {
+  text-align: right;
+  width: 350px;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 12px;
+}
+
+/* SNS 로그인 */
+ul.sns-login {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 5px;
+  font-weight: 600;
+}
+
+li {
+  display: inline-block;
+  width: 172px;
+  height: 30px;
+  line-height: 20px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+#kakao {
+  background-color: #fee500;
+  color: #2a1718;
+}
+
+#naver {
+  background-color: #00c300;
+  color: white;
+}
+
+.fa-solid {
+  margin-right: 5px;
+  display: inline-block;
+  width: 10px;
+}
+
+/* 로그인, 회원가입 버튼 */
+button {
+  background-color: #d9d9d9;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+}
