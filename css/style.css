@@ -3,28 +3,60 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.header {
+    display: flex;
+    justify-content: space-between; /* 좌우로 요소들을 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+}
 .header, .footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 20px 0;
 }
-
 .header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 24px;
     font-weight: bold;
+}
+
+.header .member {
+    display: flex;
+    gap: 10px; /* 회원가입과 로그인 링크 사이의 간격 */
+}
+
+.member a{
+    text-decoration: none;
+    color: #333333;
+    margin: 0 15px ;
+}
+
+.member a:hover{
+    text-decoration: none;
+    color: #d5bdaf;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding: 10px 0;
+    z-index: 10; /* nav 바의 z-index를 높게 설정 */
 }
 
 .navbar {
     display: flex;
     align-items: center;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    background-color: #eaeaea;
-    padding: 10px 0;
 }
 
 .nav a {
@@ -33,12 +65,60 @@ body {
     color: #333;
 }
 
+.adress{
+    display: flex;
+    margin: 0 15px ;
+    align-items: center; 
+}
+
+.adress i{
+    color: #333333;
+ }
+
+.adress i:hover{
+    color: #d5bdaf;
+    cursor: pointer;
+}
+
+
+.pick{
+    display: flex;
+    margin: 0 15px ;
+    align-items: center;
+}
+
+.pick i{
+    color: #333333;
+ }
+
+.pick i:hover{
+    color: #d5bdaf;
+    cursor: pointer;
+}
+
+.cart{
+    display: flex;
+    margin: 0 15px ;
+    align-items: center;
+}
+
+.cart i{
+    color: #333333;
+    cursor: pointer;
+}
+
+.cart i:hover{
+    color: #d5bdaf;
+    cursor: pointer;
+}
+
+
 .navbar i{
    color: #333333;
 }
 
 .navbar i:hover{
-    color: #757346;
+    color: #d5bdaf;
     cursor: pointer;
 }
 
@@ -46,8 +126,19 @@ body {
     margin: 20px auto;
     width: 300px;
     position: relative;
+    z-index: 1; /* search-bar의 z-index를 낮게 설정 */
 }
 
+.search-bar i {
+    position: absolute;
+    color: #333333; 
+    top: 50%;
+    right: 12px;
+}
+
+.search-bar i:hover {
+    color: #d5bdaf;
+}
 input{
     width: 100%;
     border: 1px solid #D9D9D9;
@@ -55,17 +146,6 @@ input{
     padding: 10px 40px 10px 12px; 
     font-size: 14px;
     box-sizing: border-box; 
-}
-
-.search-bar i {
-    color: #333333;
-    position: absolute;
-    top: 50%;
-    right: 12px;
-}
-
-.search-bar i:hover {
-    color: #757346;
 }
 
 .main-image {
