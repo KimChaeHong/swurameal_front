@@ -15,6 +15,11 @@ body {
     font-weight: bold;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
 .nav {
     display: flex;
     justify-content: center;
