@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/38c2cc654b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <h2>로그인</h2>
+    <form action="">
+      <input type="text" placeholder="아이디를 입력해주세요" /><br />
+      <input type="text" placeholder="비밀번호를 입력해주세요" /><br />
+      <div id="id-pw">
+        <a href="">아이디 찾기</a>
+        <span> | </span>
+        <a href="">비밀번호 찾기</a>
+      </div>
+      <ul class="sns-login">
+        <a href="">
+          <li id="kakao">
+            <i class="fa-solid fa-comment" style="color: #2a1718"></i>
+            <span>카카오계정으로 로그인</span>
+          </li>
+        </a>
+        <a href="">
+          <li id="naver">
+            <i class="fa-solid fa-n" style="color: #ffffff"></i>
+            <span>네이버계정으로 로그인</span>
+          </li>
+        </a>
+      </ul>
+      <button>로그인</button><br />
+      <button>회원가입</button>
+    </form>
+  </body>
 </html>
