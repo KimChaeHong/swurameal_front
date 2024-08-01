@@ -28,19 +28,44 @@ body {
 }
 
 .nav a {
-    margin: 0 15px;
+    margin: 0 15px ;
     text-decoration: none;
     color: #333;
 }
 
-.search-bar {
-    text-align: center;
-    margin: 20px 0;
+.navbar i{
+   color: #333333;
 }
 
-.search-bar input[type="text"] {
+.navbar i:hover{
+    color: #757346;
+    cursor: pointer;
+}
+
+.search-bar {
+    margin: 20px auto;
     width: 300px;
-    padding: 10px;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    padding: 10px 40px 10px 12px; 
+    font-size: 14px;
+    box-sizing: border-box; 
+}
+
+.search-bar i {
+    color: #333333;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+}
+
+.search-bar i:hover {
+    color: #757346;
 }
 
 .main-image {
