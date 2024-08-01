@@ -1,1 +1,107 @@
-/* mypage css입니다. */
+section {
+    width: 510px;
+    height: 1200px;
+}
+.mypage-info {
+    margin: 10px;
+    padding: 10px;
+    /* text-align: center; */
+}
+.mypage-name {
+    margin-left: 20px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.mypage-name span {
+    font-weight: bold;
+    color: #333333;
+}
+.coupon-point-detail {
+    background-color: #f5f5f5;
+    border-radius: 23px;
+    padding: 20px;
+    width: 460px; 
+    height: 245px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.coupon-point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.coupon-detail,
+.point-detail {
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+.coupon-text,
+.point-text {
+    font-size: 24px;
+    color: #777777;
+}
+
+.coupon-number,
+.point-number {
+    font-size: 34px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 5px;
+}
+
+.divide-line {
+    width: 1px;
+    background-color: #d9d9d9;
+    height: 115px;
+}
+.membership-info {
+    font-size: 20px;
+    color: #333333;
+    border-top: 2px solid #d9d9d9;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.highlight-purple {
+    color: #d4c3e8;
+    font-weight: bold;
+}
+.highlight {
+    font-weight: bold;
+}
+.mypage-category {
+    margin: 20px;
+    padding: 20px;
+    width: 250px;
+    height: 730px;
+}
+
+.mypage-category h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.category-detail p {
+    font-size: 20px;
+    color: #d9d9d9;
+    margin: 15px 0;
+}
+
+.category-detail a {
+    display: block;
+    font-size: 32px;
+    color: #757575;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+/* a가 활성화 되어 있으면 스타일 적용됨*/
+.category-detail a.active {
+    font-weight: bold;
+    color: #000000;
+}
