@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
+    width: 1020px;
 }
 .header {
     display: flex;
@@ -54,17 +55,20 @@ body {
     z-index: 10; /* nav 바의 z-index를 높게 설정 */
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-}
 
 .nav a {
-    margin: 0 15px ;
+    margin: 7px 15px ;
     text-decoration: none;
     color: #333;
 }
 
+.pick a{
+    margin: auto;
+}
+
+.cart a{
+    margin: auto;
+}
 .adress{
     display: flex;
     margin: 0 15px ;
@@ -112,14 +116,20 @@ body {
     cursor: pointer;
 }
 
-
-.navbar i{
-   color: #333333;
+.navbar {
+    display: flex;
+    align-items: center;
+    color: #333333;
+    cursor: pointer;
 }
 
-.navbar i:hover{
+.navbar:hover{
     color: #d5bdaf;
     cursor: pointer;
+}
+
+.navbar span{
+    margin: 0 15px;
 }
 
 .search-bar {
