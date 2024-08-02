@@ -1,22 +1,22 @@
 .temp{
     text-align: center;
     height: 220px;
-    width: 1920px;
+    width: 100%;
     background-color: #777777;
 }
 
 .mypage-container{
     display: flex;
-    gap:20px;
+    justify-content: center;
 }
+
 section{
-    margin-top : 180px;
+    margin-top : 100px;
     margin-bottom: 50px;
     height: 1200px;
 }
 .mypage-section {
-    width: 510px;
-    margin-left : 220px;
+    width: 450px;
 }
 .mypage-info {
     margin: 10px;
@@ -24,8 +24,8 @@ section{
     /* text-align: center; */
 }
 .mypage-name {
-    margin-left: 20px;
-    font-size: 28px;
+    margin-left: 10px;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 .mypage-name span {
@@ -36,8 +36,8 @@ section{
     background-color: #f5f5f5;
     border-radius: 23px;
     padding: 20px;
-    width: 460px; 
-    height: 245px; 
+    width: 340px; 
+    height: 180px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 5px;   */
 }
 
 .coupon-detail,
@@ -65,7 +65,7 @@ section{
 
 .coupon-number,
 .point-number {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     color: #333333;
     margin-top: 5px;
@@ -77,11 +77,11 @@ section{
     height: 115px;
 }
 .membership-info {
-    font-size: 20px;
+    font-size: 15px;
     color: #333333;
     border-top: 2px solid #d9d9d9;
     padding-top: 10px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .highlight-purple {
     color: #d4c3e8;
@@ -91,27 +91,27 @@ section{
     font-weight: bold;
 }
 .mypage-category {
-    margin: 20px;
-    padding: 20px;
+    margin-left: 20px;
+    padding: 10px;
     width: 250px;
     height: 730px;
 }
 
 .mypage-category h3 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #333333;
 }
 
 .category-detail p {
-    font-size: 20px;
+    font-size: 12px;
     color: #d9d9d9;
     margin: 15px 0;
 }
 
 .category-detail a {
     display: block;
-    font-size: 32px;
+    font-size: 20px;
     color: #757575;
     margin: 10px 20px;
     text-decoration: none;
@@ -122,26 +122,36 @@ section{
     color: #000000;
 }
 
+
+/* 페이지가 업로드 될 section */
 .mypage-screen{
-    margin-left : 60px;
+    margin-left : 30px;
 }
+/* .title-box{
+    height: 20px;
+    padding-top : 10px; 
+} */
 .title{
-    margin-top : 50px;
+    font-weight: bold;
     font-size: 28px;
+    margin-top : 43px;
+    margin-bottom: 18px;
 }
 .horizontal-line{
-    width: 900px;
-    height: 1px;
+    width: 850px;
+    height: 1.5px;
     background-color: #000000;
 }
 
 .page-upload{
+    margin-top : 23px;
     height : 1100px;
-    width : 900px;
+    width : 850px;
     background-color: #777777;
 }
 
 footer {
+    width: 100%;
     height: 300px;
     background-color: #333333;
 }
