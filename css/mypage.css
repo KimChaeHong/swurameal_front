@@ -127,17 +127,24 @@ section{
 .mypage-screen{
     margin-left : 30px;
 }
+/* .title-box{
+    height: 20px;
+    padding-top : 10px; 
+} */
 .title{
-    margin-top : 50px;
+    font-weight: bold;
     font-size: 28px;
+    margin-top : 43px;
+    margin-bottom: 18px;
 }
 .horizontal-line{
     width: 850px;
-    height: 1px;
+    height: 1.5px;
     background-color: #000000;
 }
 
 .page-upload{
+    margin-top : 23px;
     height : 1100px;
     width : 850px;
     background-color: #777777;
