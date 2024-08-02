@@ -1,6 +1,22 @@
-section {
-    width: 510px;
+.temp{
+    text-align: center;
+    height: 220px;
+    width: 1920px;
+    background-color: #777777;
+}
+
+.mypage-container{
+    display: flex;
+    gap:20px;
+}
+section{
+    margin-top : 180px;
+    margin-bottom: 50px;
     height: 1200px;
+}
+.mypage-section {
+    width: 510px;
+    margin-left : 220px;
 }
 .mypage-info {
     margin: 10px;
@@ -104,4 +120,28 @@ section {
 .category-detail a.active {
     font-weight: bold;
     color: #000000;
+}
+
+.mypage-screen{
+    margin-left : 60px;
+}
+.title{
+    margin-top : 50px;
+    font-size: 28px;
+}
+.horizontal-line{
+    width: 900px;
+    height: 1px;
+    background-color: #000000;
+}
+
+.page-upload{
+    height : 1100px;
+    width : 900px;
+    background-color: #777777;
+}
+
+footer {
+    height: 300px;
+    background-color: #333333;
 }
