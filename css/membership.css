@@ -1,5 +1,5 @@
 body {
-    width: 100%;
+    width: 1920px;
     text-align: center;
     align-items: center;
     margin: auto;
@@ -7,7 +7,7 @@ body {
 }
 .membership-main {
     background-image: url(../images/Image+Blur.png);
-    width: 100%;
+    width: 1920px;
     height: 600px;
     text-align: center;
     margin : auto;
@@ -39,6 +39,8 @@ body {
     border-radius: 50px;
 }
 #img-container {
+    width: 1200px;
+    height: 400px;
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
