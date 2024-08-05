@@ -84,7 +84,6 @@ body {
     cursor: pointer;
 }
 
-
 .pick{
     display: flex;
     margin: 0 15px ;
@@ -178,13 +177,12 @@ input{
 }
 
 .product-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-.product-item {
+.product-item { 
     border: 1px solid #ddd;
     padding: 10px;
     width: 200px;
