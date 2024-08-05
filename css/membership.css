@@ -38,6 +38,11 @@ body {
     border: 1px white;
     border-radius: 50px;
     margin-top: 50px;
+    cursor: pointer;
+}
+#sub-button:hover {
+    opacity: 80%;
+    border-color: black;
 }
 #img-container {
     width: 1200px;
@@ -49,7 +54,7 @@ body {
     text-align: center;
     gap: 20px;
 }
-figure{
+#img-container figure {
     width: 300px;
     height: 300px;
     margin: 0 auto;
@@ -60,4 +65,30 @@ figure{
 #textline-top{
     margin-top: 80px;
 
+}
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.popup-visible {
+    display: block;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
 }
