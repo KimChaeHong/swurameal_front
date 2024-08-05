@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="../css/cart.css" />
     <title>장바구니</title>
   </head>
-  <body>
+  <body id="cart-body">
     <h2 id="cart-h2">장바구니</h2>
-    <section id="cart-section">
-      <div id="cart-item">
+      
+      <!-- 아이템 리스트 -->
+      <section id="cart-section">
+      <div id="cart-items">
         <div id="cart-choice">
           <i
             id="allBtn"
@@ -25,36 +27,37 @@
             class="fa-solid fa-circle-check"
             style="display: none"
           ></i>
-          <span onclick="choiceAll()">전체선택</span>
+          <span onclick="choiceAll()" class="choice">전체선택</span>
           <span> | </span>
-          <span>선택삭제</span>
+          <span class="choice">선택삭제</span>
         </div>
-        <div id="cart-items">
+        <div id="cart-item">
           <!-- 아이템 1 -->
           <div class="item">
             <i class="fa-regular fa-circle-check"></i>
-            <img src="" alt="상품이미지" />
+            <img src="/images/411.png" alt="상품이미지" />
             <div id="item-detail">
-              <p>상품명</p>
-              <p>상품설명</p>
+              <p>구양주 스파클링(9도 900ml)</p>
+              <p>아홉번 담근 프리미엄 탁주</p>
             </div>
             <div class="cnt-btn">
-              <button onclick="changeCnt(-1)">-</button>
+              <button onclick="decrease()">-</button>
               <span>1</span>
-              <button onclick="changeCnt(1)">+</button>
+              <button onclick="increase()">+</button>
             </div>
             <div id="item-price">
-              <span id="item-price-sale">5000</span><span>원</span><br />
-              <span id="item-price-regular">7000</span><span>원</span>
+              <p><span id="item-price-sale">5000</span>원</p>
+              <p><span id="item-price-regular">7000</span>원</p>
             </div>
+            <p class="x-btn"><i class="fa-solid fa-x"></i></p>
           </div>
           <!-- 아이템 2 -->
           <div class="item">
             <i class="fa-regular fa-circle-check"></i>
-            <img src="" alt="상품이미지" />
+            <img src="/images/412.png" alt="상품이미지" />
             <div id="item-detail">
-              <p>상품명</p>
-              <p>상품설명</p>
+              <p>구양주 스파클링(9도 900ml)</p>
+              <p>아홉번의 담금으로 탄생한 프리미엄 탁주</p>
             </div>
             <div class="cnt-btn">
               <button>-</button>
