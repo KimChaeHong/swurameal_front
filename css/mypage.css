@@ -45,7 +45,7 @@ section {
     border-radius: 23px;
     padding: 20px;
     width: 100%;
-    max-width: 340px; /* 최대 너비 설정 */
+    max-width: 360px; /* 최대 너비 설정 */
     height: auto; /* 높이를 자동으로 설정 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
