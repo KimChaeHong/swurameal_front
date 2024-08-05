@@ -27,13 +27,18 @@ $(document).ready(function () {
     }
 
     $(".category-detail a").on("click", function (e) {
-        e.preventDefault();
+        let url = $(this).attr("href");
+        if($(this).text() == "멤버쉽"){
+            userdata.isMembership ? url = "./membership2.html" : url = "./membership.html";
+            location.href = url;
+        }else{
+            e.preventDefault();
+        }
         $(".title").html(`${$(this).text()}`);
         $(".category-detail a").css({
             color: "#757575",
             "font-weight": "normal",
         });
-        let url = $(this).attr("href");
         $(this).css({
             "font-weight": "bold",
             color: "black",
