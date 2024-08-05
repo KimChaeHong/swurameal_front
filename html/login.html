@@ -16,9 +16,9 @@
       <input type="text" placeholder="아이디를 입력해주세요" /><br />
       <input type="text" placeholder="비밀번호를 입력해주세요" /><br />
       <div id="id-pw">
-        <a href="">아이디 찾기</a>
+        <a href="#" onclick="findIdPw('id'); return false;">아이디 찾기</a>
         <span> | </span>
-        <a href="">비밀번호 찾기</a>
+        <a href="#" onclick="findIdPw('pw'); return false;">비밀번호 찾기</a>
       </div>
       <ul class="sns-login">
         <a href="">
@@ -37,5 +37,6 @@
       <button class="login-btn">로그인</button><br />
       <button class="login-btn">회원가입</button>
     </form>
+    <script src="/js/find.js"></script>
   </body>
 </html>
