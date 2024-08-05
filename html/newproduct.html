@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwuraMEAL</title>
     <link rel="stylesheet" href="../css/newproduct.css">
+    <link rel="stylesheet" href="../css/rollUp.css">
     <script src="https://kit.fontawesome.com/0cd5778fa3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/rollUp.js"></script>
+    <script src="../js/newProduct.js" defer></script>
 
 </head>
 <body>
@@ -58,54 +62,20 @@
     </div>
     
     <div class="product-section">
-        <h2>추천상품</h2>
+        <h2>신상품</h2>
         <div class="product-grid">
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
+            <!-- Product items will be dynamically inserted here -->
         </div>
-    </div>
-    
-    <div class="product-section">
-        <h2>특가상품</h2>
-        <div class="product-grid">
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
-            <div class="product-item">
-                <img src="images/cat.jpg" alt="제품 이미지">
-                <div class="price">55,900원</div>
-                <div class="rating">4.9 ★</div>
-            </div>
-        </div>
-    </div>
-    
+
+
+        <button onclick="backToTop()" id="btn-back-to-top" title="위로 가기">Top</button>
+
     <div class="footer">
         <div>MYCHEF</div>
         <div>1668-3989</div>
         <div>평일 09:00 ~ 17:00 (점심시간 12:30 ~ 13:30, 주말/공휴일 휴무)</div>
         <div>주소: 부산시 해운대구</div>
     </div>
-    
     <script src="js/main.js"></script>
     </body>
 </html>
