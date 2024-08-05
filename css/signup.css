@@ -2,14 +2,14 @@
   box-sizing: border-box;
   text-decoration: none;
 }
-h2 {
+#signup-h2 {
   text-align: center;
 }
 span.rq {
   color: red;
 }
 
-div#top-border {
+div#signup-top-border {
   width: 550px;
   text-align: right;
   border-bottom: 1.8px solid rgb(51, 51, 51);
@@ -18,23 +18,23 @@ div#top-border {
   font-size: 14px;
 }
 
-#form {
+#signup-form {
   width: max-content;
   margin: auto;
 }
-#form > div {
+#signup-form > div {
   margin-bottom: 15px;
   height: 35px;
 }
 
-label {
+#signup-form label {
   display: inline-block;
   width: 120px;
   text-align: left;
   font-weight: 600;
 }
 
-input {
+#signup-form input {
   width: 300px;
   height: 35px;
   padding: 10px;
@@ -43,15 +43,16 @@ input {
   background-color: transparent;
 }
 
-button {
+#signup-form button {
   width: 100px;
   height: 35px;
+  margin: 3px;
   background: none;
   border: 1px solid #393939;
   border-radius: 3px;
 }
 
-button:hover {
+#signup-form button:hover {
   cursor: pointer;
 }
 
@@ -65,16 +66,16 @@ div#useAdrDiv p {
 }
 
 div#userBirthDiv {
-  display: inline-block;
   width: 300px;
   height: 35px;
   border-radius: 3px;
   border: 1px solid #d9d9d9;
   color: #d9d9d9;
   text-align: center;
+  display: inline-block;
 }
 
-input.userBirth {
+#userBirthDiv input.userBirth {
   border: none;
   text-align: center;
   width: 80px;
