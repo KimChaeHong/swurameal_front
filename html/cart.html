@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/38c2cc654b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <title>장바구니</title>
+  </head>
+  <body>
+    <h2 id="cart-h2">장바구니</h2>
+    <section id="cart-section">
+      <div id="cart-item">
+        <div id="cart-choice">
+          <i
+            id="allBtn"
+            onclick="choiceAll()"
+            class="fa-regular fa-circle-check"
+          ></i>
+          <i
+            onclick="choiceAll()"
+            class="fa-solid fa-circle-check"
+            style="display: none"
+          ></i>
+          <span onclick="choiceAll()">전체선택</span>
+          <span> | </span>
+          <span>선택삭제</span>
+        </div>
+        <div id="cart-items">
+          <!-- 아이템 1 -->
+          <div class="item">
+            <i class="fa-regular fa-circle-check"></i>
+            <img src="" alt="상품이미지" />
+            <div id="item-detail">
+              <p>상품명</p>
+              <p>상품설명</p>
+            </div>
+            <div class="cnt-btn">
+              <button onclick="changeCnt(-1)">-</button>
+              <span>1</span>
+              <button onclick="changeCnt(1)">+</button>
+            </div>
+            <div id="item-price">
+              <span id="item-price-sale">5000</span><span>원</span><br />
+              <span id="item-price-regular">7000</span><span>원</span>
+            </div>
+          </div>
+          <!-- 아이템 2 -->
+          <div class="item">
+            <i class="fa-regular fa-circle-check"></i>
+            <img src="" alt="상품이미지" />
+            <div id="item-detail">
+              <p>상품명</p>
+              <p>상품설명</p>
+            </div>
+            <div class="cnt-btn">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+            <div id="item-price">
+              <p>5,000원</p>
+              <p>7,000원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cart-pay">결제</div>
+    </section>
+    <script src="/js/cart.js"></script>
+  </body>
 </html>

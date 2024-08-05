@@ -35,8 +35,15 @@
         </a>
       </ul>
       <button class="login-btn">로그인</button><br />
-      <button class="login-btn">회원가입</button>
+      <button onclick="toSignup(); return false;" class="login-btn">
+        회원가입
+      </button>
     </form>
     <script src="/js/find.js"></script>
+    <script>
+      function toSignup() {
+        window.location.href = "/html/signup.html";
+      }
+    </script>
   </body>
 </html>

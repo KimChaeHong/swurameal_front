@@ -1,0 +1,60 @@
+.navbar {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 130px;
+    font-size: 14px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar:hover .dropdown > ul,
+.dropdown ul li:hover > ul {
+    display: block;
+}
+
+.dropdown ul li {
+    position: relative;
+}
+
+.dropdown ul li a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown ul li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown ul ul {
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+.dropdown ul li:hover > ul {
+    display: block;
+    margin-left: 0;
+}
+
+.dropdown ul ul ul {
+    left: 100%;
+    top: 0;
+    display: none;
+    
+}
+
+.dropdown ul ul li:hover > ul {
+    display: block;
+    margin-left: 0;
+}
