@@ -41,6 +41,10 @@ body, html {
     color: #000;
 }
 
+.sidebar ul li a:hover {
+    font-weight: bold;
+}
+
 .main-content {
     flex: 1;
     padding: 20px;
@@ -77,6 +81,15 @@ body, html {
 
 .main-content table th {
     background-color: #f2f2f2;
+}
+
+.clickable a{
+    text-decoration: none;
+    color: black;
+}
+
+.clickable a:hover{
+    font-weight: bold;
 }
 
 .pagination {
