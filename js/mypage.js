@@ -7,8 +7,14 @@ const user = {
     pointNum: 2100,
 };
 
-$(document).ready(function () {
+
+function userUpload() {
     localStorage.setItem("user", JSON.stringify(user));
+}
+
+
+$(document).ready(function () {
+    userUpload();
     const userdata = JSON.parse(localStorage.getItem("user"));
     $(".coupon-number").html(`${userdata.couponNum}장`);
     $(".point-number").html(`${userdata.pointNum}p`);

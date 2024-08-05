@@ -26,9 +26,6 @@ p:hover {
 }
 
 .review-writeable-page {
-    border: 1px black;
-    border-style: ridge;
-    border-radius : 10px;
     /* width: 850px; */
 }
 
@@ -38,6 +35,10 @@ p:hover {
 }
 
 .product-box {
+    margin-top : 10px;
+    border: 1px #f0f0f0;
+    border-style: ridge;
+    border-radius : 10px;
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
