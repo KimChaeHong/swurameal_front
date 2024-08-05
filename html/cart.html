@@ -39,13 +39,13 @@
               <p>상품설명</p>
             </div>
             <div class="cnt-btn">
-              <button onclick="decrese()">-</button>
-              <span class="one">1</span>
-              <button onclick="increse()">+</button>
+              <button onclick="changeCnt(-1)">-</button>
+              <span>1</span>
+              <button onclick="changeCnt(1)">+</button>
             </div>
             <div id="item-price">
-              <p>5,000원</p>
-              <p>7,000원</p>
+              <span id="item-price-sale">5000</span><span>원</span><br />
+              <span id="item-price-regular">7000</span><span>원</span>
             </div>
           </div>
           <!-- 아이템 2 -->
