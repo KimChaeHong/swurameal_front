@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#cart-h2 {
+  text-align: center;
+}
+
+#cart-section {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+#cart-item {
+  background-color: yellow;
+  width: 700px;
+}
+#cart-pay {
+  background-color: aqua;
+  width: 300px;
+}
