@@ -1,4 +1,14 @@
 $(document).ready(function() {
+    // 로그인 상태 확인 및 업데이트
+    function updateMemberLinks() {
+        if (localStorage.getItem('loggedIn') === 'true') {
+            $('#memberLinks').html('<a href="../html/mypage.html">마이페이지</a> <a href="#" id="logoutLink">로그아웃</a>');
+        } else {
+            $('#memberLinks').html('<a href="../html/signup.html" id="signupLink">회원가입</a> <a href="../html/login.html" id="loginLink">로그인</a>');
+        }
+    }
+
+    // 초기 상태 업데이트
     updateMemberLinks();
 
     // 로그인 함수 예제
@@ -15,16 +25,9 @@ $(document).ready(function() {
         updateMemberLinks();
     }
 
-    function updateMemberLinks() {
-        if (localStorage.getItem('loggedIn') === 'true') {
-            $('#memberLinks').html('<a href="#" id="logout">로그아웃</a>');
-        } else {
-            $('#memberLinks').html('<a href="../html/signup.html">회원가입</a><a href="../html/login.html">로그인</a>');
-        }
-    }
-
     // 로그아웃 링크 클릭 이벤트 처리
-    $(document).on('click', '#logout', function() {
+    $(document).on('click', '#logoutLink', function(event) {
+        event.preventDefault();
         logout();
     });
 
