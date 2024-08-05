@@ -37,6 +37,7 @@ body {
     height: 50px;
     border: 1px white;
     border-radius: 50px;
+    margin-top: 50px;
 }
 #img-container {
     width: 1200px;
@@ -52,4 +53,11 @@ figure{
     width: 300px;
     height: 300px;
     margin: 0 auto;
+}
+.textline {
+    margin-top: 50px;
+}
+#textline-top{
+    margin-top: 80px;
+
 }
