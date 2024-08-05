@@ -51,9 +51,11 @@ body {
     display: flex;
     justify-content: center;
     background-color: #eaeaea;
-    padding: 10px 0;
+    margin : 0px;
+    padding: 0px;
     z-index: 10; /* nav 바의 z-index를 높게 설정 */
 }
+
 
 .nav a {
     margin: 7px 15px ;
@@ -128,12 +130,13 @@ body {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 130px;
+    min-width: 140px;
     font-size: 14px;
     z-index: 1;
     padding: 0;
     margin: 0;
     list-style: none;
+   
 }
 
 .navbar:hover .dropdown > ul,
@@ -170,8 +173,7 @@ body {
 .dropdown ul ul ul {
     left: 100%;
     top: 0;
-    display: none;
-    
+    display: none;  
 }
 
 .dropdown ul ul li:hover > ul {
@@ -179,14 +181,13 @@ body {
     margin-left: 0;
 }
 
-
 .navbar:hover{
     color: #d5bdaf;
     cursor: pointer;
 }
 
-.navbar span{
-    margin: 0 15px;
+.navbar {
+    margin: 7px 15px;
 }
 
 .search-bar {
