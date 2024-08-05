@@ -34,12 +34,20 @@ function findPage() {
 function certPhoneMail(arg) {
   let phoneDiv = document.querySelector("#find-phone");
   let mailDiv = document.querySelector("#find-email");
+  let phoneBtn = document.querySelector("#find-phone-btn");
+  let mailBtn = document.querySelector("#find-email-btn");
 
   if (arg == "phone") {
     phoneDiv.style.display = "block";
     mailDiv.style.display = "none";
+    phoneBtn.style.borderBottom = "2px solid black";
+    phoneBtn.style.fontWeight = "bolder";
+    mailBtn.style.borderBottom = "1px solid #d9d9d9";
   } else if (arg == "email") {
     phoneDiv.style.display = "none";
     mailDiv.style.display = "block";
+    phoneBtn.style.borderBottom = "1px solid #d9d9d9";
+    mailBtn.style.fontWeight = "bolder";
+    mailBtn.style.borderBottom = "2px solid black";
   }
 }

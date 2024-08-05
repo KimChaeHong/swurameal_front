@@ -13,9 +13,15 @@
   <body>
     <h2 id="find-id-h2">아이디 찾기</h2>
     <h2 id="find-pw-h2">비밀번호 찾기</h2>
-    <button onclick="certPhoneMail('phone')">휴대폰 인증</button>
-    <button onclick="certPhoneMail('email')">이메일 인증</button>
-    <form action="">
+    <div id="find-btn-div">
+      <button id="find-phone-btn" onclick="certPhoneMail('phone')">
+        휴대폰 인증
+      </button>
+      <button id="find-email-btn" onclick="certPhoneMail('email')">
+        이메일 인증
+      </button>
+    </div>
+    <form id="find-form" action="#">
       <div id="find-name">
         <label for="userName">이름</label>
         <input type="text" id="userName" placeholder="이름을 입력해 주세요." />
@@ -40,7 +46,7 @@
           placeholder="이메일을 입력해 주세요."
         />
       </div>
-      <button>인증번호 받기</button>
+      <button id="certify-btn" onclick="return false">인증번호 받기</button>
     </form>
   </body>
 </html>
