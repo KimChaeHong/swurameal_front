@@ -126,16 +126,11 @@ section {
     margin: 10px 20px;
     text-decoration: none;
 }
-/* a가 활성화 되어 있으면 스타일 적용됨
-.category-detail a.active {
-    font-weight: bold;
-    color: #000000;
-} */
 
 /* 페이지가 업로드 될 section */
 .mypage-screen {
     margin-left: 30px;
-    width: 50%
+    width: 45%
     
 }
 /* .title-box{
