@@ -1,0 +1,21 @@
+[
+    [
+        {
+            "goodsId": "12345",
+            "goodsName": "Premium Organic Green Tea",
+            "mainImg": "https://example.com/images/green-tea-1.jpg",
+            "goodsImg": "https://example.com/images/green-tea-2.jpg",
+            "goodsDetailImg": "https://example.com/images/green-tea-3.jpg",
+            "category": "Beverages",
+            "price": 29.99,
+            "goodsComment": "A high-quality organic green tea with a rich flavor and aroma.",
+            "origin": "Japan",
+            "deliveryInfo": "Ships within 3-5 business days",
+            "seller": "Tea Masters Co.",
+            "saleUnit": "box",
+            "weight": "200g",
+            "stockStatus": 14,
+            "status": "sold out"
+        }
+    ]
+]
