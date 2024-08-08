@@ -26,7 +26,11 @@ selfCheckBtn.forEach((el) =>
   })
 );
 
-/* 수량 증가 || 감소 */
+// 상품 꺼내기
+
+/* 상품 수량 증가 || 감소 */
+
+const priceBox = document.querySelector("");
 
 const itemCnt = document.querySelector(".one");
 let cnt = parseInt(itemCnt.innerText);

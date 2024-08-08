@@ -14,14 +14,16 @@
   margin: 80px auto;
 }
 
-#cart-body button, #cart-choice .choice:hover, i:hover {
+#cart-body button,
+#cart-choice .choice:hover,
+i:hover {
   cursor: pointer;
 }
 
 #cart-section i:not(.fa-x) {
   font-size: 18px;
   margin-right: 5px;
-  color: #5F0080;
+  color: #5f0080;
 }
 
 #cart-choice {
@@ -57,13 +59,13 @@
   margin-left: 10px;
 }
 
-#item-detail p {
+.item-detail p {
   font-size: 14px;
   padding-bottom: 8px;
   margin: 0 20px;
   width: 190px;
 }
-#item-detail p:first-child {
+.item-detail p:first-child {
   font-weight: 600;
 }
 
@@ -88,21 +90,20 @@
   color: #c2c1c1;
 }
 
-#item-price {
+.item-prices {
   width: 100px;
   text-align: right;
   padding-right: 20px;
 }
 
-#item-price p {
+.item-prices p {
   margin: 0;
   line-height: 1.8;
   font-weight: 600;
   font-size: 18px;
-  
 }
 
-#item-price p:not(:first-child) {
+.item-prices p:not(:first-child) {
   text-decoration: line-through;
   color: #c2c1c1;
   font-size: 14px;
@@ -116,7 +117,6 @@
   font-size: 14px;
   padding-left: 20px;
 }
-
 
 /* 결제 */
 #cart-pay {
