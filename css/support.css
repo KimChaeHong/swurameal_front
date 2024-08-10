@@ -1,0 +1,43 @@
+.container {
+    width: 1040px;
+    margin: 0px 200px;
+    padding: 0px;
+}
+
+#leftSide{
+    width: 340px;
+}
+
+#categori {
+    width: 300px;
+    height: 350px;
+    background-color: #d9d9d9;
+    margin-top: 110px;
+    margin-right: 40px;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-top: 45px;
+}
+
+h5 {
+    margin-top: 40px;
+}
+
+h5:hover {
+    cursor: pointer;
+}
+
+
+#mainContent {
+width: 700px;
+padding: 0px;
+}
+
+#title {
+margin-top: 110px;
+margin-bottom: 15px;
+}
+
+#boardContainer {
+width: 700px;
+}
