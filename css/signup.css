@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {font-family: "Noto Sans KR", sans-serif;}
+
+.signup h2 {
+  text-align: center;
+	height: 150px;
+	line-height: 150px;
+	font-size: 32px;
+	letter-spacing: 2px;
+}
+
+/* 필수입력사항 '*' */
+.signup .rq { color: red;} 
+
+
+.signup p:nth-child(2) {
+  width: 640px;
+  text-align: right;
+  border-bottom: 2px solid #333333;
+  margin: 30px auto;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+#signup-form {
+  width: max-content;
+  margin: auto;
+}
+#signup-form > div {
+  margin-bottom: 20px;
+}
+
+#signup-form label {
+  display: inline-block;
+	font-size: 14px;
+  width: 120px;
+}
+
+#signup-form input {
+  width: 330px;
+  height: 40px;
+  padding: 10px;
+	font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--mediumgray);
+	/* background-color: transparent; */
+}
+
+#signup-form button {
+  width: 100px;
+  height: 40px;
+  margin: 3px;
+  background: none;
+	font-size: 14px;
+  border: 0.8px solid var(--darkgray);
+  border-radius: 3px;
+}
+
+#signup-form .check-btn {
+	border: 0.8px solid var(--mediumgray);
+	color: var(--mediumgray);
+}
+
+p.desc {
+	margin: 5px 0 0 125px;
+  font-size: 12px;
+}
+
+#birth {
+  width: 330px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #d9d9d9;
+  color: #d9d9d9;
+  text-align: center;
+  display: inline-block;
+}
+
+.signup #birth input {
+  border: none;
+  text-align: center;
+  width: 80px;
+	height: 35px;
+}
+
+.signup #signup-btn {
+  display: block;
+  width: 230px;
+  height: 50px;
+  background-color: var(--theme);
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  margin: 30px auto;
+  border-radius: 3px;
+}
