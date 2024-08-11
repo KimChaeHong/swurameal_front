@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {font-family: "Noto Sans KR", sans-serif;}
+
+.find h2 {
+  text-align: center;
+	height: 150px;
+	line-height: 150px;
+	font-size: 32px;
+	letter-spacing: 2px;
+}
+
+/* 휴대폰 인증 || 이메일 인증 버튼 */
+#find-btn-div {
+  margin: auto;
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#find-btn-div > button {
+  border: none;
+  border-bottom: 1px solid var(--mediumgray);
+  color: var(--darkgray);
+  font-weight: 400;
+  background: none;
+  margin: 0;
+  padding: 10px 50px;
+  
+}
+
+#find-btn-div #find-phone-btn {
+  border-bottom: 2px solid var(--theme);
+  color: var(--theme);
+  font-weight: 500;
+}
+
+/* form 설정 */
+#find-form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#find-form * {
+  width: 360px;
+  height: 40px;
+  border-radius: 3px;
+  margin: auto;
+}
+
+#find-form label {
+  display: block;
+  margin: 0 0 5px;
+  height: max-content;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#find-phone-email {
+  margin-top: 45px;
+}
+
+#find-form input {
+  border: 1px solid var(--mediumgray);
+  padding: 10px;
+  margin-top: 5px;
+  width: 340px;
+}
+
+/* 인증번호 받기 버튼 */
+#certify-btn {
+  background-color: var(--theme);
+  display: block;
+  width: 340px;
+  margin: 40px 70px;
+  border: none;
+  color: white;
+  padding-left: 0;
+  font: 14px;
+}

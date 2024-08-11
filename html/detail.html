@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="korea">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../src/bootstrap/bootstrap.min.js"></script>
+    <script src="../src/jquery/jquery.min.js"></script>
+    <script src="../js/backToTop.js"></script>
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>swuraMeal</title>
+</head>
+<body>
+
+    <header>
+        Header
+    </header>
+
+    <nav class="navbar">
+        Navbar
+    </nav>
+
+    <div class="carousel slide" data-bs-ride="carousel">
+
+    </div>
+
+    <main class="container" >
+        <section class="d-flex main-content">
+            <div id="image-container">
+                <img src="">
+            </div>
+            <div id="product-info">
+                <p id="product-name">상품이름</p>
+                <p id="product-coment">상품 코멘트</p>
+                <p id="product-price">상품 가격</p>
+                <hr>
+                <div class="d-flex">
+                    <span id="delivery">배송</span>
+                    <span>~~</span>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <span id="seller">판매자</span>
+                    <span>~~</span>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <span id="unit">판매단위</span>
+                    <span>~~</span>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <span id="product-weight">중량/용량</span>
+                    <span>~~</span>
+                </div>
+                <hr>
+                <div class="d-flex">
+                    <span id="product-quantity">상품선택</span>
+                    <div id="count-box">
+                        <p id="mini-name">상품이름</p>
+                        <div class="d-flex justify-content-between">
+                            <input type="number" min="1" value="1">
+                            <span>가격*수량</span>
+                        </div>
+                    </div>
+                </div>
+                <p id="total-price">총 가격</p>
+                <div id="button-box" class="d-flex justify-content-between">
+                    <span id="pick" class="btn">찜</span>
+                    <span id="cart" class="btn">장</span>
+                    <span id="buy" class="btn">구매하기</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="product-recommend">
+            <h4>고객님을 위한 추천상품</h4>
+            <div class="d-flex product-list">
+
+            </div>
+        </section>
+
+        <section class="product-detail">
+            <div class="d-flex">
+                <span class="btn flex-grow-1 detail-button">상품설명</span>
+                <span class="btn flex-grow-1 detail-button">상세정보</span>
+                <span class="btn flex-grow-1 detail-button">리뷰</span>
+            </div>
+            <div id="detail-img-container" class="">
+                <img src="#" class="detail-img">
+                <br>
+                <img src="#" class="detail-img">
+            </div>
+        </section>
+        <section>
+            <p><span id="review-title">상품리뷰</span> <span id="count-review">nn건</span></p>
+            <div id="review-container">
+                <div class="review-box">
+                    <p>
+                      <span class="cus-name">고객이름</span>
+                      <span class="date">날짜</span>
+                    </p>
+                    <p class="review-content">
+                        리뷰들어갈 자리
+                    </p>
+                </div>
+                <div class="review-box">
+                    <p>
+                      <span class="cus-name">고객이름</span>  
+                      <span class="date">날짜</span>
+                    </p>
+                    <p class="review-content">
+                        리뷰들어갈 자리
+                    </p>
+                </div>
+                <div class="review-box">
+                    <p>
+                      <span class="cus-name">고객이름</span>  
+                      <span class="date">날짜</span>
+                    </p>
+                    <p class="review-content">
+                        리뷰들어갈 자리
+                    </p>
+                </div>
+                <div class="review-box">
+                    <p>
+                      <span class="cus-name">고객이름</span>  
+                      <span class="date">날짜</span>
+                    </p>
+                    <p class="review-content">
+                        리뷰들어갈 자리
+                    </p>
+                </div>
+                <div class="pagination-box">
+                    <span>&lt; 1 2 3 4 5 &gt;</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Footer
+    </footer>
+
+    <button onclick="backToTop()" id="btn-back-to-top">Top</button>
+</body>
+</html>

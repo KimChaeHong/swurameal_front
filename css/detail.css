@@ -1,0 +1,173 @@
+.container {
+    width: 1040px;
+    margin: 110px 200px;
+}
+
+#image-container {
+    width: 600px;
+}
+
+#image-container > img {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+#product-info {
+    width: 440px;
+}
+
+#product-name {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+#product-coment {
+    font-size: small;
+    color: var(--mediumgray);
+}
+
+#product-price {
+    font-size: x-large;
+    font-weight: bold;
+    margin: 30px 0px;
+}
+
+#delivery {
+    width: 100px;
+}
+
+#seller {
+    width: 100px;
+}
+
+#unit {
+    width: 100px;
+}
+
+#product-weight {
+    width: 100px;
+}
+
+#product-quantity {
+    width: 100px;
+}
+
+#count-box {
+    width: 330px;
+    border: 1px solid;
+    border-color: var(--lightgray);
+    padding: 5px;
+}
+
+#mini-name {
+    font-size: small;
+}
+
+#total-price {
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    margin-bottom: 50px;
+}
+
+#button-box {
+    width: 440px;
+    height: 56px;
+    margin-bottom: 50px;
+}
+
+#pick, #cart {
+    color: var(--theme);
+    font-weight: bold;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buy {
+    color: white;
+    background-color: var(--theme);
+    width: 300px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-recommend {
+    width: 1040px;
+    height: 420px;
+    border: 1px;
+}
+
+.product-detail {
+    align-items: center;
+    text-align: center;
+}
+.detail-button {
+    width: 300px;
+    height: 60px;
+    border: 1px solid;
+    border-color: var(--mediumgray);
+    border-radius: 0px;
+    background-color: var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-button:hover {
+    background-color: var(--mediumgray);
+}
+
+#detail-img-container {
+    width: 900px;
+    align-items: center;
+    margin: 0px 200px 50px 200px;
+}
+
+.detail-img {
+    width: 900px;
+    border: 1px white;
+}
+
+#review-container {
+    width: 1040px;
+    height: 500px;
+    border-top: 2px solid;
+    text-align: center;
+}
+
+#review-title {
+    font-weight: bold;
+}
+
+#count-review {
+    color: var(--darkgray);
+}
+
+.review-box {
+    border-bottom: 1px solid;
+    border-color: var(--lightgray);
+    padding: 10px;
+    text-align: left;
+}
+
+.cus-name {
+    border-color: var(--darkgray);
+    color: var(--darkgray);
+
+}
+
+.date {
+    color: var(--darkgray);
+}
+
+#pagination-box {
+    margin-top: 20px;
+}

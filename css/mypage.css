@@ -1,0 +1,87 @@
+.container {
+    margin-top: 110px;
+    width: 1040px;
+}
+
+.mypage-category {
+    padding: 0px;
+    width: 300px;
+}
+
+.profile {
+    padding: 0px;
+    width: 300px;
+    height: 196px;
+    background-color: var(--lightgray);
+    border-radius: 23px;
+}
+
+.bi-person-square {
+    margin-top: 44px;
+    margin-left: 39px;
+    font-size: 100px;
+    line-height: 100px;
+}
+.profile-detail {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    margin-top: 48px;
+    margin-left: 24px;
+    font-size: 18px;
+}
+
+.profile-detail p {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.member-name {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.category-box {
+    width: 300px;
+    border-radius: 23px;
+    background-color: var(--lightgray);
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+.category-box h3 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.category-box p {
+    font-size: 24px;
+    margin-top: 40px;
+    color: var(--darkgray);
+    text-decoration: none;
+}
+
+/* 상세 페이지 */
+
+.title-box p {
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.category-box p:hover {
+    cursor: pointer;
+}
+.horizontal-line {
+    background-color: black;
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+}
+
+.mypage-box {
+    margin-left: 40px;
+}
