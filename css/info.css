@@ -1,0 +1,87 @@
+.form-container {
+    margin-left: 80px;
+    margin-top: 25px;
+}
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.form-group label {
+    width: 130px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group textarea {
+    width: 340px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px ridge var(--mediumgray);
+    border-radius: 3px;
+    color: var(--darkgray);
+    font-size: 14px;
+    display: block;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--mediumgray);
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.address-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-button {
+    margin-left: 10px;
+    font-size: 16px;
+    width: 92px;
+    height: 42px;
+    background-color: white;
+    border: 1px ridge var(--darkgray);
+    border-radius: 3px;
+    color: var(--darkgray);
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.buttons button {
+    width: 165px;
+    height: 55px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cancel-button {
+    border: 1px ridge var(--darkgray);
+    color: var(--darkgray);
+    background-color: white;
+}
+
+.save-button {
+    background-color: var(--theme);
+    color: white;
+}
