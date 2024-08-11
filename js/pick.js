@@ -13,7 +13,7 @@ function renderProductPage(data, page, container) {
     let start = (page - 1) * itemsPerPage;
     let end = start + itemsPerPage;
     let paginatedItems = data.slice(start, end);
-    console.log(data);
+
     let itemHtml = "";
     for (const item of paginatedItems) {
         itemHtml =
@@ -24,9 +24,9 @@ function renderProductPage(data, page, container) {
             <div class="img-product d-flex">
               <img src="${item.img}">
               <div class="product-info">
-                  <p><strong>카테고리</strong>: ${item.category}</p>
-                  <p><strong>상품명</strong>: ${item.title}</p>
-                  <p><strong>가격</strong>: ${item.price}</p>
+                  <p><strong>카테고리</strong> ${item.category}</p>
+                  <p><strong>상품명</strong> ${item.title}</p>
+                  <p><strong>가격</strong> ${item.price}</p>
               </div>
             </div>
             <div class="button-list">
@@ -44,7 +44,7 @@ function uploadPickPage() {
     // let currentPage = 1;
     // uploadRocalStorage();
     const products = JSON.parse(localStorage.getItem("picklist"));
-    const pickPage =
+    const pickPageHtml =
         /*html*/
         `<div class = "pick-container d-flex flex-column">
           <div class = "choice-box">
@@ -66,14 +66,14 @@ function uploadPickPage() {
         href: "../css/pick.css",
     });
     $("head").append(pickCss);
-    $(".page-upload").html(pickPage);
+    $(".page-upload").html(pickPageHtml);
 
     renderProductPage(products, currentPage, ".pick-products");
+
     $(".choice-all i, .all-select").on("click", function () {
         $(".pick-product > i").toggleClass("bi-check-circle bi-check-circle-fill");
     });
     $(".pick-product > i").on("click", function () {
-        console.log("aaaaaaa");
         $(this).toggleClass("bi-check-circle bi-check-circle-fill");
     });
 }

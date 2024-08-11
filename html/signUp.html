@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/signup.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../src/bootstrap/bootstrap.min.js"></script>
+	<script src="../src/jquery/jquery.min.js"></script>
+	<script src="../js/backToTop.js"></script>
+	<title>회원가입</title>
+</head>
+<body>
+	<header>
+		<h2>Header</h2>
+	</header>
+	<nav class="navbar">
+		<h2>navbar</h2>
+	</nav>
+
+	<!-- 회원가입 페이지 메인 -->
+	<main class="container signup">		
+	<h2>회원가입</h2>
+	<p><span class="rq">*</span> 필수입력사항</p>
+	<div id="signup-form">
+		<div>
+			<label for="user-id">아이디<span class="rq">*</span></label>
+			<input type="text" id="user-id" placeholder="아이디를 입력해 주세요." required/>
+			<button>중복확인</button>
+		</div>
+		<div>
+			<label for="user-pw">비밀번호<span class="rq">*</span></label>
+			<input type="password" id="user-pw" placeholder="비밀번호를 입력해 주세요." required/>
+		</div>
+		<div>
+			<label for="user-pw2">비밀번호확인<span class="rq">*</span></label>
+			<input type="password" id="user-pw2" placeholder="비밀번호를 한번 더 입력해 주세요." required/>
+		</div>
+		<div>
+			<label for="user-name">이름<span class="rq">*</span></label>
+			<input type="text" id="user-name" placeholder="이름을 입력해 주세요." required/>
+		</div>
+		<div>
+			<label for="user-email">이메일<span class="rq">*</span></label>
+			<input type="email" id="user-email" placeholder="예: swura@meal.com" required/>
+			<button>중복확인</button>
+		</div>
+		<div>
+			<label for="user-phone">휴대폰<span class="rq">*</span></label>
+			<input type="tel" id="user-phone" placeholder="슷자만 입력해 주세요." required/>
+			<button class="check-btn">인증번호 받기</button>
+		</div>
+		<div>
+			<label>주소<span class="rq">*</span></label>
+			<input type="text" id="user-address" placeholder="주소">
+			<button onclick="searchAddress()">주소 검색</button>
+			<p class="desc">배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+		</div>
+		<div>
+			<label>생년월일</label>
+			<div id="birth">
+				<input type="text" placeholder="YYYY">
+				<span>/</span>
+				<input type="text" placeholder="MM">
+				<span>/</span>
+				<input type="text" placeholder="DD">
+			</div>
+		</div>
+		<button id="signup-btn">가입하기</button>
+		</div>
+	</div>
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script src="../js/searchAddress.js"></script>
+	</main>
+
+	<footer>
+		<h2>Footer</h2>
+	</footer>
+	<button onclick="backToTop()" id="btn-back-to-top">Top</button>
+</body>
+</html>

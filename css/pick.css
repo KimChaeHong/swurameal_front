@@ -56,6 +56,12 @@ i,
     gap: 10px;
 }
 
+.product-info strong {
+    font-size: 18px;
+    display: inline-block;
+    width: 100px;
+}
+
 .product-info p {
     margin: 0px;
 }
