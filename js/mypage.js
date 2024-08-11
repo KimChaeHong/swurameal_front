@@ -1,5 +1,5 @@
 const user = {
-    username: "정원석",
+    username: "OOO",
     email: "testuser@example.com",
     isLoggedIn: true,
 };
@@ -12,7 +12,7 @@ const mypage =
     /*html*/
     `<div class="title-box"">
         <p>주문배송</p>
-        <div class="horizontal-line"></div>
+      <div class="horizontal-line"></div>
       </div>
       <div class="page-upload"></div>`;
 
@@ -32,6 +32,7 @@ $(document).ready(function () {
         let url = $(this).attr("data-js");
 
         e.preventDefault();
+        userUpload;
         $(".title-box p").html(`${$(this).text()}`);
         $(".category-box p").css({
             color: darkgrayColor,

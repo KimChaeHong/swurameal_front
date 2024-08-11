@@ -1,0 +1,125 @@
+.review-choice-box {
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+}
+.review-choice-box div {
+    background-color: #fffbfb;
+    border: 1px ridge var(--mediumgray);
+    color: var(--mediumgray);
+    cursor: pointer;
+    width: 50%;
+    height: 5%;
+    text-align: center;
+}
+
+.review-choice-box p {
+    font-size: 24px;
+    margin: 20px;
+}
+
+.product-box {
+    margin-top: 25px;
+    border-bottom: 1px var(--mediumgray);
+    border-style: ridge;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-details img {
+    width: 130px;
+    height: 130px;
+    border-radius: 9px;
+    margin-right: 20px;
+}
+.product-details {
+    margin-bottom: 25px;
+}
+
+.product-details strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.product-box button,
+.review-top button {
+    background-color: var(--theme);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 86px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 12px;
+}
+
+.review-written-page {
+    display: none;
+    width: 100%;
+}
+
+.review-box {
+    padding-left: 16px;
+    border-bottom: 1px var(--mediumgray);
+    border-style: ridge;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+.review-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .review-top div {
+    display: flex;
+    flex-direction: column;
+} */
+
+.review-box div p {
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-size: 14px;
+    color: var(--mediumgray);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* .review-update button:hover,
+.review-delete:hover,
+.product-box button:hover {
+} */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border-style: none;
+    background-color: rgb(0, 0, 0, 0);
+    margin: 0 5px;
+    color: #d9d9d9;
+    font-weight: lighter;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    color: black;
+    font-weight: bold;
+}
