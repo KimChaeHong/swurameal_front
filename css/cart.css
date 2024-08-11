@@ -9,6 +9,12 @@
 	letter-spacing: 2px;
 }
 
+i {
+	color: var(--theme);
+	width: 20px;
+	padding-left: 20px;
+}
+
 /* 전체선택 | 선택삭제 버튼 */
 #select-btns {
 	width: 620px;
@@ -25,85 +31,8 @@
 	width: 620px;
 }
 
-/* 주문내역서 */
-#cart-pay {
-	width: 340px;
-}
-
-#cart-pay #how-much {
-	height: 200px;
-	background-color: var(--lightgray);
-	padding: 25px;
-}
-
-#how-much p {
-	text-align: center;
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom:35px;
-}
-
-#how-much span {
-	padding-bottom: 10px;
-}
-
-#how-much .total {
-	font-weight: 700;
-	margin-top: 25px;
-	font-size: 16px;
-}
-
-#cart-pay button {
-	background-color: var(--theme);
-	color: white;
-	height: 40px;
-	width: 100%;
-	border: none;
-	border-radius: 3px;
-	margin-top: 18px;
-	letter-spacing: 2px;
-}
-
-/* 상품리스트 & 결제 section
-#cart-section {
-  display: flex;
-  width: max-content;
-  margin: 80px auto;
-}
-
-#cart-body button, #cart-choice .choice:hover, i:hover {
-  cursor: pointer;
-}
-
-#cart-section i:not(.fa-x) {
-  font-size: 18px;
-  margin-right: 5px;
-  color: #5F0080;
-}
-
-#cart-choice {
-  width: 100%;
-  border-bottom: 1px solid black;
-  padding-bottom: 15px;
-  margin-bottom: 5px;
-}
-
-#cart-choice span {
-  margin-right: 10px;
-  font-size: 14px;
-}
-#cart-choice span:not(.choice) {
-  color: #ddd;
-}
-
-
-#cart-items {
-  width: 650px;
-}
-
 .item {
   border-bottom: 1px solid #ddd;
-  display: flex;
   padding: 25px;
   padding-left: 0;
 }
@@ -142,34 +71,55 @@
 }
 
 .cnt-btn button:first-child {
-  color: #c2c1c1;
+  color: var(--mediumgray);
 }
 
 #item-price {
   width: 100px;
   text-align: right;
   padding-right: 20px;
-}
-
-#item-price p {
-  margin: 0;
+	margin: 0;
   line-height: 1.8;
   font-weight: 600;
   font-size: 18px;
-  
 }
 
-#item-price p:not(:first-child) {
-  text-decoration: line-through;
-  color: #c2c1c1;
-  font-size: 14px;
-  font-weight: 400;
+/* 주문내역서 */
+#cart-pay {
+	width: 340px;
+	min-width: 240px;
 }
 
-.x-btn i {
-  width: 20px;
-  color: #c2c1c1;
-  font-weight: 100;
-  font-size: 14px;
-  padding-left: 20px;
+#cart-pay #how-much {
+	height: 200px;
+	background-color: var(--lightgray);
+	padding: 25px;
+}
+
+#how-much p {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom:35px;
+}
+
+#how-much span {
+	padding-bottom: 10px;
+}
+
+#how-much .total {
+	font-weight: 700;
+	margin-top: 25px;
+	font-size: 16px;
+}
+
+#cart-pay button {
+	background-color: var(--theme);
+	color: white;
+	height: 40px;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	margin-top: 18px;
+	letter-spacing: 2px;
 }
