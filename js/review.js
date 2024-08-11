@@ -20,6 +20,9 @@
 //         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"}
 // ]
 
+// const itemsPerPage = 5;
+// let currentPage = 1;
+
 function uploadRocalStorage() {
     localStorage.setItem("product", JSON.stringify(product));
     localStorage.setItem("review", JSON.stringify(review));
@@ -52,10 +55,10 @@ function renderProductPage(data, page, container) {
                 <div class="product-details d-flex" >
                     <img src="${item.img}" class="product-image" />
                     <div class = "d-flex flex-column product-info">
-                    <p><strong>주문 번호</strong>: ${item.orderNumber}</p>
-                    <p><strong>주문 날짜</strong>: ${item.orderDay}</p>
-                    <p><strong>상품명</strong>: ${item.title}</p>
-                    <p><strong>가격</strong>: ${item.price}</p>
+                        <p><strong>주문 번호</strong>: ${item.orderNumber}</p>
+                        <p><strong>주문 날짜</strong>: ${item.orderDay}</p>
+                        <p><strong>상품명</strong>: ${item.title}</p>
+                        <p><strong>가격</strong>: ${item.price}</p>
                     </div>
                 </div>
                 <button>작성하기</button>
@@ -107,10 +110,7 @@ function setupPagination(data, container, isProduct) {
     });
 }
 
-const itemsPerPage = 5;
-let currentPage = 1;
-
-$(document).ready(function () {
+function uploadReviewPage() {
     const reviewContent =
         /*html*/
         `<div class="review-container" >
@@ -159,4 +159,4 @@ $(document).ready(function () {
         renderReviewPage(reviewdata, currentPage, ".review-written-page");
         setupPagination(reviewdata, ".review-written-page", false);
     });
-});
+}
