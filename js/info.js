@@ -1,21 +1,12 @@
-user = {
-    id: "test1234",
-    pw: "test1234",
-    name: "테스트",
-    email: "test@test.com",
-    휴대폰: "010-0000-0000",
-    배송지: "서울특별시 테스트동",
-    생년월일: "2024/08/11",
-};
-
 function uploadInfoPage() {
+    userdata = JSON.parse(localStorage.getItem("user"));
     infoPageHtml =
         /*html*/
         `<div class="form-container">
             <form action="your-server-endpoint" method="POST">
                 <div class="form-group">
                     <label for="userid">아이디</label>
-                    <input type="text" id="userid" name="userid" value="coghd28" readonly>
+                    <input type="text" id="userid" name="userid" value=${userdata.id} readonly>
                 </div>
                 <div class="form-group">
                     <label for="current-password">비밀번호</label>
@@ -31,26 +22,26 @@ function uploadInfoPage() {
                 </div>
                 <div class="form-group">
                     <label for="name">이름</label>
-                    <input type="text" id="name" name="name" value="김이사">
+                    <input type="text" id="name" name="name" value=${userdata.name}>
                 </div>
                 <div class="form-group">
                     <label for="email">이메일</label>
-                    <input type="email" id="email" name="email" value="swura@meal.com">
+                    <input type="email" id="email" name="email" value=${userdata.email}>
                 </div>
                 <div class="form-group">
                     <label for="phone">전화번호</label>
-                    <input type="tel" id="phone" name="phone" value="010 - 0603 - 4578">
+                    <input type="tel" id="phone" name="phone" value=${userdata.phone}>
                 </div>
                 <div class="form-group">
                     <label for="address">주소</label>
                     <div class="address-group">
-                        <input type="text" id="address" name="address" value="서울 ○○동 123번지">
+                        <input type="text" id="address" name="address" value='${userdata.address}'>
                         <button class="address-button">주소 검색</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="birthdate">생년월일</label>
-                    <input type="date" id="birthdate" name="birthdate" placeholder="YYYY / MM / DD">
+                    <input type="date" id="birthdate" name="birthdate" value=${userdata.birth}>
                 </div>
                 <div class="buttons">
                     <button type="button" class="cancel-button">탈퇴하기</button>

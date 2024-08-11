@@ -28,14 +28,14 @@
     margin-bottom: 10px;
     border: 1px ridge var(--mediumgray);
     border-radius: 3px;
-    color: black;
+    color: var(--darkgray);
     font-size: 14px;
     display: block;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #bbb;
+    color: var(--mediumgray);
 }
 
 .form-group {

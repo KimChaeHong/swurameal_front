@@ -1,8 +1,13 @@
-// const user = {
-//     username: "OOO",
-//     email: "testuser@example.com",
-//     isLoggedIn: true,
-// };
+user = {
+    id: "test1234",
+    pw: "test1234",
+    name: "테스트",
+    email: "test@test.com",
+    phone: "010-0000-0000",
+    address: "서울특별시 테스트동",
+    birth: "2024-08-11",
+};
+
 let currentPage = 1;
 const itemsPerPage = 5;
 
@@ -53,7 +58,7 @@ $(document).ready(function () {
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
 
-    // userUpload();
+    userUpload();
     const userdata = JSON.parse(localStorage.getItem("user"));
     console.log($(".category-box p ").first().attr("data-js"));
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
