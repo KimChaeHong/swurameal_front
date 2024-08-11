@@ -1,0 +1,53 @@
+.period-choice {
+    margin: 35px 0 0 0;
+    color: var(--mediumgray);
+}
+.period-choice div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    height: 65px;
+    border: 1px ridge var(--mediumgray);
+}
+
+.period-choice div:hover {
+    cursor: pointer;
+}
+.order-list {
+    margin-top: 50px;
+    border-top: 1px ridge var(--mediumgray);
+}
+
+.order-product {
+    padding-left: 20px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px ridge var(--mediumgray);
+    align-items: center;
+}
+
+.order-product img {
+    width: 150px;
+    height: 150px;
+}
+
+.order-info {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-info p {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.order-info strong {
+    font-size: 24px;
+    font-weight: bold;
+
+    display: inline-block;
+    width: 130px;
+    margin-right: 10px;
+}
