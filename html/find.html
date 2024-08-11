@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/find.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../src/bootstrap/bootstrap.min.js"></script>
+	<script src="../src/jquery/jquery.min.js"></script>
+	<script src="../js/backToTop.js"></script>
+	<script src="/js/find.js"></script>
+  <script>
+    window.onload = findPage; 
+	</script>
+	<title>아이디/비밀번호 찾기</title> 
+</head>
+<body>
+	<header><h1>Header</h1></header>
+	<nav class="navbar"><h1>navbar</h1></nav>
+
+	<!-- 아이디/비밀번호 찾기 페이지 메인 -->
+	<main class="container find">
+		<h2 id="find-title"></h2>
+    <div id="find-btn-div">
+      <button id="find-phone-btn" onclick="certPhoneMail('phone')">
+        휴대폰 인증
+      </button>
+      <button id="find-email-btn" onclick="certPhoneMail('email')">
+        이메일 인증
+      </button> 
+    </div>
+    <form id="find-form" action="#">
+      <div id="find-name-id"></div>			<!-- 아이디 || 비밀번호 찾기 -->
+      <div id="find-phone-email"></div>	<!-- 휴대폰 || 이메일 인증 -->
+      <button id="certify-btn" onclick="return false">인증번호 받기</button>
+    </form>
+	</main>
+
+	<footer><h2>Footer</h2></footer>
+	<button onclick="backToTop()" id="btn-back-to-top">Top</button>
+
+
+</body>
+</html>
