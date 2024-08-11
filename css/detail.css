@@ -76,6 +76,7 @@
 #button-box {
     width: 440px;
     height: 56px;
+    margin-bottom: 50px;
 }
 
 #pick, #cart {
@@ -96,4 +97,77 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.product-recommend {
+    width: 1040px;
+    height: 420px;
+    border: 1px;
+}
+
+.product-detail {
+    align-items: center;
+    text-align: center;
+}
+.detail-button {
+    width: 300px;
+    height: 60px;
+    border: 1px solid;
+    border-color: var(--mediumgray);
+    border-radius: 0px;
+    background-color: var(--lightgray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-button:hover {
+    background-color: var(--mediumgray);
+}
+
+#detail-img-container {
+    width: 900px;
+    align-items: center;
+    margin: 0px 200px 50px 200px;
+}
+
+.detail-img {
+    width: 900px;
+    border: 1px white;
+}
+
+#review-container {
+    width: 1040px;
+    height: 500px;
+    border-top: 2px solid;
+    text-align: center;
+}
+
+#review-title {
+    font-weight: bold;
+}
+
+#count-review {
+    color: var(--darkgray);
+}
+
+.review-box {
+    border-bottom: 1px solid;
+    border-color: var(--lightgray);
+    padding: 10px;
+    text-align: left;
+}
+
+.cus-name {
+    border-color: var(--darkgray);
+    color: var(--darkgray);
+
+}
+
+.date {
+    color: var(--darkgray);
+}
+
+#pagination-box {
+    margin-top: 20px;
 }

@@ -55,10 +55,10 @@ function renderProductPage(data, page, container) {
                 <div class="product-details d-flex" >
                     <img src="${item.img}" class="product-image" />
                     <div class = "d-flex flex-column product-info">
-                        <p><strong>주문 번호</strong>: ${item.orderNumber}</p>
-                        <p><strong>주문 날짜</strong>: ${item.orderDay}</p>
-                        <p><strong>상품명</strong>: ${item.title}</p>
-                        <p><strong>가격</strong>: ${item.price}</p>
+                        <p><strong>주문 번호</strong> ${item.orderNumber}</p>
+                        <p><strong>주문 날짜</strong> ${item.orderDay}</p>
+                        <p><strong>상품명</strong> ${item.title}</p>
+                        <p><strong>가격</strong> ${item.price}</p>
                     </div>
                 </div>
                 <button>작성하기</button>
