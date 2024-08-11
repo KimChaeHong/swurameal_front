@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../src/bootstrap/bootstrap.min.js"></script>
+	<script src="../src/jquery/jquery.min.js"></script>
+	<script src="../js/backToTop.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>로그인</title>
+</head>
+
+<body>
+	<header>
+		<h2>Header</h2>
+	</header>
+	<nav class="navbar">
+		<h2>navbar</h2>
+	</nav>
+
+	<!-- 로그인 페이지 메인 -->
+	<main class="container login">
+		<h2>로그인</h2>
+		<form action="#">
+			<input type="text" placeholder="아이디를 입력해 주세요." /><br />
+			<input type="text" placeholder="비밀번호를 입력해 주세요." /><br /> 
+			<div id="id-pw">
+				<a href="#">아이디 찾기</a>
+				<span> | </span>
+				<a href="#">비밀번호 찾기</a> 
+			</div>
+			<ul class="">
+				<a href="#">
+					<li id="kakao">
+						<i class="bi bi-chat-fill"></i> 
+						<span>카카오계정으로 로그인</span>
+					</li>
+				</a>
+				<a href="#">
+					<li id="naver">
+						<i>N</i>
+						<span>네이버계정으로 로그인</span>
+					</li>
+				</a>
+			</ul>
+			<button class="login-btn">로그인</button><br />
+			<button class="signup-btn">
+				회원가입
+			</button>
+		</form>
+	</main>
+
+	<footer>
+		<h2>Footer</h2>
+	</footer>
+	<button onclick="backToTop()" id="btn-back-to-top">Top</button>
+</body>
+
+</html>

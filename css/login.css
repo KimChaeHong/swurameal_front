@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+.login h2 {
+  text-align: center;
+	height: 150px;
+	line-height: 150px;
+	font-size: 32px;
+	letter-spacing: 2px;
+}
+
+/* form 설정 */
+.login form {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login form > * {
+  width: 400px;
+  height: 54px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+}
+
+.login form > input {
+  border: 1px solid var(--mediumgray);
+  padding: 10px;
+	font-size: 16px;
+}
+
+/* 아이디, 비밀번호 찾기 */
+#id-pw {
+	text-align: right;
+  height: 20px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 14px;
+	text-decoration: none;
+}
+
+#id-pw span {
+	padding: 0 5px;
+}
+
+/* SNS 로그인 */
+.login form ul {
+  margin: 10px auto 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.login form ul li {
+  display: inline-block;
+  width: 195px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+	font-weight: 500;
+}
+
+
+
+#kakao {
+  background-color: #fee500;
+  color: #2a1718;
+}
+
+#naver {
+  background-color: #00c300;
+  color: white;
+}
+
+#kakao i, #naver i {
+	padding-right: 5px;
+	font-size: 17px;
+	line-height: 17px;
+}
+
+/* 로그인, 회원가입 버튼 */
+.login .login-btn {
+  background-color: var(--theme);
+	color: white;
+  border: none;
+	font: 16px;
+	padding-right: 5px;
+}
+
+.login .signup-btn {
+	background-color: white;
+	color: var(--theme);
+	border: 0.8px solid var(--theme);
+	font: 16px;
+}
