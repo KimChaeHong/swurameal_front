@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -12,7 +10,7 @@
 	<script src="../src/bootstrap/bootstrap.min.js"></script>
 	<script src="../src/jquery/jquery.min.js"></script>
 	<script src="../js/backToTop.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/js/login.js"></script>
 	<title>로그인</title>
 </head>
 
@@ -31,9 +29,9 @@
 			<input type="text" placeholder="아이디를 입력해 주세요." /><br />
 			<input type="text" placeholder="비밀번호를 입력해 주세요." /><br /> 
 			<div id="id-pw">
-				<a href="#">아이디 찾기</a>
+				<a href="" onclick="findIdPw('id'); return false;">아이디 찾기</a>
 				<span> | </span>
-				<a href="#">비밀번호 찾기</a> 
+				<a href="" onclick="findIdPw('pw'); return false;">비밀번호 찾기</a> 
 			</div>
 			<ul class="">
 				<a href="#">
@@ -50,12 +48,11 @@
 				</a>
 			</ul>
 			<button class="login-btn">로그인</button><br />
-			<button class="signup-btn">
+			<button class="signup-btn"  onclick="toSignup(); return false;">
 				회원가입
 			</button>
 		</form>
 	</main>
-
 	<footer>
 		<h2>Footer</h2>
 	</footer>

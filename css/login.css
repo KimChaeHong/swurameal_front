@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
-* {
-	font-family: "Noto Sans KR", sans-serif;
-}
+* {font-family: "Noto Sans KR", sans-serif;}
 
 .login h2 {
   text-align: center;
@@ -63,8 +60,6 @@
   font-size: 14px;
 	font-weight: 500;
 }
-
-
 
 #kakao {
   background-color: #fee500;
