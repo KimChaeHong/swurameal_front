@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/cart.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="../src/bootstrap/bootstrap.min.js"></script>
+	<script src="../src/jquery/jquery.min.js"></script>
+	<script src="../js/backToTop.js"></script>
+	<title>장바구니</title>
+</head>
+<body>
+	<header><h2>Header</h2></header>
+	<nav class="navbar"><h2>navbar</h2></nav>
+
+	<!-- 장바구니 페이지 메인 -->
+	<main class="container cart">
+		<h2>장바구니</h2>
+		<div id="select-btns">
+			<i class="bi bi-check-circle-fill" id="allBtn"></i>
+			<!-- <i class="bi bi-check-circle"></i> -->
+			<span>전체선택</span>
+			<span> | </span>
+			<span>선택삭제</span>
+		</div>
+		<div class="d-flex justify-content-between">
+			<!-- 장바구니 상품 -->
+			<div id="cart-items">
+			</div>
+
+			<!-- 주문내역서 -->
+			<div id="cart-pay">
+				<div id="how-much">
+					<p>주문내역</p>
+					<div class="d-flex justify-content-between">
+						<span>상품금액</span>
+						<span>24,400원</span>
+					</div>
+					<div class="d-flex justify-content-between">
+						<span>배송비</span>
+						<span>3,000원</span>
+					</div>
+					<div class="d-flex justify-content-between total">
+						<span>결제예정금액</span>
+						<span>27,400원</span>
+					</div>
+				</div>
+				<button>주문하기</button>
+			</div>
+		</div>
+	</main>
+
+
+	<footer><h2>Footer</h2></footer>
+	<button onclick="backToTop()" id="btn-back-to-top">Top</button>
+</body>
+</html>
