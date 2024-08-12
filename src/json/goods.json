@@ -615,7 +615,7 @@
         {
             "goodsId": "411",
             "goodsName": "17도 막걸리",
-            "mainImg": "../src/images/411.jpg",
+            "mainImg": "../src/images/411.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -632,7 +632,7 @@
         {
             "goodsId": "412",
             "goodsName": "빨간쌀 막걸리",
-            "mainImg": "../src/images/412.jpg",
+            "mainImg": "../src/images/412.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -649,7 +649,7 @@
         {
             "goodsId": "413",
             "goodsName": "느린마을",
-            "mainImg": "../src/images/413.jpg",
+            "mainImg": "../src/images/413.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -666,7 +666,7 @@
         {
             "goodsId": "414",
             "goodsName": "스파클링 탁주",
-            "mainImg": "../src/images/414.jpg",
+            "mainImg": "../src/images/414.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -683,7 +683,7 @@
         {
             "goodsId": "421",
             "goodsName": "제주감귤 혼디",
-            "mainImg": "../src/images/421.jpg",
+            "mainImg": "../src/images/421.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -700,7 +700,7 @@
         {
             "goodsId": "422",
             "goodsName": "산머루주",
-            "mainImg": "../src/images/422.jpg",
+            "mainImg": "../src/images/422.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -717,7 +717,7 @@
         {
             "goodsId": "423",
             "goodsName": "원소주",
-            "mainImg": "../src/images/423.jpg",
+            "mainImg": "../src/images/423.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -734,7 +734,7 @@
         {
             "goodsId": "424",
             "goodsName": "에피소드 상그리아",
-            "mainImg": "../src/images/424.jpg",
+            "mainImg": "../src/images/424.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -751,7 +751,7 @@
         {
             "goodsId": "431",
             "goodsName": "독도 소주",
-            "mainImg": "../src/images/431.jpg",
+            "mainImg": "../src/images/431.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -768,7 +768,7 @@
         {
             "goodsId": "432",
             "goodsName": "문경바람 오크통 숙성주",
-            "mainImg": "../src/images/432.jpg",
+            "mainImg": "../src/images/432.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -785,7 +785,7 @@
         {
             "goodsId": "433",
             "goodsName": "금이산농원 복숭아와인",
-            "mainImg": "../src/images/433.jpg",
+            "mainImg": "../src/images/433.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
@@ -802,7 +802,7 @@
         {
             "goodsId": "434",
             "goodsName": "제주 탐라주",
-            "mainImg": "../src/images/434.jpg",
+            "mainImg": "../src/images/434.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "전통주",
