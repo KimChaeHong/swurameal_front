@@ -128,7 +128,7 @@
 #detail-img-container {
     width: 900px;
     align-items: center;
-    margin: 0px 200px 50px 200px;
+    margin: 0px auto;
 }
 
 .detail-img {
@@ -141,6 +141,7 @@
     height: 500px;
     border-top: 2px solid;
     text-align: center;
+    margin-top: 50px;
 }
 
 #review-title {
@@ -170,4 +171,10 @@
 
 #pagination-box {
     margin-top: 20px;
+}
+
+#plus-button, #minus-button {
+    width: 30px;
+    height: 30px;
+    background-color: none;
 }
