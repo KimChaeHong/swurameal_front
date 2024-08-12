@@ -1,33 +1,3 @@
-// let product = [
-//     { img: "../src/images/111.png", title: "떡볶이", orderNumber: "123123123", orderDay: "2024년 08월 06일", price: "12,300 원" },
-//     { img: "../src/images/111.png", title: "파스타", orderNumber: "222222222", orderDay: "2024년 08월 05일", price: "7,300 원" },
-// ];
-// /*prettier-ignore*/
-// let review = [
-//     {title: "떡볶이", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-//     {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
-//         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"}
-// ]
-
-// const itemsPerPage = 5;
-// let currentPage = 1;
-
-function uploadRocalStorage() {
-    localStorage.setItem("product", JSON.stringify(product));
-    localStorage.setItem("review", JSON.stringify(review));
-}
-
 function changeColor(nonClickDiv, clickedDiv) {
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
@@ -135,11 +105,9 @@ function uploadReviewPage() {
     $("head").append(reviewCss);
     $(".page-upload").html(reviewContent);
 
-    // uploadRocalStorage();
-
     changeColor(".review-written-box", ".review-writeable-box");
-    const productdata = JSON.parse(localStorage.getItem("product"));
-    const reviewdata = JSON.parse(localStorage.getItem("review"));
+    const productdata = JSON.parse(localStorage.getItem("writeableList"));
+    const reviewdata = JSON.parse(localStorage.getItem("writtenList"));
     renderProductPage(productdata, currentPage, ".review-writeable-page");
     setupPagination(productdata, ".review-writeable-page", true);
 

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 초기 렌더링
-    renderItems(data);
+    //renderItems(data);
 
     searchButton.addEventListener('click', filterItems);
 
