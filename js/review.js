@@ -156,7 +156,6 @@ function uploadReviewPage() {
             <div class="pagination"></div> 
         </div>
         `;
-    $(".container").append(modalHtml);
 
     const reviewCss = $("<link>", {
         rel: "stylesheet",
@@ -165,6 +164,7 @@ function uploadReviewPage() {
     });
     $("head").append(reviewCss);
     $(".page-upload").html(reviewContent);
+    $(".container").append(modalHtml);
 
     changeColor(".review-written-box", ".review-writeable-box");
     const productdata = JSON.parse(localStorage.getItem("writeableList"));

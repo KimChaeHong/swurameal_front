@@ -90,6 +90,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
             else if (text === "주문 내역") uploadOrderPage();
             else if (text === "상품 후기") uploadReviewPage();
             else if (text == "개인정보 수정") uploadInfoPage();
+            else uploadGoodsPage();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error("Request failed: ", textStatus, errorThrown);
@@ -108,7 +109,7 @@ $(document).ready(function () {
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
 
     $(".mypage-box").append(mypage);
-    $(".member-name").html(/*html*/ `${userdata.username}님`);
+    $(".member-name").html(/*html*/ `${userdata.name} 님`);
 
     $(".category-box p").on("click", function (e) {
         // let url = $(this).attr("data-js");
