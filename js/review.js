@@ -64,10 +64,8 @@ function renderReviewPage(data, page, container) {
 }
 
 function clickModalButton(reviewData, buttonText, container) {
-    console.log(reviewData);
     let reviewInfo = "";
     let title = "";
-    console.log(reviewInfo);
     if (buttonText == "수정하기") {
         title = container.closest(".review-top").find("div > p").eq(0).text();
         reviewInfo = reviewData.filter((data) => title == data.title);
