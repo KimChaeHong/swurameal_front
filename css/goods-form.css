@@ -1,0 +1,72 @@
+.form-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+.form-group label {
+    width: 190px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.form-group input {
+    border: 1px ridge var(--mediumgray);
+    border-radius: 4px;
+    width: 340px;
+    height: 50px;
+}
+.form-group:nth-of-type(3),
+.form-group:nth-of-type(4),
+.form-group:nth-of-type(5) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group:nth-of-type(3) {
+    margin-top: 15px;
+}
+.form-group:nth-of-type(6) {
+    margin-top: 0px;
+}
+.form-group input[type="file"] {
+    border: none;
+    margin-left: 100px;
+}
+
+#goods-stockStatus {
+    width: 165px;
+    height: 50px;
+}
+.form-group button,
+.buttons button {
+    width: 165px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.form-group button {
+    border: 1px ridge var(--darkgray);
+    background-color: white;
+    color: var(--darkgray);
+}
+
+.buttons {
+    margin-top: 70px;
+    margin-left: 196px;
+}
+
+.goods-delete {
+    background-color: white;
+    border: 1px ridge var(--theme);
+    color: var(--theme);
+}
+
+.goods-update {
+    border: none;
+    background-color: var(--theme);
+    color: white;
+}
