@@ -1,9 +1,6 @@
 #logo{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    color: #6B0609;
+    font-family: 'Pinyon Script';
+    font-size: 45px;
 }
-#logged-in-links{
-    border: 1px solid black;
-} 
-#logged-out-links{
-    border: 1px solid black;
-} 
