@@ -20,6 +20,9 @@ const orderList = [
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년04월01일", orderStatus: "배송완료", price: "12,200원" },
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2022년01월06일", orderStatus: "배송완료", price: "12,200원" },
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2021년08월04일", orderStatus: "배송완료", price: "12,200원" },
+    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2021년08월04일", orderStatus: "배송완료", price: "12,200원" },
+    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2021년08월04일", orderStatus: "배송완료", price: "12,200원" },
+    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2021년08월04일", orderStatus: "배송완료", price: "12,200원" },
 ];
 
 let writeableList = [
@@ -82,6 +85,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
         url: url,
         method: "GET",
         success: function (data) {
+            currentPage = 1;
             if (text === "찜한 상품") uploadPickPage();
             else if (text === "주문 내역") uploadOrderPage();
             else if (text === "상품 후기") uploadReviewPage();

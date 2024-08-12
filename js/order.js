@@ -11,7 +11,6 @@ function stringToDate(orderdate) {
 }
 function changeColor(nonClickDiv, clickedDiv) {
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
-    const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
     const mediumgray = getComputedStyle(document.documentElement).getPropertyValue("--mediumgray");
 
     $(nonClickDiv).css({
@@ -27,24 +26,28 @@ function changeColor(nonClickDiv, clickedDiv) {
 }
 function choicePeriod(threeMonth, sixMonth, oneYear, threeYear) {
     $(".three-month").on("click", function () {
-        rederOrderPage(threeMonth, currentPage, ".order-list");
+        renderOrderPage(threeMonth, currentPage, ".order-list");
+        setupPagination(threeMonth, ".order-list");
         changeColor(".six-month, .one-year, .three-year", ".three-month");
     });
     $(".six-month").on("click", function () {
-        rederOrderPage(sixMonth, currentPage, ".order-list");
+        renderOrderPage(sixMonth, currentPage, ".order-list");
+        setupPagination(sixMonth, ".order-list");
         changeColor(".three-month, .one-year, .three-year", ".six-month");
     });
     $(".one-year").on("click", function () {
-        rederOrderPage(oneYear, currentPage, ".order-list");
+        renderOrderPage(oneYear, currentPage, ".order-list");
+        setupPagination(oneYear, ".order-list");
         changeColor(".six-month, .three-month, .three-year", ".one-year");
     });
     $(".three-year").on("click", function () {
-        rederOrderPage(threeYear, currentPage, ".order-list");
+        renderOrderPage(threeYear, currentPage, ".order-list");
+        setupPagination(threeYear, ".order-list");
         changeColor(".six-month, .one-year, .three-month", ".three-year");
     });
 }
 
-function rederOrderPage(data, page, container) {
+function renderOrderPage(data, page, container) {
     $(container).html("");
     let start = (page - 1) * itemsPerPage;
     let end = start + itemsPerPage;
@@ -68,6 +71,23 @@ function rederOrderPage(data, page, container) {
     }
 }
 
+function setupPagination(data, container) {
+    $(".pagination").html("");
+    let pageCount = Math.ceil(data.length / itemsPerPage);
+    for (let i = 1; i <= pageCount; i++) {
+        $(".pagination").append(`<button class="page-num">${i}</button>`);
+    }
+
+    $(".page-num").eq(0).addClass("active");
+
+    $(".page-num").on("click", function () {
+        $(".page-num").removeClass("active");
+        $(this).addClass("active");
+        currentPage = parseInt($(this).text());
+        renderOrderPage(data, currentPage, container);
+    });
+}
+
 function uploadOrderPage() {
     const products = JSON.parse(localStorage.getItem("orderList"));
     const orderPageHtml =
@@ -81,6 +101,7 @@ function uploadOrderPage() {
                 <div class="col-3 three-year">3년</div>
             </div>
             <div class="d-flex flex-column order-list"></div>
+            <div class="pagination"></div> 
         </div>
         `;
     const orderCss = $("<link>", {
@@ -90,7 +111,6 @@ function uploadOrderPage() {
     });
     $("head").append(orderCss);
     $(".page-upload").html(orderPageHtml);
-    rederOrderPage(products, currentPage, ".order-list");
 
     let threeMonth = [];
     let sixMonth = [];
@@ -107,6 +127,8 @@ function uploadOrderPage() {
         if (monthDiff <= 12) oneYear.push(data);
         if (monthDiff <= 36) threeYear.push(data);
     }
-
+    renderOrderPage(threeMonth, currentPage, ".order-list");
+    setupPagination(threeMonth, ".order-list");
+    changeColor(".six-month, .one-year, .three-year", ".three-month");
     choicePeriod(threeMonth, sixMonth, oneYear, threeYear);
 }

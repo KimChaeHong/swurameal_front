@@ -86,3 +86,24 @@ i,
     margin-right: 30px;
     vertical-align: middle;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border-style: none;
+    background-color: rgb(0, 0, 0, 0);
+    margin: 0 5px;
+    color: #d9d9d9;
+    font-weight: lighter;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    color: black;
+    font-weight: bold;
+}
