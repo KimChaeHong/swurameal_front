@@ -123,3 +123,78 @@
     color: black;
     font-weight: bold;
 }
+
+/* 모달 */
+.modal-dialog {
+    max-width: 600px;
+}
+.modal-title {
+    font-size: 28px;
+}
+
+.modal-product-img {
+    margin-left: 80px;
+    width: 165px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.modal-product-img p {
+    margin-top: 10px;
+}
+.modal-product-img img {
+    width: 80px;
+    height: 80px;
+    margin-left: 20px;
+}
+.modal-product-detail {
+    margin-top: 5px;
+    gap: 5px;
+}
+.modal-product-detail p {
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.modal-product-detail strong {
+    display: inline-block;
+    width: 70px;
+}
+
+.modal-review {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.modal-review p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.modal-review textarea {
+    margin-left: 20px;
+    width: 400px;
+    min-height: 230px;
+    border: 1px ridge var(--mediumgray);
+}
+
+.modal-footer {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.modal-footer button {
+    width: 190px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.review-close {
+    border: 1px ridge var(--darkgray);
+    color: var(--darkgray);
+    background-color: white;
+}
+
+.review-update {
+    background-color: var(--theme);
+    color: white;
+    border: none;
+}

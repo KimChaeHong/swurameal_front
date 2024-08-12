@@ -27,11 +27,11 @@ function renderProductPage(data, page, container) {
                     <div class = "d-flex flex-column product-info">
                         <p><strong>주문 번호</strong> ${item.orderNumber}</p>
                         <p><strong>주문 날짜</strong> ${item.orderDay}</p>
-                        <p><strong>상품명</strong> ${item.title}</p>
+                        <p><strong>상품명</strong> <span>${item.title}</span></p>
                         <p><strong>가격</strong> ${item.price}</p>
                     </div>
                 </div>
-                <button>작성하기</button>
+                <button class="insert-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >작성하기</button>
             </div>`;
         $(container).append(itemHtml);
     }
@@ -52,14 +52,38 @@ function renderReviewPage(data, page, container) {
                         <p class="title">${r.title}</p>
                         <p class="sub-title">${r.auther} | ${r.wirttenDay}</p>
                     </div>
-                    <button>수정하기</button>
+                    <button class="update-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">수정하기</button>
                 </div>
                 <div class="review-description">
                     <p class="description">${r.description}</p>
                 </div>
-            </div>`;
+            </div>
+            `;
         $(".review-written-page").append(reviewHtml);
     }
+}
+
+function clickModalButton(reviewData, buttonText, container) {
+    console.log(reviewData);
+    let reviewInfo = "";
+    let title = "";
+    console.log(reviewInfo);
+    if (buttonText == "수정하기") {
+        title = container.closest(".review-top").find("div > p").eq(0).text();
+        reviewInfo = reviewData.filter((data) => title == data.title);
+        $(".modal-review textarea").val(reviewInfo[0].description);
+        $(".modal-product-detail :nth-of-type(2) > span").text(reviewInfo[0].wirttenDay);
+    } else {
+        title = container.closest(".product-box").find("div > div > :nth-of-type(3) > span").text();
+        reviewInfo = reviewData.filter((data) => title == data.title);
+        $(".modal-review textarea").val("");
+        const today = new Date();
+        const todayFormat = today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate();
+        $(".modal-product-detail :nth-of-type(2) > span").text(todayFormat);
+    }
+    $(".modal-product-img img").attr("src", reviewInfo[0].img);
+    $(".review-update").text(buttonText);
+    $(".modal-product-detail :nth-of-type(1) > span").text(title);
 }
 
 function setupPagination(data, container, isProduct) {
@@ -79,23 +103,60 @@ function setupPagination(data, container, isProduct) {
         isProduct || renderReviewPage(data, currentPage, container);
     });
 }
+function modalPage() {
+    /*prettier-ignore*/
+    let html = /*html*/
+    `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title text-center w-100" >상품후기 수정</p>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <div class="modal-product-img d-flex" >
+                            <p>구매<br/>상품</p>
+                            <img src=""/>
+                        </div>
+                        <div class="modal-product-detail d-flex flex-column flex-grow-1">
+                            <p><strong>상품명</strong> <span></span></p>
+                            <p><strong>작성일</strong> <span></span></p>
+                        </div>
+                    </div>
+                    <div class="modal-review d-flex" style="border : 1px ridge red">
+                        <p>내용</p>
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="review-close" data-bs-dismiss="modal">취소</button>
+                    <button class="review-update">수정하기</button>
+                </div>
+            </div>
+        </div>
+    </div>`;
+    return html;
+}
 
 function uploadReviewPage() {
+    const modalHtml = modalPage();
     const reviewContent =
         /*html*/
         `<div class="review-container" >
-        <div class="review-choice-box">
-            <div class="review-writeable-box">
-                <p class="review-writeable">작성 가능한 리뷰</p>
+            <div class="review-choice-box">
+                <div class="review-writeable-box">
+                    <p class="review-writeable">작성 가능한 리뷰</p>
+                </div>
+                <div class="review-written-box">
+                    <p class="review-written">작성한 리뷰</p>
+                </div>
             </div>
-            <div class="review-written-box">
-                <p class="review-written">작성한 리뷰</p>
-            </div>
+            <div class="review-writeable-page"></div>
+            <div class="review-written-page"></div>
+            <div class="pagination"></div> 
         </div>
-        <div class="review-writeable-page"></div>
-        <div class="review-written-page"></div>
-        <div class="pagination"></div> 
-    </div>`;
+        `;
+    $(".container").append(modalHtml);
 
     const reviewCss = $("<link>", {
         rel: "stylesheet",
@@ -128,5 +189,13 @@ function uploadReviewPage() {
         $(".review-written-page").css("display", "block");
         renderReviewPage(reviewdata, currentPage, ".review-written-page");
         setupPagination(reviewdata, ".review-written-page", false);
+    });
+
+    $(document).on("click", ".update-button", function () {
+        clickModalButton(reviewdata, "수정하기", $(this));
+    });
+
+    $(document).on("click", ".insert-button", function () {
+        clickModalButton(productdata, "작성하기", $(this));
     });
 }

@@ -31,19 +31,19 @@ let writeableList = [
 ];
 /*prettier-ignore*/
 let writtenList = [
-    {title: "떡볶이", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png", title: "떡볶이", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"},
-    {title: "파스타", wirttenDay: "24.08.06", auther:"OOO",
+    {img: "../src/images/111.png",title: "파스타", wirttenDay: "24/08/06", auther:"OOO",
         description: "감사위원은 원장의 제청으로 대통령이 임명하고, 그 임기는 4년으"}
 ]
 

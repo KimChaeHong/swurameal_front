@@ -9,21 +9,21 @@ function renderProductPage(data, page, container) {
         itemHtml =
             /*html*/
             `
-              <div class="pick-product d-flex">
+            <div class="pick-product d-flex">
                 <i class="bi bi-check-circle" data-select="1"></i>
                 <div class="img-product d-flex">
-                  <img src="${item.img}">
-                  <div class="product-info">
-                      <p><strong>카테고리</strong> ${item.category}</p>
-                      <p><strong>상품명</strong> ${item.title}</p>
-                      <p><strong>가격</strong> ${item.price}</p>
-                  </div>
+                    <img src="${item.img}">
+                    <div class="product-info">
+                        <p><strong>카테고리</strong> ${item.category}</p>
+                        <p><strong>상품명</strong> ${item.title}</p>
+                        <p><strong>가격</strong> ${item.price}</p>
+                    </div>    
                 </div>
                 <div class="button-list">
-                  <i class="bi bi-cart2"></i>
-                  <i class="bi bi-x-lg"></i>
+                    <i class="bi bi-cart2"></i>
+                    <i class="bi bi-x-lg"></i>
                 </div>
-              </div>
+            </div>
             `;
         $(container).append(itemHtml);
     }
@@ -67,17 +67,17 @@ function uploadPickPage() {
     const pickPageHtml =
         /*html*/
         `<div class = "pick-container d-flex flex-column">
-          <div class = "choice-box">
-            <div class='choice-all d-flex'>
-              <i class="bi bi-check-circle" data-flag="1"></i>
-              <p class="all-select" >전체선택</p>
+            <div class = "choice-box">
+                <div class='choice-all d-flex'>
+                <i class="bi bi-check-circle" data-flag="1"></i>
+                <p class="all-select" >전체선택</p>
+                </div>
+                <div class='choice-deselect'>
+                <p><span class="all-del">전체 삭제</span> | <span class="choice-del">선택 삭제</span></p>
+                </div>
             </div>
-            <div class='choice-deselect'>
-              <p><span class="all-del">전체 삭제</span> | <span class="choice-del">선택 삭제</span></p>
-            </div>
-          </div>
-          <div class= "pick-products d-flex flex-column"></div>
-          <div class="pagination"></div> 
+            <div class= "pick-products d-flex flex-column"></div>
+            <div class="pagination"></div> 
         </div>`;
 
     const pickCss = $("<link>", {
