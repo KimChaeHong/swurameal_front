@@ -93,7 +93,7 @@
 /* 개인정보 및 결제 동의 */
 #pay-agree .d-flex:not(.title) {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #pay-agree i.bi-check-square-fill {
@@ -102,11 +102,11 @@
 }
 
 #pay-agree .agree {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #pay-agree .agree p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
