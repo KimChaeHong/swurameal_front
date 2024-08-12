@@ -59,7 +59,7 @@ function setupPagination(data, container) {
 
 async function uploadGoodsPage() {
     //기본 틀이 되는 html
-    const GoodsContent =
+    const goodsContent =
         /*html*/
         `
             <div class="d-flex flex-column">
@@ -79,7 +79,7 @@ async function uploadGoodsPage() {
             </div>
         `;
     //page-upload할 공간에 집어 넣는 코드(임시로 마이페이지에 구현)
-    $(".page-upload").html(GoodsContent);
+    $(".page-upload").html(goodsContent);
 
     //페이지에 css 적용시키기
     const goodsCss = $("<link>", {

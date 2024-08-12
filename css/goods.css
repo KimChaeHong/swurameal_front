@@ -81,7 +81,8 @@
 }
 
 .goods-info :nth-of-type(6) {
-    margin-left: 20px;
+    text-align: center;
+    margin-left: 15px;
     width: 70px;
 }
 
@@ -89,7 +90,7 @@
     background-color: white;
     border: 1px ridge var(--darkgray);
     border-radius: 3px;
-    margin-left: 0px;
+    margin-left: 4px;
     width: 45px;
     height: 18px;
 }
