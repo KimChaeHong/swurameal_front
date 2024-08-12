@@ -3,7 +3,7 @@
         {
             "goodsId": "114",
             "goodsName": "크림 떡볶이",
-            "mainImg": "../src/images/114.jpg",
+            "mainImg": "../src/images/114.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -20,7 +20,7 @@
         {
             "goodsId": "115",
             "goodsName": "짜장 떡볶이",
-            "mainImg": "../src/images/115.jpg",
+            "mainImg": "../src/images/115.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -37,7 +37,7 @@
         {
             "goodsId": "113",
             "goodsName": "로제 떡볶이",
-            "mainImg": "../src/images/113.jpg",
+            "mainImg": "../src/images/113.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -54,7 +54,7 @@
         {
             "goodsId": "112",
             "goodsName": "차돌 떡볶이",
-            "mainImg": "../src/images/112.jpg",
+            "mainImg": "../src/images/112.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -71,7 +71,7 @@
         {
             "goodsId": "111",
             "goodsName": "즉석 떡볶이",
-            "mainImg": "../src/images/111.jpg",
+            "mainImg": "../src/images/111.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -88,7 +88,7 @@
         {
             "goodsId": "116",
             "goodsName": "오리지널 떡볶이",
-            "mainImg": "../src/images/116.jpg",
+            "mainImg": "../src/images/116.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -105,7 +105,7 @@
         {
             "goodsId": "131",
             "goodsName": "순대",
-            "mainImg": "../src/images/131.jpg",
+            "mainImg": "../src/images/131.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -122,7 +122,7 @@
         {
             "goodsId": "125",
             "goodsName": "치킨 가라아케",
-            "mainImg": "../src/images/125.jpg",
+            "mainImg": "../src/images/125.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -139,7 +139,7 @@
         {
             "goodsId": "122",
             "goodsName": "야끼만두",
-            "mainImg": "../src/images/122.jpg",
+            "mainImg": "../src/images/122.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -156,7 +156,7 @@
         {
             "goodsId": "124",
             "goodsName": "고추튀김",
-            "mainImg": "../src/images/124.jpg",
+            "mainImg": "../src/images/124.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -173,7 +173,7 @@
         {
             "goodsId": "123",
             "goodsName": "오징어 튀김",
-            "mainImg": "../src/images/123.jpg",
+            "mainImg": "../src/images/123.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
@@ -190,7 +190,7 @@
         {
             "goodsId": "121",
             "goodsName": "김말이",
-            "mainImg": "../src/images/121.jpg",
+            "mainImg": "../src/images/121.png",
             "goodsImg": "",
             "goodsDetailImg": "",
             "category": "분식",
