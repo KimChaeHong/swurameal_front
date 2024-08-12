@@ -1,3 +1,99 @@
 .row-header {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 700px;
+    border-bottom: 1px ridge black;
+}
+.row-header div {
+    margin: 0px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.row-header :nth-of-type(1) {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 15px;
+}
+
+.row-header :nth-of-type(2) {
+    width: px;
+    margin-left: 35px;
+}
+.row-header :nth-of-type(3) {
+    margin-left: 70px;
+}
+.row-header :nth-of-type(4) {
+    margin-left: 100px;
+}
+.row-header :nth-of-type(5) {
+    margin-left: 45px;
+}
+.row-header :nth-of-type(6) {
+    margin-left: 45px;
+}
+.row-header :nth-of-type(7) {
+    margin-left: 55px;
+}
+.row-header :nth-of-type(8) {
+    margin-left: 53px;
+}
+
+.goods-info {
+    margin-top: 10px;
+    width: 700px;
+    border-bottom: 1px ridge var(--mediumgray);
+    padding-bottom: 10px;
+}
+.goods-info p {
+    margin: 0px;
+}
+
+.goods-info img {
+    width: 45px;
+    height: 45px;
+}
+
+.goods-info :nth-of-type(1) {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 15px;
+}
+
+.goods-info :nth-of-type(2) {
+    margin-left: 20px;
+    width: 190px;
+}
+
+.goods-info :nth-of-type(3) {
+    margin-left: 6px;
+    width: 70px;
+}
+
+.goods-info :nth-of-type(4) {
+    margin-left: 10px;
+    width: 60px;
+}
+.goods-info :nth-of-type(5) {
+    margin-left: 17px;
+    width: 40px;
+}
+
+.goods-info :nth-of-type(6) {
+    margin-left: 20px;
+    width: 70px;
+}
+
+.goods-info .d-flex.flex-column button {
+    background-color: white;
     border: 1px ridge var(--darkgray);
+    border-radius: 3px;
+    margin-left: 0px;
+    width: 45px;
+    height: 18px;
+}
+
+.goods-info .d-flex.flex-column {
+    gap: 5px;
 }
