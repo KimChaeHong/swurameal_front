@@ -96,8 +96,12 @@
   font-size: 16px;
 }
 
-#pay-agree i.bi-check-square-fill {
+#pay-agree i {
+  margin-right: 5px;
   font-size: 18px;
+}
+
+#pay-agree i.bi-check-square-fill {
   color: var(--theme);
 }
 
