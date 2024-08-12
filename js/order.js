@@ -1,15 +1,3 @@
-const product = [
-    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년08월06일", orderStatus: "배송완료", price: "12,200원" },
-    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년08월06일", orderStatus: "배송완료", price: "12,200원" },
-    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년04월01일", orderStatus: "배송완료", price: "12,200원" },
-    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2022년01월06일", orderStatus: "배송완료", price: "12,200원" },
-    { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2021년08월04일", orderStatus: "배송완료", price: "12,200원" },
-];
-
-function uploadRocalStorage() {
-    localStorage.setItem("orderlist", JSON.stringify(product));
-}
-
 function getMonthDiff(startDate, endDate) {
     return (endDate.getFullYear() - startDate.getFullYear()) * 12 + endDate.getMonth() - startDate.getMonth();
 }
@@ -66,34 +54,33 @@ function rederOrderPage(data, page, container) {
         itemHtml =
             /*html*/
             `
-          <div class="order-product d-flex">
-              <img src="${item.img}">
-              <div class="order-info">
-                  <p><strong>상품명</strong> ${item.title}</span></p>
-                  <p><strong>주문 날짜</strong> ${item.orderDate}</p>
-                  <p><strong>결제 금액</strong> ${item.price}</p>
-                  <p><strong>주문 상태</strong> ${item.orderStatus}</p>
-              </div>
-          </div>
+            <div class="order-product d-flex">
+                <img src="${item.img}">
+                <div class="order-info">
+                    <p><strong>상품명</strong> ${item.title}</span></p>
+                    <p><strong>주문 날짜</strong> ${item.orderDate}</p>
+                    <p><strong>결제 금액</strong> ${item.price}</p>
+                    <p><strong>주문 상태</strong> ${item.orderStatus}</p>
+                </div>
+            </div>
         `;
         $(container).append(itemHtml);
     }
 }
 
 function uploadOrderPage() {
-    uploadRocalStorage();
-    const products = JSON.parse(localStorage.getItem("orderlist"));
+    const products = JSON.parse(localStorage.getItem("orderList"));
     const orderPageHtml =
         /*html*/
         `
         <div class="order-container d-flex flex-column">
-          <div class="row text-center period-choice" >
-            <div class="col-3 three-month">3개월</div>
-            <div class="col-3 six-month">6개월</div>
-            <div class="col-3 one-year">1년</div>
-            <div class="col-3 three-year">3년</div>
-          </div>
-          <div class="d-flex flex-column order-list"></div>
+            <div class="row text-center period-choice" >
+                <div class="col-3 three-month">3개월</div>
+                <div class="col-3 six-month">6개월</div>
+                <div class="col-3 one-year">1년</div>
+                <div class="col-3 three-year">3년</div>
+            </div>
+            <div class="d-flex flex-column order-list"></div>
         </div>
         `;
     const orderCss = $("<link>", {

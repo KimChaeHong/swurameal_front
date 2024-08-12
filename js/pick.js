@@ -1,13 +1,3 @@
-// const product = [
-//     { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-//     { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-//     { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-//     { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-// ];
-function uploadRocalStorage() {
-    localStorage.setItem("picklist", JSON.stringify(product));
-}
-
 function renderProductPage(data, page, container) {
     $(container).html("");
     let start = (page - 1) * itemsPerPage;
@@ -19,31 +9,28 @@ function renderProductPage(data, page, container) {
         itemHtml =
             /*html*/
             `
-          <div class="pick-product d-flex">
-            <i class="bi bi-check-circle"></i>
-            <div class="img-product d-flex">
-              <img src="${item.img}">
-              <div class="product-info">
-                  <p><strong>카테고리</strong> ${item.category}</p>
-                  <p><strong>상품명</strong> ${item.title}</p>
-                  <p><strong>가격</strong> ${item.price}</p>
+              <div class="pick-product d-flex">
+                <i class="bi bi-check-circle"></i>
+                <div class="img-product d-flex">
+                  <img src="${item.img}">
+                  <div class="product-info">
+                      <p><strong>카테고리</strong> ${item.category}</p>
+                      <p><strong>상품명</strong> ${item.title}</p>
+                      <p><strong>가격</strong> ${item.price}</p>
+                  </div>
+                </div>
+                <div class="button-list">
+                  <i class="bi bi-cart2"></i>
+                  <i class="bi bi-x-lg"></i>
+                </div>
               </div>
-            </div>
-            <div class="button-list">
-              <i class="bi bi-cart2"></i>
-              <i class="bi bi-x-lg"></i>
-            </div>
-          </div>
-        `;
+            `;
         $(container).append(itemHtml);
     }
 }
 
 function uploadPickPage() {
-    // const itemsPerPage = 5;
-    // let currentPage = 1;
-    // uploadRocalStorage();
-    const products = JSON.parse(localStorage.getItem("picklist"));
+    const products = JSON.parse(localStorage.getItem("pickList"));
     const pickPageHtml =
         /*html*/
         `<div class = "pick-container d-flex flex-column">
@@ -57,7 +44,7 @@ function uploadPickPage() {
             </div>
           </div>
           <div class= "pick-products d-flex flex-column">
-          </dvi>
+          </div>
         </div>`;
 
     const pickCss = $("<link>", {
