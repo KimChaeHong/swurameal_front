@@ -1,0 +1,13 @@
+.carousel {
+    width: 1440px;
+    height: 280px;
+    margin: auto; /* Center the carousel horizontally */
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel-item img {
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    height: 100%; /* Make sure the image covers the height of the carousel */
+    width: 100%; /* Ensure the image covers the width of the carousel */
+}
