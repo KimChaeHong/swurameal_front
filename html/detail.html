@@ -28,44 +28,48 @@
     <main class="container" >
         <section class="d-flex main-content">
             <div id="image-container">
-                <img src="">
+                <img src="../src/images/322.png">
             </div>
             <div id="product-info">
-                <p id="product-name">상품이름</p>
-                <p id="product-coment">상품 코멘트</p>
-                <p id="product-price">상품 가격</p>
+                <p id="product-name">[한식]매운 돼지갈비찜</p>
+                <p id="product-coment">매콤한 제주도 신선 흑돼지</p>
+                <p id="product-price"></p>
                 <hr>
                 <div class="d-flex">
                     <span id="delivery">배송</span>
-                    <span>~~</span>
+                    <span>1~2일</span>
                 </div>
                 <hr>
                 <div class="d-flex">
                     <span id="seller">판매자</span>
-                    <span>~~</span>
+                    <span>수라밀</span>
                 </div>
                 <hr>
                 <div class="d-flex">
                     <span id="unit">판매단위</span>
-                    <span>~~</span>
+                    <span>1팩</span>
                 </div>
                 <hr>
                 <div class="d-flex">
                     <span id="product-weight">중량/용량</span>
-                    <span>~~</span>
+                    <span>840g</span>
                 </div>
                 <hr>
                 <div class="d-flex">
                     <span id="product-quantity">상품선택</span>
                     <div id="count-box">
-                        <p id="mini-name">상품이름</p>
+                        <p id="mini-name">[한식]매운 돼지갈비찜</p>
                         <div class="d-flex justify-content-between">
-                            <input type="number" min="1" value="1">
-                            <span>가격*수량</span>
+                            <div class="cnt-btn">
+                                <button id="minus-button">-</button>
+                                <span id="count" type="number" min="1">1</span>
+                                <button id="plus-button">+</button>
+                            </div>
+                            <span class="total-price">가격*수량</span>
                         </div>
                     </div>
                 </div>
-                <p id="total-price">총 가격</p>
+                <p class="total-price">총 가격</p>
                 <div id="button-box" class="d-flex justify-content-between">
                     <span id="pick" class="btn">찜</span>
                     <span id="cart" class="btn">장</span>
@@ -75,23 +79,20 @@
             </div>
         </section>
 
-        <section class="product-recommend">
-            <h4>고객님을 위한 추천상품</h4>
-            <div class="d-flex product-list">
-
-            </div>
+        <section class="d-flex product-recommend">
+            
         </section>
 
         <section class="product-detail">
             <div class="d-flex">
-                <span class="btn flex-grow-1 detail-button">상품설명</span>
-                <span class="btn flex-grow-1 detail-button">상세정보</span>
-                <span class="btn flex-grow-1 detail-button">리뷰</span>
+                <span id="move-info" class="btn flex-grow-1 detail-button">상품설명</span>
+                <span id="move-detail" class="btn flex-grow-1 detail-button">상세정보</span>
+                <span id="move-review" class="btn flex-grow-1 detail-button">리뷰</span>
             </div>
             <div id="detail-img-container" class="">
-                <img src="#" class="detail-img">
+                <img id="detail-img1" src="../src/images/detail.jpg" class="detail-img">
                 <br>
-                <img src="#" class="detail-img">
+                <img id="detail-img2" src="../src/images/detail2.png" class="detail-img">
             </div>
         </section>
         <section>
@@ -146,5 +147,6 @@
     </footer>
 
     <button onclick="backToTop()" id="btn-back-to-top">Top</button>
+    <script src="../js/detail.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 .container {
     width: 1040px;
-    margin: 0px 200px;
+    margin: 0px auto;
     padding: 0px;
 }
 
@@ -11,7 +11,7 @@
 #category {
     width: 300px;
     height: 350px;
-    background-color: #d9d9d9;
+    background-color: var(--mediumgray);
     margin-top: 110px;
     margin-right: 40px;
     border-radius: 15px;
@@ -45,4 +45,104 @@ width: 700px;
 h5.active {
     color: var(--theme);
     font-weight: bold;
+}
+
+#board-container {
+    width: 700px;
+    height: 550px;
+    border-top: 2px solid;
+}
+
+.board-top {
+    width: 700px;
+    height: 60px;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.board-top > p, .board > p {
+    margin-bottom: 0px;
+}
+
+#just-title {
+    width: 460px;
+}
+
+.board {
+    width: 700px;
+    height: 50px;
+    border-bottom: 1px solid;
+    border-color: var(--mediumgray);
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.post-title {
+    width: 450px;
+}
+
+.page{
+    margin-top: 20px;
+}
+
+.inquiry-button {
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme);
+    color: white;
+}
+
+.inquiry-button:hover {
+    border: 1px solid;
+    border-color: black;
+    background-color: var(--theme);
+    color: white;
+}
+.accordian {
+    border-radius: 0px;
+}
+
+.accordion-item {
+    border: none;
+    border-radius: 0px;
+}
+
+.accordion-body {
+    border: 1px solid var(--mediumgray);
+    word-break: break-all;
+}
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button {
+    border-radius: 0px;
+}
+
+.qna-text {
+    width: 500px;
+}
+
+.btn-sm {
+    width: 50px;
+    height: 25px;
+}
+
+.btn-sm:hover {
+    border: none;
+    font-weight: bold;
+}
+
+.form-button-container {
+    text-align: right;
+}
+
+.text-form {
+    width: 600px;
+    height: 300px;
 }
