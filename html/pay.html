@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../src/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/pay.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../src/bootstrap/bootstrap.min.js"></script>
+    <script src="../src/jquery/jquery.min.js"></script>
+    <script src="../js/backToTop.js"></script>
+    <!-- 카카오주소 api -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="/js/signup.js"></script>
+    <script src="/js/pay.js"></script>
+    <title>주문 / 결제</title>
+  </head>
+  <body>
+    <header><h2>Header</h2></header>
+    <nav class="navbar"><h2>navbar</h2></nav>
+
+    <!-- 주문결제 페이지 메인 -->
+    <main class="container pay">
+      <h2>주문 / 결제</h2>
+      <div class="d-flex justify-content-between">
+        <div class="left-section">
+          <!-- 주문상품 -->
+          <div id="pay-items">
+            <div class="title">주문상품</div>
+            <div class="item d-flex justify-content-between">
+              <img src="" alt="상품이미지" />
+              <div id="item-detail">
+                <p>[전통주] 구양주 스파클링(9도 900ml)</p>
+                <p>아홉번 담근 프리미엄 탁주</p>
+              </div>
+              <div class="item-cnt">1개</div>
+              <div class="item-price">7,000원</div>
+            </div>
+            <div class="item d-flex justify-content-between">
+              <img src="" alt="상품이미지" />
+              <div id="item-detail">
+                <p>[전통주] 구양주 스파클링(9도 900ml)</p>
+                <p>아홉번 담근 프리미엄 탁주</p>
+              </div>
+              <div class="item-cnt">1개</div>
+              <div class="item-price">7,000원</div>
+            </div>
+          </div>
+
+          <!-- 주문자 정보 -->
+          <div id="user-info">
+            <div class="title">주문자 정보</div>
+            <span class="label">주문자명</span>
+            <span>정원석</span><br />
+            <span class="label">휴대폰 번호</span>
+            <span>010-1234-5678</span><br />
+            <span class="label">이메일</span>
+            <span>swura@meal.com</span><br />
+            <span class="label">배송지</span>
+            <input id="user-address" value="서울 구로구 디지털로26길 123, 1605호"></input>
+            <button onclick="searchAddress()">배송지 변경</button>
+          </div>
+
+          <!-- 개인정보 및 결제 동의 -->
+          <div id="pay-agree">
+            <div class="title d-flex justify-content-between">
+                <p>개인정보 및 결제 동의</p>
+                <i class="bi bi-check-square-fill"></i>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>개인정보 수집 이용 및 처리 동의</span>
+                <i class="bi bi-square"></i>
+            </div>
+            <div class="d-flex justify-content-between">
+                <span>전자지급 결제대행 서비스 이용약관 동의</span>
+                <i class="bi bi-square"></i>
+            </div>
+            <div class="d-flex justify-content-between agree">
+                <p>위 내용을 확인 하였으며 결제에 동의합니다.</p>
+                <i class="bi bi-square"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 주문내역서 -->
+        <div id="pay-pay">
+          <div id="how-much">
+            <p>주문/결제 내역</p>
+            <div class="d-flex justify-content-between">
+              <span>상품금액</span>
+              <span>24,400원</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>배송비</span>
+              <span>3,000원</span>
+            </div>
+            <div class="d-flex justify-content-between total">
+              <span>최종결제금액</span>
+              <span>27,400원</span>
+            </div>
+          </div>
+          <button onclick="pay()">결제하기</button>
+        </div>
+      </div>
+    </main>
+
+    <footer><h2>Footer</h2></footer>
+    <button onclick="backToTop()" id="btn-back-to-top">Top</button>
+  </body>
+</html>

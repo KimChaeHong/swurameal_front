@@ -3,12 +3,7 @@
   font-family: "Noto Sans KR", sans-serif;
 }
 
-/* hover 클래스를 가진 태그에  */
-.hover:hover {
-  cursor: pointer;
-}
-
-.cart h2 {
+.pay h2 {
   text-align: center;
   height: 150px;
   line-height: 150px;
@@ -16,26 +11,18 @@
   letter-spacing: 2px;
 }
 
-.bi-check-circle,
-.bi-check-circle-fill {
-  color: var(--theme);
-  display: inline-block;
-  font-size: 20px;
-  margin-right: 5px;
-}
-
-/* 전체선택 | 선택삭제 버튼 */
-#select-btns {
-  width: 620px;
+.pay .title {
+  font-size: 24px;
+  font-weight: 500;
   padding-bottom: 15px;
+  border-bottom: 1.8px solid black;
 }
 
-#select-btns span {
-  margin: 6px;
-}
-
-/* 장바구니 상품 */
-#cart-items {
+/* 결제 상품 */
+#pay-items,
+#user-info,
+#pay-agree {
+  margin-bottom: 150px;
   width: 620px;
 }
 
@@ -46,20 +33,16 @@
   padding-left: 0;
 }
 
-.item:first-of-type {
-  border-top: 1.8px solid black;
-}
-
 .item img {
   width: 100px;
   height: 100px;
-  margin-right: 10px;
+  margin-right: 20px;
   border: 1px solid black;
 }
 
 #item-detail p {
   font-size: 17px;
-  width: 320px;
+  width: 280px;
   font-weight: 600;
   margin-bottom: 14px;
 }
@@ -70,50 +53,71 @@
   font-weight: 400;
 }
 
-.cnt-btn {
-  border: 1px solid var(--mediumgray);
-  border-radius: 3px;
-  height: max-content;
-  margin: 25px 0;
-  width: 90px;
-  height: 30px;
-  text-align: center;
-}
-
-.cnt-btn button {
-  border: none;
-  background: none;
-  padding: auto;
-  width: 30px;
-  height: 100%;
-  font-size: 18px;
-}
-
-.cnt-btn button:first-child {
-  color: var(--darkgray);
-}
-
-#item-price {
+.item-cnt,
+.item-price {
   width: 100px;
   text-align: right;
   padding-right: 20px;
   margin: 0;
-  line-height: 1.8;
   font-weight: 600;
   font-size: 18px;
 }
 
-.bi-x-lg {
-  color: var(--mediumgray);
+.item-cnt {
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+/* 주문자 정보 */
+#user-info .label {
+  display: inline-block;
+  width: 140px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+#user-info input {
+  border: none;
+  width: 360px;
+}
+
+#user-info button {
+  height: 28px;
+  border: 0.8px solid var(--darkgray);
+  color: var(--darkgray);
+  background-color: white;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+/* 개인정보 및 결제 동의 */
+#pay-agree .d-flex:not(.title) {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+#pay-agree i.bi-check-square-fill {
+  font-size: 18px;
+  color: var(--theme);
+}
+
+#pay-agree .agree {
+  padding-top: 10px;
+}
+
+#pay-agree .agree p {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /* 주문내역서 */
-#cart-pay {
+#pay-pay {
   width: 340px;
   min-width: 240px;
+  margin-top: 39px;
 }
 
-#cart-pay #how-much {
+#pay-pay #how-much {
   height: 200px;
   background-color: var(--lightgray);
   padding: 25px;
@@ -136,7 +140,7 @@
   font-size: 16px;
 }
 
-#cart-pay button {
+#pay-pay button {
   background-color: var(--theme);
   color: white;
   height: 40px;
