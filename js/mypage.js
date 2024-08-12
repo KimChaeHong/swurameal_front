@@ -1,4 +1,4 @@
-const user = {
+let user = {
     id: "test1234",
     pw: "test1234",
     name: "테스트",
@@ -7,14 +7,14 @@ const user = {
     address: "서울특별시 테스트동",
     birth: "2024-08-11",
 };
-const pickList = [
+let pickList = [
     { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
+    { img: "../src/images/111.png", category: "전통주", title: "양주", price: "12,200원" },
+    { img: "../src/images/111.png", category: "전통주", title: "소주", price: "12,200원" },
+    { img: "../src/images/111.png", category: "전통주", title: "맥주", price: "12,200원" },
 ];
 
-const orderList = [
+let orderList = [
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년08월06일", orderStatus: "배송완료", price: "12,200원" },
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년08월06일", orderStatus: "배송완료", price: "12,200원" },
     { img: "../src/images/111.png", title: "매운돼지갈비", orderDate: "2024년04월01일", orderStatus: "배송완료", price: "12,200원" },

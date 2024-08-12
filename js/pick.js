@@ -46,8 +46,24 @@ function setupPagination(data, container) {
     });
 }
 
+function pickProductDelete(selected) {
+    const deleteList = [];
+
+    if ($(selected).length !== 0) {
+        $(selected).each(function () {
+            deleteList.push($(this).closest(".pick-product").find(".product-info p").eq(1).text().replace("상품명", "").trim());
+        });
+        const updateList = pickList.filter((item) => !deleteList.includes(item.title));
+        localStorage.setItem("pickList", JSON.stringify(updateList));
+        pickList = JSON.parse(localStorage.getItem("pickList"));
+        console.log(pickList);
+        renderProductPage(pickList, currentPage, ".pick-products");
+        setupPagination(pickList, ".pick-products");
+    }
+}
+
 function uploadPickPage() {
-    const products = JSON.parse(localStorage.getItem("pickList"));
+    const pickList = JSON.parse(localStorage.getItem("pickList"));
     const pickPageHtml =
         /*html*/
         `<div class = "pick-container d-flex flex-column">
@@ -72,28 +88,46 @@ function uploadPickPage() {
     $("head").append(pickCss);
     $(".page-upload").html(pickPageHtml);
 
-    renderProductPage(products, currentPage, ".pick-products");
-    setupPagination(products, ".pick-products");
+    renderProductPage(pickList, currentPage, ".pick-products");
+    setupPagination(pickList, ".pick-products");
 
     $(".choice-all i, .all-select").on("click", function () {
-        console.log($(".choice-all i").data("flag"));
-        if ($(".choice-all i").data("flag") == 1) {
+        if ($(".choice-all i").attr("data-flag") == 1) {
             $(".pick-product > i").attr({
                 class: "bi bi-check-circle-fill",
                 "data-select": 2,
             });
-            $(".choice-all i").data("flag", 2);
+            $(".choice-all i").attr("data-flag", 2);
         } else {
             $(".pick-product > i").attr({
                 class: "bi bi-check-circle",
                 "data-select": 1,
             });
-            $(".choice-all i").data("flag", 1);
+            $(".choice-all i").attr("data-flag", 1);
         }
     });
-    $(".pick-product > i").on("click", function () {
-        $(this).toggleClass("bi-check-circle bi-check-circle-fill");
-        console.log($(".pick-product > i").data("select"));
-        $(this).data("select") == 1 ? $(this).data("select", "2") : $(this).data("select", "1");
+
+    $(".page-upload").on("click", ".pick-product > i", function () {
+        if ($(this).attr("data-select") == 1)
+            $(this).attr({
+                class: "bi bi-check-circle-fill",
+                "data-select": 2,
+            });
+        else {
+            $(this).attr({
+                class: "bi bi-check-circle",
+                "data-select": 1,
+            });
+        }
+    });
+
+    $("page-upload").on("click", ".all-del", function () {
+        pickProductDelete(".pick-product i");
+    });
+    $(".page-upload").on("click", ".choice-del", function () {
+        pickProductDelete('.pick-product i[data-select="2"]');
+    });
+    $(".page-upload").on("click", ".bi-x-lg", function () {
+        pickProductDelete($(this));
     });
 }
