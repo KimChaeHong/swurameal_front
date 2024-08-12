@@ -112,6 +112,7 @@ function uploadReviewPage() {
     setupPagination(productdata, ".review-writeable-page", true);
 
     $(".review-writeable-box").on("click", function (e) {
+        currentPage = 1;
         changeColor(".review-written-box", ".review-writeable-box");
         $(".review-writeable-page").html("");
         $(".review-written-page").css("display", "none");
@@ -121,6 +122,7 @@ function uploadReviewPage() {
     });
 
     $(".review-written-box").on("click", function (e) {
+        currentPage = 1;
         changeColor(".review-writeable-box", ".review-written-box");
         $(".review-writeable-page").css("display", "none");
         $(".review-written-page").css("display", "block");
