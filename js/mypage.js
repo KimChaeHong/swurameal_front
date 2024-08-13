@@ -90,8 +90,6 @@ function pageUpload(page, themeColor, darkgrayColor) {
             else if (text === "주문 내역") uploadOrderPage();
             else if (text === "상품 후기") uploadReviewPage();
             else if (text == "개인정보 수정") uploadInfoPage();
-            else if (text == "상품관리 테스트") uploadGoodsPage();
-            else uploadGoodsFormPage();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error("Request failed: ", textStatus, errorThrown);
@@ -100,13 +98,24 @@ function pageUpload(page, themeColor, darkgrayColor) {
     });
 }
 
+function pageTagUpload(tagName, cssName) {
+    const linkCss = $("<link>", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: `../css/${cssName}.css`,
+    });
+    $("head").append(linkCss);
+    $(`.${tagName}`).load(`../${tagName}.html`);
+}
 $(document).ready(function () {
+    pageTagUpload("header", "index");
+    pageTagUpload("footer", "footer");
+    pageTagUpload("nav", "nav");
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
 
     localStorageUpload();
     const userdata = JSON.parse(localStorage.getItem("user"));
-    console.log($(".category-box p ").first().attr("data-js"));
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
 
     $(".mypage-box").append(mypage);
