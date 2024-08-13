@@ -1,0 +1,10 @@
+#logo{
+    /* border: 1px solid black; */
+    color: #6B0609;
+    font-family: 'Pinyon Script';
+    font-size: 45px;
+}
+#header{
+    width: 1040px;
+    margin: auto;
+}
