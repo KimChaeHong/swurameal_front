@@ -20,18 +20,18 @@ function renderGoodsPage(data, page, container) {
             /*html*/
             `
         <div class="goods-info d-flex align-items-center">
-        <i class="bi bi-check-square" data-select="1"></i>
-        <p>${item.goodsId}</p>
-        <img src="${item.mainImg}"/>
-        <p>${item.goodsName}</p>
-        <p>${item.category}</p>
-        <p>${item.price}</p>
-        <p>${item.stockStatus}</p>
-        <p>${item.status}</p>
-        <div class="d-flex flex-column">
-        <button>수정</button>
-        <button>삭제</button>
-        </div>
+            <i class="bi bi-check-square" data-select="1"></i>
+            <p>${item.goodsId}</p>
+            <img src="${item.mainImg}"/>
+            <p>${item.goodsName}</p>
+            <p>${item.category}</p>
+            <p>${item.price}</p>
+            <p>${item.stockStatus}</p>
+            <p>${item.status}</p>
+            <div class="d-flex flex-column">
+                <button>수정</button>
+                <button>삭제</button>
+            </div>
         </div>
         `;
         $(container).append(goodsListHtml);
@@ -143,11 +143,15 @@ async function uploadGoodsPage() {
     });
 
     $(".product-list").on("click", ".goods-info div :nth-of-type(1)", function () {
+        const goodsId = $(this).closest(".goods-info").children().eq(1).text();
+        const goodsInfo = goods.filter((data) => data.goodsId == goodsId);
+
         $.ajax({
             url: "../js/goods-form.js",
             method: "GET",
             success: function (data) {
-                uploadGoodsFormPage();
+                uploadGoodsFormPage(goodsInfo[0]);
+
                 $(".goods-update").text("수정");
             },
             error: function (jqXHR, textStatus, errorThrown) {
