@@ -7,8 +7,6 @@ async function loadJSON() {
         console.error("Error loading JSON:", error);
     }
 }
-let goodsCurrentPage = 1;
-const goodsPerPage = 10;
 
 function renderGoodsPage(data, page, container) {
     $(container).html("");
@@ -18,25 +16,24 @@ function renderGoodsPage(data, page, container) {
 
     let goodsListHtml = "";
     for (const item of paginatedItems) {
-        console.log(item.mainImg);
         goodsListHtml =
             /*html*/
             `
-            <div class="goods-info d-flex align-items-center">
-                <i class="bi bi-check-square"></i>
-                <p>${item.goodsId}</p>
-                <img src="${item.mainImg}"/>
-                <p>${item.goodsName}</p>
-                <p>${item.category}</p>
-                <p>${item.price}</p>
-                <p>${item.stockStatus}</p>
-                <p>${item.status}</p>
-                <div class="d-flex flex-column">
-                    <button>수정</button>
-                    <button>삭제</button>
-                </div>
-            </div>
-            `;
+        <div class="goods-info d-flex align-items-center">
+        <i class="bi bi-check-square" data-select="1"></i>
+        <p>${item.goodsId}</p>
+        <img src="${item.mainImg}"/>
+        <p>${item.goodsName}</p>
+        <p>${item.category}</p>
+        <p>${item.price}</p>
+        <p>${item.stockStatus}</p>
+        <p>${item.status}</p>
+        <div class="d-flex flex-column">
+        <button>수정</button>
+        <button>삭제</button>
+        </div>
+        </div>
+        `;
         $(container).append(goodsListHtml);
     }
 }
@@ -57,17 +54,20 @@ function setupPagination(data, container) {
     });
 }
 
+let goodsCurrentPage = 1;
+const goodsPerPage = 10;
 async function uploadGoodsPage() {
-    $(".title-box > p").wrap('<div class ="addButton"></div>');
-    $(".addButton").append("<button>상품등록</button>");
+    if ($(".addButton > button").length == 0) {
+        $(".addButton").append("<button>상품등록</button>");
+    }
     //기본 틀이 되는 html
     const goodsContent =
         /*html*/
         `
-            <div class="d-flex flex-column">
-                <div class="row-header">
-                    <i class="bi bi-check-square"></i>
-                    <div>ID</div>
+    <div class="goods-box d-flex flex-column">
+    <div class="row-header">
+    <i class="bi bi-check-square" data-flag="1"></i>
+    <div>ID</div>
                     <div>이미지</div>
                     <div>상품명</div>
                     <div>카테고리</div>
@@ -96,4 +96,66 @@ async function uploadGoodsPage() {
     const goods = await loadJSON();
     renderGoodsPage(goods, currentPage, $(".product-list"));
     setupPagination(goods, $(".product-list"));
+
+    // 선택버튼 이벤트 발생
+    // <i class="bi bi-check-square-fill"></i>
+    $(".goods-box").on("click", ".row-header > i", function () {
+        if ($(".row-header i ").attr("data-flag") == 1) {
+            $(".row-header > i").attr("data-flag", 2);
+            $(".goods-info > i").attr({
+                "data-select": 2,
+                class: "bi bi-check-square-fill",
+            });
+        } else {
+            $(".row-header i").attr("data-flag", 1);
+            $(".goods-info i").attr({
+                "data-select": 1,
+                class: "bi bi-check-square",
+            });
+        }
+    });
+
+    $(".page-upload").on("click", ".goods-info > i", function () {
+        if ($(this).attr("data-select") == 1)
+            $(this).attr({
+                class: "bi bi-check-square-fill",
+                "data-select": 2,
+            });
+        else {
+            $(this).attr({
+                class: "bi bi-check-square",
+                "data-select": 1,
+            });
+        }
+    });
+
+    $(".title-box").on("click", ".addButton button", function () {
+        $.ajax({
+            url: "../js/goods-form.js",
+            method: "GET",
+            success: function (data) {
+                uploadGoodsFormPage();
+                $(".goods-update").text("등록");
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Request failed: ", textStatus, errorThrown);
+                alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
+            },
+        });
+    });
+
+    $(".product-list").on("click", ".goods-info div :nth-of-type(1)", function () {
+        $.ajax({
+            url: "../js/goods-form.js",
+            method: "GET",
+            success: function (data) {
+                uploadGoodsFormPage();
+                $(".goods-update").text("수정");
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Request failed: ", textStatus, errorThrown);
+                alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
+            },
+        });
+    });
 }
