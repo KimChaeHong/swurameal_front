@@ -1,6 +1,6 @@
 .container {
     width: 1040px;
-    margin: 110px 200px;
+    margin: 110px auto;
 }
 
 #image-container {
@@ -138,10 +138,9 @@
 
 #review-container {
     width: 1040px;
-    height: 500px;
     border-top: 2px solid;
     text-align: center;
-    margin-top: 50px;
+    align-items: center;
 }
 
 #review-title {
@@ -169,8 +168,15 @@
     color: var(--darkgray);
 }
 
-#pagination-box {
+.pagination {
     margin-top: 20px;
+    justify-content: center;
+}
+
+.page-link.active {
+    color: white;
+    background-color: var(--theme);
+    border-color: var(--theme);
 }
 
 #plus-button, #minus-button {
