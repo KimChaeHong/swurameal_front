@@ -54,8 +54,6 @@ function setupPagination(data, container) {
     });
 }
 
-let goodsCurrentPage = 1;
-const goodsPerPage = 10;
 async function uploadGoodsPage() {
     if ($(".addButton > button").length == 0) {
         $(".addButton").append("<button>상품등록</button>");

@@ -18,8 +18,8 @@ function pageTagUpload(tagName, cssName) {
     $(`.${tagName}`).load(`../${tagName}.html`);
 }
 
-let currentPage = 1;
-const itemsPerPage = 10;
+let goodsCurrentPage = 1;
+const goodsPerPage = 10;
 
 function pageUpload(page, themeColor, darkgrayColor) {
     const text = page.text();
@@ -43,7 +43,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
             $(".addButton button").remove();
             currentPage = 1;
             if (text === "상품 관리") uploadGoodsPage();
-            else if (text === "1:1 문의 관리") console.log("미구현");
+            else if (text === "1:1 문의 관리") uploadQnaPage();
             else if (text === "공지사항 관리") console.log("미구현");
             else if (text == "FAQ 관리") console.log("미구현");
         },
