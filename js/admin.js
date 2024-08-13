@@ -1,7 +1,9 @@
 const admin =
     /*html*/
     `<div class="title-box">
-        <p>상품 관리</p>
+        <div class="addButton">
+            <p>상품 관리</p>
+        </div>
         <div class="horizontal-line"></div>
         </div>
         <div class="page-upload"></div>`;
@@ -38,6 +40,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
         url: url,
         method: "GET",
         success: function (data) {
+            $(".addButton button").remove();
             currentPage = 1;
             if (text === "상품 관리") uploadGoodsPage();
             else if (text === "1:1 문의 관리") console.log("미구현");
@@ -61,4 +64,9 @@ $(document).ready(function () {
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
 
     $(".admin-box").append(admin);
+
+    $(".category-box p").on("click", function (e) {
+        e.preventDefault();
+        pageUpload($(this), themeColor, darkgrayColor);
+    });
 });
