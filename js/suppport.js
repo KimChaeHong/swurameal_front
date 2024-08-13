@@ -13,7 +13,8 @@ $(document).ready(function () {
         dataType: "script",
         method: "GET",
         success: function (data) {
-          if (target === "문의") uploadQnaPage();
+          if (target === "문의") uploadMyQnaPage();
+          
         },
       });
     });
