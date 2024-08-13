@@ -115,6 +115,8 @@ h5.active {
 .accordion-body {
     border: 1px solid var(--mediumgray);
     word-break: break-all;
+    background-color: var(--lightgray);
+    padding: 10px;
 }
 .accordion-button::after {
     display: none;
@@ -145,4 +147,8 @@ h5.active {
 .text-form {
     width: 600px;
     height: 300px;
+}
+
+.page-upload {
+    margin-bottom: 50px;
 }
