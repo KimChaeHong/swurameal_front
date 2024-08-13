@@ -116,7 +116,6 @@ $(document).ready(function () {
 
     localStorageUpload();
     const userdata = JSON.parse(localStorage.getItem("user"));
-    console.log($(".category-box p ").first().attr("data-js"));
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
 
     $(".mypage-box").append(mypage);
