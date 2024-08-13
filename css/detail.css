@@ -81,6 +81,8 @@
 
 #pick, #cart {
     color: var(--theme);
+    border: 1px solid;
+    border-color: var(--theme);
     font-weight: bold;
     width: 56px;
     height: 56px;

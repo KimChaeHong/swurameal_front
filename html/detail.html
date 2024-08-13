@@ -9,6 +9,10 @@
             href="../src/bootstrap/bootstrap.min.css"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
         <script src="../src/bootstrap/bootstrap.min.js"></script>
         <script src="../src/jquery/jquery.min.js"></script>
         <script src="../js/backToTop.js"></script>
@@ -70,8 +74,8 @@
                     </div>
                     <p class="total-price">총 가격</p>
                     <div id="button-box" class="d-flex justify-content-between">
-                        <span id="pick" class="btn">찜</span>
-                        <span id="cart" class="btn">장</span>
+                        <span id="pick" class="btn"><i class="bi bi-heart"></i></span> <!--찜버튼 아이콘 -->
+                        <span id="cart" class="btn"><i class="bi bi-cart"></i></span> <!--장바구니 아이콘-->
                         <span id="buy" class="btn">구매하기</span>
                     </div>
                 </div>
@@ -106,23 +110,21 @@
                 </div>
             </section>
             <br /><br />
-            <section style="height: 610px;">
+            <section style="height: 610px">
                 <p>
                     <span id="review-title">상품리뷰</span>
                     <span id="count-review">nn건</span>
                 </p>
-                    <div id="review-container">
-                        <div class="review-box">
-                            <p>
-                                <span class="cus-name">고객이름</span>
-                                <span class="date">날짜</span>
-                            </p>
-                            <p class="review-content">리뷰들어갈 자리</p>
-                        </div>
+                <div id="review-container">
+                    <div class="review-box">
+                        <p>
+                            <span class="cus-name">고객이름</span>
+                            <span class="date">날짜</span>
+                        </p>
+                        <p class="review-content">리뷰들어갈 자리</p>
                     </div>
-                    <div class="pagination">
-
-                    </div>
+                </div>
+                <div class="pagination"></div>
             </section>
         </main>
 
