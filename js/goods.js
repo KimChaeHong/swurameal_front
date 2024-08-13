@@ -58,6 +58,8 @@ function setupPagination(data, container) {
 }
 
 async function uploadGoodsPage() {
+    $(".title-box > p").wrap('<div class ="addButton"></div>');
+    $(".addButton").append("<button>상품등록</button>");
     //기본 틀이 되는 html
     const goodsContent =
         /*html*/
@@ -75,6 +77,7 @@ async function uploadGoodsPage() {
                     <div>선택</div>
                 </div>
                 <div class="product-list"></div>
+                <button class="select-delete">선택상품삭제</button>
                 <div class="pagination"></div> 
             </div>
         `;

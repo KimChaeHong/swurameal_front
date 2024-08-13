@@ -1,54 +1,13 @@
-.mypage {
+.admin {
     margin-top: 110px;
     margin-bottom: 110px;
     width: 1040px;
-}
-
-.mypage-category {
-    padding: 0px;
-    width: 300px;
-}
-
-.profile {
-    padding: 0px;
-    width: 300px;
-    height: 196px;
-    background-color: var(--lightgray);
-    border-radius: 23px;
-}
-
-.bi-person-square {
-    margin-top: 44px;
-    margin-left: 39px;
-    font-size: 100px;
-    line-height: 100px;
-}
-.profile-detail {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100px;
-    margin-top: 48px;
-    margin-left: 24px;
-    font-size: 18px;
-}
-
-.profile-detail p {
-    font-size: 20px;
-    margin-bottom: 0px;
-}
-
-.member-name {
-    font-weight: bold;
-    font-size: 28px;
 }
 
 .category-box {
     width: 300px;
     border-radius: 23px;
     background-color: var(--lightgray);
-    margin-top: 40px;
     padding-top: 40px;
     padding-left: 40px;
     padding-bottom: 40px;
@@ -66,7 +25,6 @@
 }
 
 /* 상세 페이지 */
-
 .title-box p {
     margin-top: 10px;
     font-size: 32px;
@@ -76,13 +34,36 @@
 .category-box p:hover {
     cursor: pointer;
 }
+
 .horizontal-line {
     background-color: black;
     margin-top: 10px;
     width: 700px;
     height: 1px;
 }
-
-.mypage-box {
+.admin-box {
     margin-left: 40px;
+}
+
+/* 페이지네이션 */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    border-style: none;
+    background-color: rgb(0, 0, 0, 0);
+    margin: 0 5px;
+    color: #d9d9d9;
+    font-weight: lighter;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    color: black;
+    font-weight: bold;
 }
