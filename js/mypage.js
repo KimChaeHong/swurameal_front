@@ -8,10 +8,10 @@ let user = {
     birth: "2024-08-11",
 };
 let pickList = [
-    { img: "../src/images/111.png", category: "전통주", title: "원소주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "양주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "소주", price: "12,200원" },
-    { img: "../src/images/111.png", category: "전통주", title: "맥주", price: "12,200원" },
+    { img: "../src/images/112.png", category: "분식", title: "떡볶이", price: "12,200원" },
+    { img: "../src/images/411.png", category: "전통주", title: "막걸리", price: "12,200원" },
+    { img: "../src/images/211.jpg", category: "양식", title: "파스타", price: "12,200원" },
+    { img: "../src/images/331.png", category: "한식", title: "제육볶음", price: "12,200원" },
 ];
 
 let orderList = [
