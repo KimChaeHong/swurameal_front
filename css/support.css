@@ -11,7 +11,7 @@
 #category {
     width: 300px;
     height: 350px;
-    background-color: var(--mediumgray);
+    background-color: var(--lightgray);
     margin-top: 110px;
     margin-right: 40px;
     border-radius: 15px;
@@ -49,7 +49,6 @@ h5.active {
 
 #board-container {
     width: 700px;
-    height: 550px;
     border-top: 2px solid;
 }
 
@@ -84,8 +83,13 @@ h5.active {
     width: 450px;
 }
 
-.page{
+.pagination{
     margin-top: 20px;
+}
+
+.page-link {
+    border: none;
+    color: black;
 }
 
 .inquiry-button {
@@ -103,7 +107,24 @@ h5.active {
     background-color: var(--theme);
     color: white;
 }
-.accordian {
+
+.cmp-button {
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--theme);
+    color: white;
+}
+
+.cmp-button:hover {
+    border: 1px solid;
+    border-color: black;
+    background-color: var(--theme);
+    color: white;
+}
+
+.board-list {
     border-radius: 0px;
 }
 
