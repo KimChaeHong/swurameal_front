@@ -54,9 +54,20 @@ function pageUpload(page, themeColor, darkgrayColor) {
     });
 }
 $(document).ready(function () {
-    pageTagUpload("header", "index");
-    pageTagUpload("footer", "footer");
-    pageTagUpload("nav", "nav");
+    $("#logged-in-links").html(
+        /*html*/
+        `
+        <a class="nav-link" href="#" id="logout-link">로그아웃</a>
+        &nbsp;|&nbsp;
+        <a class="nav-link" href="#" id="admin-link">관리자페이지</a>
+        `
+    );
+    $("#nav-container").load("../html/nav.html");
+    $(".sns-link > a:nth-of-type(1) img").attr("src", "../src/images/ico_instagram.png");
+    $(".sns-link > a:nth-of-type(2) img").attr("src", "../src/images/ico_fb.png");
+    $(".sns-link > a:nth-of-type(3) img").attr("src", "../src/images/ico_blog.png");
+    $(".sns-link > a:nth-of-type(4) img").attr("src", "../src/images/ico_naverpost.png");
+    $(".sns-link > a:nth-of-type(5) img").attr("src", "../src/images/ico_youtube.png");
 
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
