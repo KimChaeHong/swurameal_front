@@ -44,12 +44,14 @@
     align-items: center;
 }
 
-.address-group {
+.address-group,
+.phone-group {
     display: flex;
     justify-content: space-between;
 }
 
-.address-button {
+.address-button,
+.phone-button {
     margin-left: 10px;
     font-size: 16px;
     width: 92px;
@@ -59,6 +61,7 @@
     border-radius: 3px;
     color: var(--darkgray);
 }
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -75,7 +78,7 @@
     cursor: pointer;
 }
 
-.cancel-button {
+.delete-button {
     border: 1px ridge var(--darkgray);
     color: var(--darkgray);
     background-color: white;
