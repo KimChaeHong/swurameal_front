@@ -51,6 +51,7 @@ let currentPage = 1;
 const itemsPerPage = 5;
 
 function localStorageUpload() {
+    localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("user", JSON.stringify(user));
     localStorage.setItem("pickList", JSON.stringify(pickList));
     localStorage.setItem("orderList", JSON.stringify(orderList));
@@ -98,19 +99,14 @@ function pageUpload(page, themeColor, darkgrayColor) {
     });
 }
 
-function pageTagUpload(tagName, cssName) {
-    const linkCss = $("<link>", {
-        rel: "stylesheet",
-        type: "text/css",
-        href: `../css/${cssName}.css`,
-    });
-    $("head").append(linkCss);
-    $(`.${tagName}`).load(`../${tagName}.html`);
-}
 $(document).ready(function () {
-    pageTagUpload("header", "index");
-    pageTagUpload("footer", "footer");
-    pageTagUpload("nav", "nav");
+    $("#nav-container").load("../html/nav.html");
+    $(".sns-link > a:nth-of-type(1) img").attr("src", "../src/images/ico_instagram.png");
+    $(".sns-link > a:nth-of-type(2) img").attr("src", "../src/images/ico_fb.png");
+    $(".sns-link > a:nth-of-type(3) img").attr("src", "../src/images/ico_blog.png");
+    $(".sns-link > a:nth-of-type(4) img").attr("src", "../src/images/ico_naverpost.png");
+    $(".sns-link > a:nth-of-type(5) img").attr("src", "../src/images/ico_youtube.png");
+
     const themeColor = getComputedStyle(document.documentElement).getPropertyValue("--theme");
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
 
