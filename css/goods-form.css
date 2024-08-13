@@ -6,6 +6,9 @@
 
 .form-group {
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .form-group label {
     width: 190px;
@@ -18,6 +21,18 @@
     width: 340px;
     height: 50px;
 }
+
+#description-img-input,
+#detail-img-input,
+#rep-img-input {
+    border: 1px ridge var(--mediumgray);
+    border-radius: 4px;
+    width: 234px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .form-group:nth-of-type(3),
 .form-group:nth-of-type(4),
 .form-group:nth-of-type(5) {
@@ -25,33 +40,36 @@
     justify-content: space-between;
 }
 
-.form-group:nth-of-type(3) {
-    margin-top: 15px;
-}
-.form-group:nth-of-type(6) {
-    margin-top: 0px;
-}
 .form-group input[type="file"] {
-    border: none;
-    margin-left: 100px;
+    display: none;
 }
 
 #goods-stockStatus {
     width: 165px;
     height: 50px;
 }
-.form-group button,
+.sale,
+.sold-out,
+.seller-sold-out,
 .buttons button {
     width: 165px;
     height: 50px;
     font-size: 20px;
     border-radius: 4px;
+    margin-right: 3px;
 }
-
+.sold-out:hover {
+    cursor: default;
+}
 .form-group button {
     border: 1px ridge var(--darkgray);
     background-color: white;
     color: var(--darkgray);
+}
+.file-select {
+    width: 100px;
+    height: 50px;
+    border-radius: 4px;
 }
 
 .buttons {
