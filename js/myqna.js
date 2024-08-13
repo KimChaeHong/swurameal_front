@@ -17,7 +17,7 @@ var qnaList = [
         title: "문의3",
         content: "내용3",
         date: "2024.08.12",
-        status: "답변대기",
+        status: "답변완료",
         answer: "답변3",
     },
     {
@@ -64,37 +64,8 @@ function makeJson() {
     localStorage.setItem("qna", JSON.stringify(qnaList));
 }
 
-function renderPage(page) {
-    currentPage = page;
-    var startIndex = (currentPage - 1) * itemsPerPage;
-    var endIndex = startIndex + itemsPerPage;
-
-    $(".accordion").empty();
-
-    for (var i = startIndex; i < endIndex && i < qnaData.length; i++) {
-        $(".accordion").append(
-            /*html*/
-            `<div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="board d-flex align-item-center accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
-                    <p class="post-title">${qnaData[i].title}</p>
-                    <p class="flex-grow-1 text-center">${qnaData[i].date}</p>
-                    <p id="post-status${i}" class="flex-grow-1 text-center">${qnaData[i].status}</p>
-                </button>
-            </h2>
-            <div id="collapse${i}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div id="content${i}" class="accordion-body">
-                    ${qnaData[i].content}
-                    <div class="form-button-container"><span class="btn btn-md form-button" data-num="${i}">답변하기</span></div>
-                </div>
-            </div>
-        </div>`
-        );
-    }
-
-    renderPagination();
-
-    $(".form-button").on("click", function () {
+function formButton() {
+    $(document).on("click", ".form-button", function () {
         var num = $(this).data("num");
         var contentDiv = $("#content" + num);
 
@@ -102,33 +73,94 @@ function renderPage(page) {
 
         contentDiv.append(
             /*html*/
-            `${qnaData[num].content}
-        <hr>
-        <textarea class="text-form" placeholder="답변을 입력하세요"></textarea>
-        <p class="btn btn-sm complete-button" data-num="${num}">등록</p>`
+            `<textarea class="text-form" placeholder="답변을 입력하세요">${qnaData[num].content}</textarea>
+            <p class="btn btn-sm complete-button" data-num="${num}">완료</p>`
         );
+        completeButton();
     });
+}
 
+function completeButton() {
     $(document).on("click", ".complete-button", function () {
         var num = $(this).data("num");
         var contentDiv = $("#content" + num);
 
         contentDiv.empty();
         contentDiv.append(
+            /*html*/
             `${qnaData[Number(num)].content}
-        <hr>
-        ${qnaData[Number(num)].answer}`
+            <div class="form-button-container">
+                <span class="btn btn-sm form-button" data-num="${num}">수정</span>
+                <span class="btn btn-sm delete_button" data-num="${num}">삭제</span>
+            </div>`
         );
-        $(`#post-status${num}`).text("답변완료");
+        formButton();
     });
 }
 
+function renderPage(page) {
+    currentPage = page;
+    var startIndex = (currentPage - 1) * itemsPerPage;
+    var endIndex = startIndex + itemsPerPage;
+
+    $(".board-list").empty();
+    for (var i = startIndex; i < endIndex && i < qnaData.length; i++) {
+        if(qnaData[i].status =="답변대기"){
+            $(".board-list").append(
+                /*html*/
+                `<div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="board d-flex align-item-center accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+                            <p class="post-title">${qnaData[i].title}</p>
+                            <p class="flex-grow-1 text-center">${qnaData[i].date}</p>
+                            <p id="post-status${i}" class="flex-grow-1 text-center">${qnaData[i].status}</p>
+                        </button>
+                    </h2>
+                    <div id="collapse${i}" class="accordion-collapse collapse">
+                        <div id="content${i}" class="accordion-body">
+                         ${qnaData[i].content}
+                            <div class="form-button-container">
+                                <span class="btn btn-sm form-button" data-num="${i}">수정</span>
+                                <span class="btn btn-sm delete_button" data-num="${i}">삭제</span>
+                             </div>
+                        </div>
+                    </div>
+                </div>`
+            );
+        }else {
+            $(".board-list").append(
+                /*html*/
+                `<div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="board d-flex align-item-center accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+                            <p class="post-title">${qnaData[i].title}</p>
+                            <p class="flex-grow-1 text-center">${qnaData[i].date}</p>
+                            <p id="post-status${i}" class="flex-grow-1 text-center">${qnaData[i].status}</p>
+                        </button>
+                    </h2>
+                    <div id="collapse${i}" class="accordion-collapse collapse">
+                        <div id="content${i}" class="accordion-body">
+                            ${qnaData[i].content}
+                            <hr>
+                            ${qnaData[i].answer}
+                        </div>
+                    </div>
+                </div>`
+            );
+        }
+    }
+
+    renderPagination();
+    formButton();
+    completeButton();
+}
+
 function renderPagination() {
-    $('.page').empty();
+    $(".pagination").empty();
     var totalPages = Math.ceil(qnaData.length / itemsPerPage);
 
     for (var i = 1; i <= totalPages; i++) {
-        $(".page").append(
+        $(".pagination").append(
             /*html*/
             `<button class="page-link">${i}</button>`
         );
@@ -143,10 +175,38 @@ function renderPagination() {
 function uploadMyQnaPage() {
     makeJson();
     qnaData = JSON.parse(localStorage.getItem("qna"));
+    $("#board-container")
+        .empty()
+        .append(
+            /*html*/
+            `<div class="board-top d-flex align-items-center">
+        <p id="just-title">제목</p>
+        <p class="flex-grow-1">작성일</p>
+        <p class="flex-grow-1">답변상태</p>
+    </div>
+    <div class="board-list">
+        
+    </div>
+    
+    
+    <div class="d-flex justify-content-center">
+        <div class="pagination">
+        
+        </div>
+    </div>
+</div>`
+        );
+    $("#cmp-container").remove();
 
     renderPage(1);
 }
 
 $(document).ready(function () {
     uploadMyQnaPage();
+    $("#board-container").append(
+        /*html*/
+        `<div id="inq-btn-container" class="d-flex justify-content-end mb-3">
+        <p class="btn inquiry-button ajax-btn" data-js="../js/myqna-form.js">문의하기</p>
+    </div>`
+    );
 });
