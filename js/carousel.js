@@ -1,3 +1,3 @@
 $(function(){
-    $("#carousel-container").load("carousel.html");
+    $("#carousel-container").load("./html/carousel.html");
 });
