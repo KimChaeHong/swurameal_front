@@ -12,11 +12,40 @@
         <link rel="stylesheet" href="../css/admin.css" />
         <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet" />
 
+        <link rel="stylesheet" href="../css/footer.css" />
+        <link rel="stylesheet" href="../css/nav.css" />
+        <link rel="stylesheet" href="../css/search.css" />
+        <link rel="stylesheet" href="../css/header.css" />
         <title>swuraMeal</title>
     </head>
     <body>
-        <header class="header"></header>
-        <nav class="nav"></nav>
+        <div id="header">
+            <header class="navbar">
+                <div class="container justify-content-center">
+                    <!-- 로고 -->
+                    <div id="logo" class="navbar-brand mx-auto">swuraMeal</div>
+                    <!-- 로그인 정보 -->
+                    <div class="row align-items-start">
+                        <!-- 로그인 전 -->
+                        <div id="logged-out-links" class="col">
+                            <a class="nav-link" href="#" id="signup-link">회원가입</a>
+                            &nbsp;|&nbsp;
+                            <a class="nav-link" href="#" id="login-link">로그인</a>
+                        </div>
+
+                        <!-- 로그인 후 -->
+                        <div id="logged-in-links" class="col" style="display: none">
+                            <a class="nav-link" href="#" id="logout-link">로그아웃</a>
+                            &nbsp;|&nbsp;
+                            <a class="nav-link" href="#" id="mypage-link">마이페이지</a>
+                            &nbsp;|&nbsp;
+                            <a class="nav-link" href="#" id="support-link">고객센터</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <nav id="nav-container" class="navbar"></nav>
         <main class="container d-flex admin">
             <div class="admin-category">
                 <div class="category-box d-flex flex-column">
@@ -30,9 +59,11 @@
             <div class="admin-box flex-grow-1"></div>
         </main>
 
-        <footer class="footer"></footer>
+        <div class="footer-container"></div>
 
         <button onclick="backToTop()" id="btn-back-to-top">Top</button>
         <script src="../js/admin.js"></script>
+        <script src="../js/footer.js"></script>
+        <script src="../js/header.js"></script>
     </body>
 </html>
