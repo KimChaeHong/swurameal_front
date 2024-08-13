@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../src/bootstrap/bootstrap.min.js"></script>
     <script src="../src/jquery/jquery.min.js"></script>
-    <script src="../js/backToTop.js"></script>
+    <script src="/js/back-to-top.js"></script>
+    <script type="module" src="/js/cart-list.js"></script>
+
     <title>장바구니</title>
   </head>
   <body>
@@ -27,48 +29,13 @@
     <main class="container cart">
       <h2>장바구니</h2>
       <div id="select-btns">
-        <i class="bi bi-check-circle-fill hover" id="allBtn"></i>
-        <!-- <i class="bi bi-check-circle hover"></i> -->
-        <span class="hover">전체선택</span>
+        <span class="hover" id="allBtnTxt">전체선택</span>
         <span> | </span>
         <span class="hover">선택삭제</span>
       </div>
       <div class="d-flex justify-content-between">
         <!-- 장바구니 상품 -->
-        <div id="cart-items">
-          <!-- 아이템 1 -->
-          <div class="item d-flex justify-content-between">
-            <i class="bi bi-check-circle-fill hover" id="allBtn"></i>
-            <img src="" alt="상품이미지" />
-            <div id="item-detail">
-              <p>[전통주] 구양주 스파클링(9도 900ml)</p>
-              <p>아홉번 담근 프리미엄 탁주</p>
-              <div class="cnt-btn">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-            </div>
-            <div id="item-price">7,000원</div>
-            <i class="bi bi-x-lg hover"></i>
-          </div>
-          <!-- 아이템 2 -->
-          <div class="item d-flex justify-content-between">
-            <i class="bi bi-check-circle-fill hover" id="allBtn"></i>
-            <img src="" alt="상품이미지" />
-            <div id="item-detail">
-              <p>[전통주] 구양주 스파클링(9도 900ml)</p>
-              <p>아홉번 담근 프리미엄 탁주</p>
-              <div class="cnt-btn">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-            </div>
-            <div id="item-price">7,000원</div>
-            <i class="bi bi-x-lg hover"></i>
-          </div>
-        </div>
+        <div id="cart-items"></div>
 
         <!-- 주문내역서 -->
         <div id="cart-pay">
@@ -76,7 +43,7 @@
             <p>주문내역</p>
             <div class="d-flex justify-content-between">
               <span>상품금액</span>
-              <span>24,400원</span>
+              <span><span id="total-price">0</span>원</span>
             </div>
             <div class="d-flex justify-content-between">
               <span>배송비</span>
@@ -84,17 +51,16 @@
             </div>
             <div class="d-flex justify-content-between total">
               <span>결제예정금액</span>
-              <span>27,400원</span>
+              <span><span id="pay-price">0</span>원</span>
             </div>
           </div>
-          <button onclick="window.location.href = '/html/pay.html'">
-            주문하기
-          </button>
+          <button onclick="topay()">주문하기</button>
         </div>
       </div>
     </main>
 
     <footer><h2>Footer</h2></footer>
-    <button onclick="backToTop()" id="btn-back-to-top">Top</button>
+    <button id="btn-back-to-top">Top</button>
+    <script src="/js/cart.js" defer></script>
   </body>
 </html>
