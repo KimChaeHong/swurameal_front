@@ -1,13 +1,13 @@
-.detail-box div {
+.detail-box div:not(.update-button) {
     height: 50px;
 }
 
-.detail-box > div {
+.detail-box > div:not(.update-button) {
     height: 50px;
     font-size: 18px;
 }
 
-.detail-box > div :nth-child(1) {
+.detail-box > div:not(.update-button) :nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     width: 150px;
 }
 
-.detail-box > div :nth-child(2) {
+.detail-box > div:not(.update-button) :nth-child(2) {
     border-bottom: 1px ridge var(--mediumgray);
     border-left: 1px ridge var(--mediumgray);
     display: flex;
@@ -31,4 +31,25 @@
     white-space: pre-wrap;
     min-height: 550px;
     border-bottom: 1px ridge var(--darkgray);
+}
+
+.update-button {
+    margin-top: 5px;
+    margin-left: auto;
+    width: 100px;
+    height: 30px;
+}
+
+.update-button span,
+.update-button button {
+    color: var(--darkgray);
+}
+
+.update-button button {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 0px;
+    padding-left: 5px;
+    font-size: 14px;
 }

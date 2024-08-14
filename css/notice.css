@@ -1,7 +1,8 @@
-.row-header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+.notice-header {
+    height: 60px;
     border-bottom: 1px ridge var(--darkgray);
+    display: flex;
+    align-items: center;
 }
 
 .notice-info {
@@ -13,33 +14,38 @@
     cursor: pointer;
 }
 
-.row-header :nth-child(1),
+.notice-header :nth-child(1),
 .notice-info :nth-child(1) {
-    margin-left: 30px;
-    width: 380px;
+    width: 460px;
     padding: 0px;
 }
-
-.row-header :nth-child(1) {
+.notice-info :nth-child(1) {
+    margin-left: 10px;
+}
+.notice-header :nth-child(1) {
     text-align: center;
+    margin-right: 10px;
 }
 
-.row-header :nth-child(2),
+.notice-header :nth-child(2),
 .notice-info :nth-child(2) {
-    margin-left: 60px;
+    margin-left: 0px;
     width: 50px;
     padding: 0px;
     text-align: center;
 }
 
-.row-header :nth-child(3),
+.notice-header :nth-child(3),
 .notice-info :nth-child(3) {
     padding: 0px;
     width: 100px;
-    margin-left: 80px;
+    margin-left: 70px;
     text-align: center;
 }
-
+.addButton button {
+    background-color: var(--theme);
+    color: white;
+}
 .pagination {
     display: flex;
     justify-content: center;
