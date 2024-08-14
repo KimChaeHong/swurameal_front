@@ -1,0 +1,34 @@
+.detail-box div {
+    height: 50px;
+}
+
+.detail-box > div {
+    height: 50px;
+    font-size: 18px;
+}
+
+.detail-box > div :nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: var(--lightgray);
+    border-bottom: 1px ridge var(--mediumgray);
+    width: 150px;
+}
+
+.detail-box > div :nth-child(2) {
+    border-bottom: 1px ridge var(--mediumgray);
+    border-left: 1px ridge var(--mediumgray);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.detail-description {
+    padding-left: 30px;
+    padding-top: 20px;
+    white-space: pre-wrap;
+    min-height: 550px;
+    border-bottom: 1px ridge var(--darkgray);
+}

@@ -2,18 +2,33 @@
 let noticeList= [{
     title : "[안내] 제주지역 주문 조기 마감 양해 안내",
     author : "관리자",
+    description : `
+    고객님 안녕하세요 수라밀 입니다
+    
+    서비스 오픈 이후에 최초 예상한 주문건수보다 매일 주문량이 초과하고 있습니다.
+    배송 차량을 지속 늘리고 있음에도 불구하고 주문이 급증함에 따라,
+    부득이 주문 조기 마감이 이어지고 있습니다.
+    
+    주문을 고대하셨을 고객님들께 너그러운 양해를 부탁드리며,
+    원활한 쇼핑 경험을 위해 배성 차량 확보에 최선을 다해 준비하겠습니다.
+    
+    감사합니다.
+    수라밀 드림.`,
     registrationDate : "2024.08.14"
 },{
     title : "[안내] 소비자 분쟁해결 기준 안내",
     author : "관리자",
+    decription : "알아하쇼",
     registrationDate : "2024.08.06"
 },{
     title : "[안내] 오픈 이벤트 안내",
     author : "관리자",
+    decription: "감사합니다. 이벤트는 구라입니다.",
     registrationDate : "2024.08.06"
 },{
-    title : "[안내] 제주지역 주문 조기 마감 양해 안내",
+    title : "[안내] 8월 하루배송 휴무 일정 안내(2024.08.14 ~ 08.15)",
     author : "관리자",
+    description : "힘듭니다 좀 쉴게요.",
     registrationDate : "2024.08.06"
 }
 ]
@@ -85,12 +100,16 @@ function uploadNoticePage() {
     renderNoticePage(noticeList, noticeCurPage, ".notice-list");
     setupPagination(noticeList, ".notice-list");
 
-    $(".notcie-info").on("click", function () {
+    $(".notice-info").on("click", function () {
+        /*prettier-ignore*/
+        noticeTitle = $(this).text().trim().match(/^[^\n]+/)[0];
+        const noticeInfo = noticeList.filter((item) => item.title == noticeTitle);
+
         $.ajax({
             url: "../js/notice-detail.js",
             method: "GET",
             success: function (data) {
-                uploadNoticeDetailPage();
+                uploadNoticeDetailPage(noticeInfo[0]);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error("Request failed: ", textStatus, errorThrown);
