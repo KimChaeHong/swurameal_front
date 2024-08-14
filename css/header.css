@@ -1,20 +1,23 @@
-#logo{
+#logo {
     color: #6B0609;
     font-family: 'Pinyon Script';
     font-size: 45px;
-    margin: 0 auto;
-    text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: block; /* 텍스트 크기에 맞게 크기를 조정 */
     text-align: center;
-
+    padding: 5px 5px; /* 클릭 가능한 영역을 조금 더 넓히기 위해 패딩 추가 */
+    z-index: 1000; /* 다른 요소들보다 앞에 오도록 z-index 설정 */
 }
+
 #header{
     width: 1040px;
     margin: auto;
     position: relative;
+    padding: 15px;
 }
 
 .navbar {
