@@ -2,8 +2,33 @@
     color: #6B0609;
     font-family: 'Pinyon Script';
     font-size: 45px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
 }
 #header{
     width: 1040px;
     margin: auto;
+    position: relative;
+}
+
+.navbar {
+    position: relative;
+    height: 70px; /* 헤더의 높이를 지정하세요 */
+}
+
+#logged-out-links, 
+#logged-in-links {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
