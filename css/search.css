@@ -42,3 +42,11 @@
     color: #6B0609; /* 호버 시 변경될 색상 */
 }
 
+#ham{
+    margin-right: 170px;
+}
+
+#icon{
+    margin-left: 170px;
+    padding: 0%;
+}
