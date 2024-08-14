@@ -58,20 +58,20 @@ var qnaList = [
 ];
 
 var itemsPerPage = 5;
-var currentPage = 1;
+var currentPage = 1; // 현재페이지번호 초기화
 
-function makeJson() {
+function makeJson() { // qnaList JSON으로 만들어서 로컬스토리지에 저장
     localStorage.setItem("qna", JSON.stringify(qnaList));
 }
 
-function renderPage(page) {
+function renderPage(page) { // 해당 페이지 내용표시
     currentPage = page;
     var startIndex = (currentPage - 1) * itemsPerPage;
     var endIndex = startIndex + itemsPerPage;
 
-    $(".page-upload").empty();
+    $(".page-upload").empty(); // 내용 들어갈 부분 비우기
 
-    $(".page-upload").append(
+    $(".page-upload").append( // 게시판 상단부 생성
         /*html*/
         `<div class="board-top d-flex align-items-center">
           <p id="just-title">제목</p>
@@ -80,7 +80,7 @@ function renderPage(page) {
       </div>`
     );
 
-    for (var i = startIndex; i < endIndex && i < qnaData.length; i++) {
+    for (var i = startIndex; i < endIndex && i < qnaData.length; i++) { // ItemPerPage 만큼 해당 페이지에 게시물 생성
         $(".page-upload").append(
             /*html*/
             `<div class="accordion-item">
@@ -101,59 +101,59 @@ function renderPage(page) {
         );
     }
 
-    renderPagination();
+    renderPagination(); 
 
-    $(".form-button").on("click", function () {
+    $(".form-button").on("click", function () { //답변하기 버튼 이벤트 등록
         var num = $(this).data("num");
         var contentDiv = $("#content" + num);
 
-        contentDiv.empty();
+        contentDiv.empty(); //해당하는 content div비우기
 
-        contentDiv.append(
+        contentDiv.append( //해당하는 content div에 내용 생성
             `${qnaData[num].content}
           <hr>
           <textarea class="text-form" placeholder="답변을 입력하세요"></textarea>
           <p class="btn btn-sm complete-button" data-num="${num}">등록</p>`
-        );
+        ); // 기존내용이 들어가있는 textarea 생성, 등록완료 버튼 생성
     });
 
-    $(document).on("click", ".complete-button", function () {
+    $(document).on("click", ".complete-button", function () { // 등록 버튼 이벤트 등록 
         var num = $(this).data("num");
         var contentDiv = $("#content" + num);
 
-        contentDiv.empty();
-        contentDiv.append(
+        contentDiv.empty(); // 해당하는 content div비우기
+        contentDiv.append( // 해당하는 content div에 내용 생성
             `${qnaData[Number(num)].content}
           <hr>
           ${qnaData[Number(num)].answer}`
         );
-        $(`#post-status${num}`).text("답변완료");
+        $(`#post-status${num}`).text("답변완료"); // 답변한 게시물 답변완료로 변경
     });
 }
 
-function renderPagination() {
+function renderPagination() { // 페이지 이동버튼 생성
   var totalPages = Math.ceil(qnaData.length / itemsPerPage);
 
-  $(".page-upload").append(
+  $(".page-upload").append( // 페이지 이동 버튼 담을 div 생성
     /*html*/
     `<div class="pagination"></div>`
   );
   
-  for (var i = 1; i <= totalPages; i++) {
+  for (var i = 1; i <= totalPages; i++) { // 페이지 이동버튼 생성
       $(".pagination").append(
         /*html*/
           `<button class="page-link">${i}</button>`
       );
   }
 
-  $(".page-link").on("click", function () {
+  $(".page-link").on("click", function () { // 버튼 기능 부여
       var page = $(this).text();
       renderPage(page);
   });
 }
 
-function uploadQnaPage() {
-    makeJson();
+function uploadQnaPage() { // ajax로 부를 함수 생성 
+    makeJson(); 
     qnaData = JSON.parse(localStorage.getItem("qna"));
 
     const linkCss = $("<link>", {
@@ -161,10 +161,11 @@ function uploadQnaPage() {
         type: "text/css",
         href: `../css/support.css`,
     });
-    $("head").append(linkCss);
 
-    renderPage(1);
-}
+    $("head").append(linkCss); //관리자 페이지에서 불러도 css가 지정했던 support.css것이 적용되도록 설정
+
+    renderPage(1); // 호출 했을 때 1페이지가 호출되도록 설정
+    }
 
 $(document).ready(function () {
     uploadQnaPage();
