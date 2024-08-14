@@ -26,7 +26,7 @@ function uploadInfoPage() {
                 </div>
                 <div class="form-group">
                     <label for="email">이메일</label>
-                    <input type="email" id="email value=${userdata.email}">
+                    <input type="email" id="email" value=${userdata.email}>
                 </div>
                 <div class="form-group">
                     <label for="phone">전화번호</label>

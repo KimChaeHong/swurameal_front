@@ -200,3 +200,54 @@
 #count {
     width: 30px;
 }
+
+.goods {
+    width: 250px;
+    height: 350px;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.icon-margin {
+    margin-right: 8px;
+}
+
+#goods-img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+}
+
+.button-wrapper {
+    width: 230px;
+    height: 30px;
+    border: none;
+}
+
+.to-cart {
+    margin-top: 10px;
+    height: 36px;
+    font-size: 16px;
+    line-height: 19px;
+    width: 230px;
+    height: 30px;
+    border: 2px solid #A7B2BC;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.goods-info {
+    margin-top: 10px;
+
+}
+
+.goods-comment {
+    margin: 0%;
+    font-size: 13px;
+    color: #A7B2BC;
+}
+
+.dimmed-price {
+    font-weight: bold;
+}

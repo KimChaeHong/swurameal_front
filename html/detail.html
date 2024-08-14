@@ -70,7 +70,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="total-price">총 가격</p>
+                    <p class="total-price" id="total-price">총 가격</p>
                     <div id="button-box" class="d-flex justify-content-between">
                         <span id="pick" class="btn"><i class="bi bi-heart"></i></span> <!--찜버튼 아이콘 -->
                         <span id="cart" class="btn"><i class="bi bi-cart"></i></span> <!--장바구니 아이콘-->
@@ -79,7 +79,74 @@
                 </div>
             </section>
 
-            <section class="d-flex product-recommend"></section>
+            <!--추천상품-->
+            <p><h4 class="ms-3">고객님을 위한 추천 상품</h4></p>
+            <section class="d-flex justify-content-between px-2 product-recommend">
+                <div class="goods">
+                    <img id="goods-img" src="../src/images/321.png" class="goods-img flex-grow-1" alt="${goods.goodsName}">
+                    <div class="button-wrapper">
+                        <button class="to-cart"><i class="bi bi-cart icon-margin"></i>담기</button>
+                    </div>
+                    <div class="goods-info">
+                        <span class="goods-category">[한식]</span>
+                        <span class="goods-name">간장 돼지갈비찜</span>
+                        <p class="goods-comment">제주도 출신 신선</p>
+                        <span class="dimmed-price">
+                            <span class="price-number">11,500</span>
+                            <span class="won">원</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="goods">
+                    <img id="goods-img" src="../src/images/312.png" class="goods-img flex-grow-1" alt="${goods.goodsName}">
+                    <div class="button-wrapper">
+                        <button class="to-cart"><i class="bi bi-cart icon-margin"></i>담기</button>
+                    </div>
+                    <div class="goods-info">
+                        <span class="goods-category">[한식]</span>
+                        <span class="goods-name">된장찌개</span>
+                        <p class="goods-comment">김치찌개 먹고 싶은 날 딱!</p>
+                        <span class="dimmed-price">
+                            <span class="price-number">6,900</span>
+                            <span class="won">원</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="goods">
+                    <img id="goods-img" src="../src/images/423.png" class="goods-img flex-grow-1" alt="${goods.goodsName}">
+                    <div class="button-wrapper">
+                        <button class="to-cart"><i class="bi bi-cart icon-margin"></i>담기</button>
+                    </div>
+                    <div class="goods-info">
+                        <span class="goods-category">[전통주]</span>
+                        <span class="goods-name">독도 소주</span>
+                        <p class="goods-comment">한국 사람 1인 1명이 국법</p>
+                        <span class="dimmed-price">
+                            <span class="price-number">11,500</span>
+                            <span class="won">원</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="goods">
+                    <img id="goods-img" src="../src/images/424.png" class="goods-img flex-grow-1" alt="${goods.goodsName}">
+                    <div class="button-wrapper">
+                        <button class="to-cart"><i class="bi bi-cart icon-margin"></i>담기</button>
+                    </div>
+                    <div class="goods-info">
+                        <span class="goods-category">[전통주]</span>
+                        <span class="goods-name">제주 탐라주</span>
+                        <p class="goods-comment">한라산은 가라...</p>
+                        <span class="dimmed-price">
+                            <span class="price-number">7,000</span>
+                            <span class="won">원</span>
+                        </span>
+                    </div>
+                </div>
+
+            </section>
 
             <section class="product-detail">
                 <div class="d-flex">
