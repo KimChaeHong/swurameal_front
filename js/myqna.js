@@ -98,7 +98,7 @@ function completeButton() {
     });
 }
 
-function renderPage(page) {
+function renderMyqnaPage(page) {
     currentPage = page;
     var startIndex = (currentPage - 1) * itemsPerPage;
     var endIndex = startIndex + itemsPerPage;
@@ -168,16 +168,14 @@ function renderPagination() {
 
     $(".page-link").on("click", function () {
         var page = $(this).text();
-        renderPage(page);
+        renderMyqnaPage(page);
     });
 }
 
 function uploadMyQnaPage() {
     makeJson();
     qnaData = JSON.parse(localStorage.getItem("qna"));
-    $("#board-container")
-        .empty()
-        .append(
+    $("#board-container").empty().append(
             /*html*/
             `<div class="board-top d-flex align-items-center">
         <p id="just-title">제목</p>
@@ -193,12 +191,11 @@ function uploadMyQnaPage() {
         <div class="pagination">
         
         </div>
-    </div>
-</div>`
+    </div>`
         );
     $("#cmp-container").remove();
 
-    renderPage(1);
+    renderMyqnaPage(1);
 }
 
 $(document).ready(function () {

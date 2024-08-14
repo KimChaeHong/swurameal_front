@@ -1,4 +1,4 @@
-.container {
+.support-container {
     width: 1040px;
     margin: 0px auto;
     padding: 0px;
@@ -8,7 +8,7 @@
     width: 340px;
 }
 
-#category {
+#side-category {
     width: 300px;
     height: 350px;
     background-color: var(--lightgray);
@@ -63,6 +63,10 @@ h5.active {
     margin-bottom: 0px;
 }
 
+.post-num {
+    width: 100px;
+}
+
 #just-title {
     width: 460px;
 }
@@ -81,6 +85,7 @@ h5.active {
 
 .post-title {
     width: 450px;
+
 }
 
 .pagination{

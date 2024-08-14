@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
             <ul class="sns-link" id="sns-link">
-                <a href="#" class="sns"><img src="./src/images/ico_instagram.png" alt="수라밀 인스타그램 바로가기"></a>
-                <a href="#" class="sns"><img src="./src/images/ico_fb.png" alt="수라밀 페이스북 바로가기"></a>
-                <a href="#" class="sns"><img src="./src/images/ico_blog.png" alt="수라밀 네이버블로그 바로가기"></a>
-                <a href="#" class="sns"><img src="./src/images/ico_naverpost.png" alt="수라밀 네이버포스트 바로가기"></a>
-                <a href="#" class="sns"><img src="./src/images/ico_youtube.png" alt="수라밀 유튜브 바로가기"></a>
+                <a href="#" class="sns"><img src="../src/images/ico_instagram.png" alt="수라밀 인스타그램 바로가기"></a>
+                <a href="#" class="sns"><img src="../src/images/ico_fb.png" alt="수라밀 페이스북 바로가기"></a>
+                <a href="#" class="sns"><img src="../src/images/ico_blog.png" alt="수라밀 네이버블로그 바로가기"></a>
+                <a href="#" class="sns"><img src="../src/images/ico_naverpost.png" alt="수라밀 네이버포스트 바로가기"></a>
+                <a href="#" class="sns"><img src="../src/images/ico_youtube.png" alt="수라밀 유튜브 바로가기"></a>
             </ul>
         </div>
     </div>
