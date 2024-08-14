@@ -62,10 +62,10 @@ async function uploadGoodsPage() {
     const goodsContent =
         /*html*/
         `
-    <div class="goods-box d-flex flex-column">
-    <div class="row-header">
-    <i class="bi bi-check-square" data-flag="1"></i>
-    <div>ID</div>
+            <div class="goods-box d-flex flex-column">
+                <div class="row-header">
+                    <i class="bi bi-check-square" data-flag="1"></i>
+                    <div>ID</div>
                     <div>이미지</div>
                     <div>상품명</div>
                     <div>카테고리</div>
@@ -96,7 +96,6 @@ async function uploadGoodsPage() {
     setupPagination(goods, $(".product-list"));
 
     // 선택버튼 이벤트 발생
-    // <i class="bi bi-check-square-fill"></i>
     $(".goods-box").on("click", ".row-header > i", function () {
         if ($(".row-header i ").attr("data-flag") == 1) {
             $(".row-header > i").attr("data-flag", 2);
