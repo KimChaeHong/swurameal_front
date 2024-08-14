@@ -102,12 +102,16 @@
 }
 
 .product-recommend {
-    width: 1040px;
+    width: 1000px;
     height: 420px;
     border: 1px;
+    display: flex;
+    margin: 0px auto;
 }
 
 .product-detail {
+    margin: 0px auto;
+    width: 900px;
     align-items: center;
     text-align: center;
 }
@@ -131,6 +135,7 @@
     width: 900px;
     align-items: center;
     margin: 0px auto;
+    margin-bottom: 50px;
 }
 
 .detail-img {
