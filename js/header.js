@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  printHeader();
   const isLoggedIn = localStorage.getItem("login");
   console.log(isLoggedIn);
 
@@ -30,3 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+/* header 부분 화면 구현 */
+function printHeader() {
+  $('#header-container').append(`
+    <div class="container justify-content-center">
+            <!-- 로고 -->
+            <div id="logo" class="navbar-brand mx-auto" onclick="location.href='/index.html'">
+                swuraMeal
+            </div>
+
+            <!-- 로그인 정보 -->
+            <div class="row align-items-start">
+                <!-- 로그인 전 -->
+                <div id="logged-out-links" class="col">
+                    <a class="nav-link" href="/html/signup.html" id="signup-link">회원가입</a>
+                    &nbsp;|&nbsp;
+                    <a class="nav-link" href="/html/login.html" id="login-link">로그인</a>
+                </div>
+
+                <!-- 로그인 후 -->
+                <div id="logged-in-links" class="col" style="display: none">
+                    <a class="nav-link" href="#" id="logout-link">로그아웃</a>
+                    &nbsp;|&nbsp;
+                    <a class="nav-link admin-hide" href="/html/myPage.html" id="mypage-link">마이페이지</a>
+                    <a class="nav-link" href="/html/admin.html" id="admin-link">관리자페이지</a>
+                    &nbsp;<span class="admin-hide">|</span>&nbsp;
+                    <a class="nav-link admin-hide" href="/html/support.html">고객센터</a>
+                </div>
+            </div>
+        </div>
+    `);
+}
