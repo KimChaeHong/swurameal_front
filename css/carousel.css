@@ -1,3 +1,7 @@
+#carousel-container{
+    padding-bottom: 60px;
+}
+
 .carousel {
     min-width: 1440px;
     width: 100%;
