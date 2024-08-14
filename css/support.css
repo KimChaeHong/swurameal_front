@@ -9,14 +9,14 @@
 }
 
 #side-category {
-    width: 300px;
-    height: 350px;
+    width: 250px;
+    height: 300px;
     background-color: var(--lightgray);
     margin-top: 110px;
     margin-right: 40px;
     border-radius: 15px;
     padding-left: 30px;
-    padding-top: 45px;
+    padding-top: 30px;
 }
 
 h5 {

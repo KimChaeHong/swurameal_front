@@ -108,6 +108,8 @@
 }
 
 .product-detail {
+    margin: 0px auto;
+    width: 900px;
     align-items: center;
     text-align: center;
 }
@@ -131,6 +133,7 @@
     width: 900px;
     align-items: center;
     margin: 0px auto;
+    margin-bottom: 50px;
 }
 
 .detail-img {
