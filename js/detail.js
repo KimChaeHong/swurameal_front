@@ -39,7 +39,9 @@ $(document).ready(function () {
     $(".total-price").text(totalPrice.toLocaleString() + "원");
 
     $("#buy").on("click", function () {
-        window.location.href = "../html/cart.html";
+        if(confirm("선택한 상품을 장바구니에 담고 결제화면으로 이동하시겠습니까?")){
+            window.location.href = "../html/cart.html";
+        }
     });
 
     $("#move-info").on("click", function () {
@@ -107,4 +109,9 @@ $(document).ready(function () {
     });
 
     $('#count-review').text(review.length+'건');
+
+    $(".to-cart, #cart").on('click', function() {
+        window.alert("상품을 장바구니에 추가하였습니다.");
+    })
+
 });
