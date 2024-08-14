@@ -44,7 +44,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
             currentPage = 1;
             if (text === "상품 관리") uploadGoodsPage();
             else if (text === "1:1 문의 관리") uploadQnaPage();
-            else if (text === "공지사항 관리") console.log("미구현");
+            else if (text === "공지사항 관리") uploadNoticePage(true);
             else if (text == "FAQ 관리") console.log("미구현");
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -53,6 +53,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
         },
     });
 }
+
 $(document).ready(function () {
     $("#logged-in-links").html(
         /*html*/

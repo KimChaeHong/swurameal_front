@@ -17,6 +17,9 @@ function loginCheck() {
     console.log($("#pw").val());
     alert("아이디 또는 비밀번호가 일치하지 않습니다.");
   } else {
-    window.location.href = "../../index.html";
+    alert("로그인 되었습니다.");
+    const baseUrl = "/index.html";
+    const url = `${baseUrl}?login=true`;
+    window.location.href = url;
   }
 }
