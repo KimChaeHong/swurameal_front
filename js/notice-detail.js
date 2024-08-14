@@ -42,4 +42,18 @@ function uploadNoticeDetailPage(noticeInfo, isAdmin) {
         href: "../css/notice-detail.css",
     });
     $("head").append(noticedetailCss);
+
+    $(".update-button :nth-child(1)").on("click", function () {
+        $.ajax({
+            url: "../js/notice-form.js",
+            method: "GET",
+            success: function (data) {
+                uploadNoticeFormPage(noticeInfo);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Request failed: ", textStatus, errorThrown);
+                alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
+            },
+        });
+    });
 }

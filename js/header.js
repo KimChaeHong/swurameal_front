@@ -4,16 +4,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const loggedOutLinks = document.getElementById("logged-out-links");
   const loggedInLinks = document.getElementById("logged-in-links");
-  const mypageLinks = document.getElementById("mypage-link");
   const adminLinks = document.getElementById("admin-link");
+  const adminHide = document.querySelectorAll(".admin-hide"); // admin 계정일 때, 숨길 것
 
   if (isLoggedIn != "false") {
     // 로그인 상태
     loggedOutLinks.style.display = "none";
     loggedInLinks.style.display = "flex";
-    isLoggedIn == "user"
-      ? (adminLinks.style.display = "none") // user
-      : (mypageLinks.style.display = "none"); // admin
+    if (isLoggedIn == "user") {
+      adminLinks.style.display = "none"; // user
+    } else {
+      for (let e of adminHide) e.style.display = "none"; // admin
+    }
   } else {
     // 로그아웃 상태
     loggedOutLinks.style.display = "flex";

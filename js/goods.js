@@ -120,7 +120,7 @@ async function uploadGoodsPage() {
                 class: "bi bi-check-square-fill",
                 "data-select": 2,
             });
-        else {
+        else if ($(this).attr("data-select") == 2) {
             $(this).attr({
                 class: "bi bi-check-square",
                 "data-select": 1,
