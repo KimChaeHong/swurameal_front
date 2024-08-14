@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('./src/json/goods.json')  // JSON 파일을 불러옵니다.
+    fetch('../src/json/goods.json')  // JSON 파일을 불러옵니다.
         .then(response => response.json())  // JSON 데이터를 파싱합니다.
         .then(data => {
             const goodsData = data[0].slice(0, 4);  // 첫 번째 배열에서 처음 4개 항목만 가져옵니다.
