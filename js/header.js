@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let query = window.location.search;
-  let param = new URLSearchParams(query);
-  let isLoggedIn = param.get("login");
+  const isLoggedIn = localStorage.getItem("login");
+  console.log(isLoggedIn);
 
   const loggedOutLinks = document.getElementById("logged-out-links");
   const loggedInLinks = document.getElementById("logged-in-links");
+  const mypageLinks = document.getElementById("mypage-link");
+  const adminLinks = document.getElementById("admin-link");
 
-  if (isLoggedIn == "true") {
+  if (isLoggedIn != "false") {
     // 로그인 상태
     loggedOutLinks.style.display = "none";
     loggedInLinks.style.display = "flex";
+    isLoggedIn == "user"
+      ? (adminLinks.style.display = "none") // user
+      : (mypageLinks.style.display = "none"); // admin
   } else {
     // 로그아웃 상태
     loggedOutLinks.style.display = "flex";
@@ -18,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 로그아웃 시 예시 이벤트
   document.getElementById("logout-link").addEventListener("click", function () {
-    confirm("로그아웃하시겠습니까?") && (window.location.href = "/index.html");
+    if (confirm("로그아웃하시겠습니까?")) {
+      localStorage.setItem("login", "false");
+      location.reload();
+    }
   });
 });
