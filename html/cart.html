@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../src/bootstrap/bootstrap.min.js"></script>
     <script src="../src/jquery/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="/js/back-to-top.js"></script>
     <script type="module" src="/js/cart-list.js"></script>
+    <script src="/js/cart.js"></script>
 
     <title>장바구니</title>
   </head>
@@ -29,6 +31,7 @@
     <main class="container cart">
       <h2>장바구니</h2>
       <div id="select-btns">
+        <i class="bi bi-check-circle hover" id="allBtn"></i>
         <span class="hover" id="allBtnTxt">전체선택</span>
         <span> | </span>
         <span class="hover">선택삭제</span>
@@ -61,6 +64,5 @@
 
     <footer><h2>Footer</h2></footer>
     <button id="btn-back-to-top">Top</button>
-    <script src="/js/cart.js" defer></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('./src/json/goods.json')  // JSON 파일을 불러옵니다.
+    fetch('../src/json/goods.json')  // JSON 파일을 불러옵니다.
         .then(response => response.json())  // JSON 데이터를 파싱합니다.
         .then(data => {
             const categories = [
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const categoryBrandingHTML = `
                         <div class="category-branding">
                             <span class="category-comment">${category.comment}</span>
-                            <a type="button" class="category-move" href="./html/category.html">
+                            <a type="button" class="category-move" href="../html/category.html">
                                 <i class="bi bi-chevron-right icon-move"></i>
                             </a>
                         </div>

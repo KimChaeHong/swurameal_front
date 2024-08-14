@@ -3,6 +3,8 @@ const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValu
 
 function uploadGoodsFormPage(goodsInfo) {
     const goodsFormContent = goodsFormContentUpload(goodsInfo);
+    $(".addButton button").remove();
+
     $(".page-upload").html(goodsFormContent);
     if (goodsInfo != "undefined") {
         $("#goods-category").val(undefinedCheck(goodsInfo?.category));

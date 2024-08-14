@@ -12,11 +12,17 @@ function findIdPw(type) {
 
 /* 로그인 처리 */
 function loginCheck() {
-  if ($("#id").val() != "swura4789" || $("#pw").val() != "mealkit@123") {
+  if ($("#id").val() == "swura4789" && $("#pw").val() == "mealkit@123") {
+    alert("로그인 되었습니다.");
+    localStorage.setItem("login", "user");
+    window.location.href = "/index.html";
+  } else if ($("#id").val() == "admin" && $("#pw").val() == "admin@321") {
+    alert("관리자님 반갑습니다.");
+    localStorage.setItem("login", "admin");
+    window.location.href = "/index.html";
+  } else {
     console.log($("#id").val());
     console.log($("#pw").val());
     alert("아이디 또는 비밀번호가 일치하지 않습니다.");
-  } else {
-    window.location.href = "../../index.html";
   }
 }

@@ -1,7 +1,16 @@
+#nav-container{
+    width: 100%;
+    min-width: 1040px;
+    box-shadow: 0px 4px 4px var(--mediumgray);
+    padding: 20px;
+    z-index: 1000; 
+}
+
 #nav{
-    width: 1040px;
-    margin: auto;
-    background-color: white;
+    width: 100%;
+    min-width: 1040px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .navbar-toggler {

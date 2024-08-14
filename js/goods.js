@@ -57,6 +57,7 @@ function setupPagination(data, container) {
 async function uploadGoodsPage() {
     if ($(".addButton > button").length == 0) {
         $(".addButton").append("<button>상품등록</button>");
+        $(".addButton button").attr("data-flag", "goods");
     }
     //기본 틀이 되는 html
     const goodsContent =
@@ -89,6 +90,7 @@ async function uploadGoodsPage() {
         href: "../css/goods.css",
     });
     $("head").append(goodsCss);
+
     // JSON 데이터를 가져오는 함수를 호출합니다.
     // await를 사용하여 Promise가 처리될 때까지 기다린 후, 접근합니다.
     const goods = await loadJSON();
@@ -127,18 +129,20 @@ async function uploadGoodsPage() {
     });
 
     $(".title-box").on("click", ".addButton button", function () {
-        $.ajax({
-            url: "../js/goods-form.js",
-            method: "GET",
-            success: function (data) {
-                uploadGoodsFormPage();
-                $(".goods-update").text("등록");
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                console.error("Request failed: ", textStatus, errorThrown);
-                alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
-            },
-        });
+        if ($(".addButton button").attr("data-flag") == "goods") {
+            $.ajax({
+                url: "../js/goods-form.js",
+                method: "GET",
+                success: function (data) {
+                    uploadGoodsFormPage();
+                    $(".goods-update").text("등록");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Request failed: ", textStatus, errorThrown);
+                    alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
+                },
+            });
+        }
     });
 
     $(".product-list").on("click", ".goods-info div :nth-of-type(1)", function () {

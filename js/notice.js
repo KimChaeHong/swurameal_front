@@ -1,3 +1,5 @@
+let isAdmin = { isAdmin: true };
+
 /* prettier-ignore */
 let noticeList= [{
     title : "[안내] 제주지역 주문 조기 마감 양해 안내",
@@ -18,12 +20,12 @@ let noticeList= [{
 },{
     title : "[안내] 소비자 분쟁해결 기준 안내",
     author : "관리자",
-    decription : "알아하쇼",
+    description : "알아하쇼",
     registrationDate : "2024.08.06"
 },{
     title : "[안내] 오픈 이벤트 안내",
     author : "관리자",
-    decription: "감사합니다. 이벤트는 구라입니다.",
+    description: "감사합니다. 이벤트는 구라입니다.",
     registrationDate : "2024.08.06"
 },{
     title : "[안내] 8월 하루배송 휴무 일정 안내(2024.08.14 ~ 08.15)",
@@ -73,12 +75,18 @@ function setupPagination(data, container) {
     });
 }
 
-function uploadNoticePage() {
+function uploadNoticePage(flag) {
+    // flag== true이면 관리자 페이지
+    if (flag) {
+        $(".addButton").append("<button>작성하기</button>");
+        $(".addButton button").attr("data-flag", "notice");
+    }
+
     uploadNoticeHtml =
         /*html*/
         `
         <div class="notice-box d-flex flex-column">
-            <div class="row-header d-flex">
+            <div class="notice-header d-flex">
                 <div>제목</div>
                 <div>작성자</div>
                 <div>등록일</div>
@@ -87,8 +95,9 @@ function uploadNoticePage() {
             <div class="pagination"></div> 
         </div>  
         `;
-    $("#board-container").empty();
-    $("#board-container").append(uploadNoticeHtml);
+    $("#board-container").html(uploadNoticeHtml);
+
+    $(".page-upload").html(uploadNoticeHtml);
 
     //페이지에 css 적용시키기
     const noticeCss = $("<link>", {
@@ -109,7 +118,26 @@ function uploadNoticePage() {
             url: "../js/notice-detail.js",
             method: "GET",
             success: function (data) {
-                uploadNoticeDetailPage(noticeInfo[0]);
+                // isAdmin이 true면 관리자 페이지 false면 고객센터
+                if (flag) {
+                    uploadNoticeDetailPage(noticeInfo[0], true);
+                } else {
+                    uploadNoticeDetailPage(noticeInfo[0], false);
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.error("Request failed: ", textStatus, errorThrown);
+                alert("오류가 발생하였습니다. 다시 한번 시도해 주세요");
+            },
+        });
+    });
+
+    $(".addButton button").on("click", function () {
+        $.ajax({
+            url: "../js/notice-form.js",
+            method: "GET",
+            success: function (data) {
+                uploadNoticeFormPage();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error("Request failed: ", textStatus, errorThrown);

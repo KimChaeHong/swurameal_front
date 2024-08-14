@@ -1,5 +1,14 @@
-function uploadNoticeDetailPage(noticeInfo) {
-    console.log(noticeInfo.description);
+function uploadNoticeDetailPage(noticeInfo, isAdmin) {
+    $(".addButton button").remove();
+    const updateButton =
+        /*html*/
+        `
+        <div class="update-button d-flex flex-grow-1 justify-content-end">
+            <button>수정</button> <span>|</span>
+            <button>삭제</button>
+        </div>
+        `;
+
     noticeDetailPage =
         /*html*/
         `
@@ -20,9 +29,12 @@ function uploadNoticeDetailPage(noticeInfo) {
         </div>
         `;
 
-    $("#board-container").empty();
-    $("#board-container").append(noticeDetailPage);
+    $("#board-container").html(noticeDetailPage);
+    $(".page-upload").html(noticeDetailPage);
 
+    if (isAdmin) {
+        $(".detail-box").append(updateButton);
+    }
     //페이지에 css 적용시키기
     const noticedetailCss = $("<link>", {
         rel: "stylesheet",
