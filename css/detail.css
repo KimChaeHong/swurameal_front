@@ -102,9 +102,11 @@
 }
 
 .product-recommend {
-    width: 1040px;
+    width: 1000px;
     height: 420px;
     border: 1px;
+    display: flex;
+    margin: 0px auto;
 }
 
 .product-detail {

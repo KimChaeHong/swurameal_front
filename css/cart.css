@@ -13,6 +13,7 @@
   height: 150px;
   line-height: 150px;
   font-size: 32px;
+  font-weight: 500;
   letter-spacing: 2px;
 }
 
@@ -22,6 +23,10 @@
   display: inline-block;
   font-size: 20px;
   margin-right: 5px;
+}
+
+.bi-check-circle {
+  color: var(--mediumgray);
 }
 
 /* 전체선택 | 선택삭제 버튼 */
@@ -37,6 +42,7 @@
 /* 장바구니 상품 */
 #cart-items {
   width: 620px;
+  margin-right: 50px;
 }
 
 .item {
@@ -73,7 +79,7 @@
   border: 1px solid var(--mediumgray);
   border-radius: 3px;
   height: max-content;
-  margin: 25px 0;
+  margin: 25px 0 0;
   width: 90px;
   height: 30px;
   text-align: center;
