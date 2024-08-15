@@ -8,6 +8,7 @@ const admin =
         </div>
         <div class="page-upload"></div>`;
 
+//
 function pageTagUpload(tagName, cssName) {
     const linkCss = $("<link>", {
         rel: "stylesheet",
@@ -45,7 +46,7 @@ function pageUpload(page, themeColor, darkgrayColor) {
             if (text === "상품 관리") uploadGoodsPage();
             else if (text === "1:1 문의 관리") uploadQnaPage();
             else if (text === "공지사항 관리") uploadNoticePage(true);
-            else if (text == "FAQ 관리") console.log("미구현");
+            else if (text == "FAQ 관리") uploadFaqPage();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error("Request failed: ", textStatus, errorThrown);
