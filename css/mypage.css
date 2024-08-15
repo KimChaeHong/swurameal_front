@@ -23,11 +23,12 @@
     border-radius: 23px;
 }
 
-.bi-person-square {
+.bi-person-fill {
     margin-top: 44px;
     margin-left: 39px;
     font-size: 100px;
     line-height: 100px;
+    color: var(--mediumgray);
 }
 .profile-detail {
     padding-top: 20px;
