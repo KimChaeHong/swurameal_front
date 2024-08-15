@@ -121,7 +121,7 @@ function modalPage() {
                             <p><strong>작성일</strong> <span></span></p>
                         </div>
                     </div>
-                    <div class="modal-review d-flex" style="border : 1px ridge red">
+                    <div class="modal-review d-flex" >
                         <p>내용</p>
                         <textarea></textarea>
                     </div>
@@ -136,7 +136,7 @@ function modalPage() {
     return html;
 }
 
-function uploadReviewPage() {
+function uploadPage() {
     const modalHtml = modalPage();
     const reviewContent =
         /*html*/

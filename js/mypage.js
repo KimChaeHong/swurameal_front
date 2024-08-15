@@ -47,13 +47,16 @@ let writtenList = [
         description: "부드러운 돼지고기와 달콤짭짤한 간장 소스가 조화를 이루어 정말 맛있었어요. 풍성한 양념 덕에 밥도둑이 따로 없었습니다."},
     {img: "../src/images/211.jpg",title: "연어스테이크", wirttenDay: "24/08/06", auther:"수라밀",
         description: "연어의 부드러운 식감과 겉은 바삭한 그릴링이 완벽하게 어우러졌어요. 풍부한 육즙과 고소한 맛이 입안 가득 퍼져, 정말 고급스러운 맛을 느낄 수 있었습니다."},
-    {img: "../src/images/411.png",title: "파스타", wirttenDay: "24/08/06", auther:"수라밀",
+    {img: "../src/images/411.png",title: "17도 막걸리", wirttenDay: "24/08/06", auther:"수라밀",
         description: "부드럽고 은은한 단맛에 더해진 17도의 알코올이 묵직한 맛을 더해줍니다. 일반 막걸리보다 깊고 진한 풍미가 인상적이었고, 특별한 날에 마시기 좋은 술이었어요."}
 ]
 
+// 현재 페이지
 let currentPage = 1;
-const itemsPerPage = 5;
+// 한 페이지에 보여줄 갯수
+const itemsPerPage = 7;
 
+// LocalStorage에 업로드를 한다.
 function localStorageUpload() {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("user", JSON.stringify(user));
@@ -63,7 +66,7 @@ function localStorageUpload() {
     localStorage.setItem("writtenList", JSON.stringify(writtenList));
 }
 
-const mypage =
+const mypageDefault =
     /*html*/
     `<div class="title-box">
         <p>찜한 상품</p>
@@ -71,30 +74,42 @@ const mypage =
         </div>
         <div class="page-upload"></div>`;
 
-function pageUpload(page, themeColor, darkgrayColor) {
-    const text = page.text();
-    const url = page.attr("data-js");
+function pageUpload(clicked, themeColor, darkgrayColor) {
+    const text = clicked.text();
+    const url = clicked.attr("data-js");
 
-    $(".title-box p").html(`${page.text()}`);
+    // ajax로 페이지를 불러올 때마다 title-boxd안의 p를 바꿔줍니다.
+    // 바꾸는 text는 클릭한 <p>태그
+    $(".title-box p").html(`${clicked.text()}`);
+
+    // .category의 자손인 모든 p태그의 색과 폰트를 바꾼다.
     $(".category-box p").css({
         color: darkgrayColor,
         "font-weight": "normal",
     });
 
-    page.css({
+    // 클릭된 <p>태그의 색과 폰트를 바꾼다.
+    clicked.css({
         color: themeColor,
         "font-weight": "bold",
     });
 
+    //ajax를 사용해 페이지를 불러온다.
     $.ajax({
         url: url,
         method: "GET",
         success: function (data) {
+            // currentPage, itemPerPage를 초기화 시킨다.
+            // currentPage를 mypage.js에서 선언한 이유 :
+            // 만약 currentPage를 let변수로 다른 js에서 선언하였다면
+            // ajax로 js에 접근할떄마다 currentPage를 초기화하게 되고
+            // let선언을 계속 하게 되어 오류가 발생한다.
+            // 따라서 currentPage를 myPage에서 선언하고 이 js파일에서 초기화 시킨뒤
+            // 다른 js 파일에서도 사용할 수 있도록 만들었다.
             currentPage = 1;
-            if (text === "찜한 상품") uploadPickPage();
-            else if (text === "주문 내역") uploadOrderPage();
-            else if (text === "상품 후기") uploadReviewPage();
-            else if (text == "개인정보 수정") uploadInfoPage();
+
+            // js파일안에 있는 uploadPage를 통해 페이지를 가지고 온다.
+            uploadPage();
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.error("Request failed: ", textStatus, errorThrown);
@@ -115,12 +130,19 @@ $(document).ready(function () {
     const darkgrayColor = getComputedStyle(document.documentElement).getPropertyValue("--darkgray");
 
     localStorageUpload();
+    //localStorage에 있는 key가 user의 데이터를 가지고 온다.
     const userdata = JSON.parse(localStorage.getItem("user"));
+
+    // pageUpload함수 사용
     pageUpload($(".category-box p ").first(), themeColor, darkgrayColor);
 
-    $(".mypage-box").append(mypage);
+    // .mypage-box 밑에 mypageDefault를 넣는다.
+    $(".mypage-box").append(mypageDefault);
+
+    // .localStorage에 저장되어있는 name변수를 .member-name에 바꿔준다.
     $(".member-name").html(/*html*/ `${userdata.name} 님`);
 
+    // click하면 page를 로드한다.
     $(".category-box p").on("click", function (e) {
         // let url = $(this).attr("data-js");
         e.preventDefault();

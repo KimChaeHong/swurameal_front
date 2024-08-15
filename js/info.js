@@ -1,6 +1,6 @@
-function uploadInfoPage() {
+function uploadPage() {
     userdata = JSON.parse(localStorage.getItem("user"));
-    infoPageHtml =
+    const infoPageHtml =
         /*html*/
         `<div class="form-container">
             <form action="your-server-endpoint" method="POST">
@@ -53,27 +53,49 @@ function uploadInfoPage() {
             </form>
         </div>`;
 
+    //개인정보 수정페이지 css불러오기
     const infoCss = $("<link>", {
         rel: "stylesheet",
         type: "text/css",
         href: "../css/info.css",
     });
     $("head").append(infoCss);
+
+    //page-upload 클래스에 infoPageHtml을 넣는다.
     $(".page-upload").html(infoPageHtml);
+
+    // 만약 .form-container안에 있는 address-button이 클릭된다면
+    // 기본 이벤트를 막고 주소 검색하는 창을 띄운다.
     $(".form-container").on("click", ".address-button", function (e) {
         e.preventDefault();
         searchAddress();
     });
-    $(".form-container").on("click", ".save-button, .phone-button", (e) => e.preventDefault());
+
+    // 수정버튼이 눌렸을 때 벌어지는 이벤트
+    $(".form-container").on("click", ".save-button, .phone-button", (e) => {
+        e.preventDefault();
+        alert("수정되었습니다.");
+    });
+
+    // 삭제버튼이 눌렸을 때 벌어지는 이벤트
     $(".form-container").on("click", ".delete-button", function (e) {
         e.preventDefault();
         alert("정말로 탈퇴하시겠습니까?");
     });
+
+    // 유효성 검사
     validation();
 }
 
 // 유효성 검사
 function validation() {
+    $("#current-password").on("change", (e) => {
+        let val = e.target.value;
+        if (val !== "mealkit@123") {
+            alert("비밀번호를 틀렸습니다.");
+            $("#current-password").focus();
+        }
+    });
     /* 비밀번호 */
     // 8글자 이상, 영문, 숫자, 특수문자 각 1글자 이상 사용
     $("#new-password").on("change", (e) => {
@@ -81,6 +103,7 @@ function validation() {
         const pattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]*$/;
         if (val.length < 8) {
             alert("비밀번호는 8글자 이상 작성해 주세요.");
+            $("#new-password").focus();
         } else if (!pattern.test(val)) {
             alert("비밀번호는 영문, 숫자, 특수문자를 모두 사용하여 작성해 주세요.\n(특수문자는 @, $, !, %, *, #, ?, & 만 사용 가능합니다.)");
             $("#new-password").focus();
@@ -135,6 +158,7 @@ function validation() {
         if (curDate.getFullYear() > 1000 && (curDate < minDate || curDate > maxDate)) {
             alert("날짜는 1900-01-01과 2024-12-31 사이여야 합니다.");
             e.target.value = `${userdata.birth}`;
+            $("#birthday").focus();
         }
     });
 }

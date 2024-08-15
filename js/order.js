@@ -88,7 +88,7 @@ function setupPagination(data, container) {
     });
 }
 
-function uploadOrderPage() {
+function uploadPage() {
     const products = JSON.parse(localStorage.getItem("orderList"));
     const orderPageHtml =
         /*html*/
