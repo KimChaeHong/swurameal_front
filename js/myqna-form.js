@@ -1,5 +1,6 @@
+//문의 작성 페이지 생성함수
 function myqnaFormPage() {
-    $(".board-list").empty();
+$(".board-list").empty();
     $(".pagination").empty();
     $("#inq-btn-container").remove();
     $('.board-top').remove();
@@ -14,7 +15,7 @@ function myqnaFormPage() {
     );
 }
 
-$(document).ready(function () {
+$(document).ready(function () { 
     myqnaFormPage();
 
     $("#board-container").append(

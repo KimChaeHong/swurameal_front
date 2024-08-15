@@ -60,10 +60,12 @@ var qnaList = [
 var itemsPerPage = 5;
 var currentPage = 1;
 
+//qna 데이터를 localStorage에 저장
 function makeJson() {
     localStorage.setItem("qna", JSON.stringify(qnaList));
 }
 
+//수정 버튼 클릭 시 실행되는 함수
 function formButton() {
     $(document).on("click", ".form-button", function () {
         var num = $(this).data("num");
@@ -80,6 +82,7 @@ function formButton() {
     });
 }
 
+// 완료 버튼 클릭 시 실행되는 함수
 function completeButton() {
     $(document).on("click", ".complete-button", function () {
         var num = $(this).data("num");
@@ -98,6 +101,7 @@ function completeButton() {
     });
 }
 
+// qna 목록을 현재 페이지에 맞게 렌더링
 function renderMyqnaPage(page) {
     currentPage = page;
     var startIndex = (currentPage - 1) * itemsPerPage;
@@ -150,11 +154,12 @@ function renderMyqnaPage(page) {
         }
     }
 
-    renderPagination();
+    renderPagination(); // 페이지네이션을 렌더링
     formButton();
     completeButton();
 }
 
+// 페이지네이션을 렌더링
 function renderPagination() {
     $(".pagination").empty();
     var totalPages = Math.ceil(qnaData.length / itemsPerPage);
@@ -165,13 +170,14 @@ function renderPagination() {
             `<button class="page-link">${i}</button>`
         );
     }
-
+// 페이지 링크 클릭 시 해당 페이지를 렌더링하는 이벤트 등록
     $(".page-link").on("click", function () {
         var page = $(this).text();
         renderMyqnaPage(page);
     });
 }
 
+// QnA 페이지초기 렌더링 함수
 function uploadMyQnaPage() {
     makeJson();
     qnaData = JSON.parse(localStorage.getItem("qna"));

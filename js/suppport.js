@@ -1,7 +1,8 @@
 $(document).ready(function () {
-    uploadNoticePage();
+    uploadNoticePage(); //페이지가 로드될 때 초기화면 공지사항 페이지
 
-    $("h5").on("click", function () { // side-category 클릭 시 발생하는 페이지 이동
+    // side-category 클릭 시 발생하는 페이지 이동 이벤트
+    $("h5").on("click", function () {
         var target = $(this).text();
         $("#title").text(target);
 
@@ -10,6 +11,7 @@ $(document).ready(function () {
 
         var jsFile = $(this).data("js");
 
+        //해당 js 파일을 로드
         $.ajax({
             url: jsFile,
             dataType: "script",
@@ -22,10 +24,12 @@ $(document).ready(function () {
         });
     });
 
-    $(document).on("click", ".ajax-btn", function () { // 문의하기 버튼, 등록버튼 클릭시 발생하는 페이지 이동
+    // "문의하기" 버튼이나 "등록" 버튼을 클릭했을 때 발생하는 이벤트
+    $(document).on("click", ".ajax-btn", function () {
         var jsFile = $(this).data("js");
         var target = $(this).text();
 
+         // 해당 JavaScript 파일을 로드
         $.ajax({
             url: jsFile,
             dataType: "script",
