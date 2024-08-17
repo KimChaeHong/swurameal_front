@@ -19,11 +19,11 @@
     padding-top: 30px;
 }
 
-h5 {
+.h5 {
     margin-top: 40px;
 }
 
-h5:hover {
+.h5:hover {
     cursor: pointer;
 }
 
@@ -90,11 +90,6 @@ h5.active {
 
 .pagination{
     margin-top: 20px;
-}
-
-.page-link {
-    border: none;
-    color: black;
 }
 
 .inquiry-button {
