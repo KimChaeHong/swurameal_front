@@ -17,7 +17,7 @@
 .profile {
     padding: 0px;
     /* width: 300px; */
-    width: 280px;
+    width: 260px;
     /*height: 196px;*/
     height: 170px;
     background-color: var(--lightgray);
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     /* margin-top: 48px; */
-    margin-left: 20px;
+    margin-left: 10px;
     /* margin-left: 24px; */
 }
 
@@ -57,7 +57,7 @@
 
 .category-box {
     /* width: 300px; */
-    width: 280px;
+    width: 260px;
     border-radius: 23px;
     background-color: var(--lightgray);
     margin-top: 40px;

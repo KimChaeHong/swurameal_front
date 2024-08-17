@@ -11,12 +11,15 @@
 }
 
 .category-box {
-    width: 300px;
+    /* width: 300px; */
+    width: 260px;
     border-radius: 23px;
     background-color: var(--lightgray);
+    display: flex;
     padding-top: 40px;
     padding-left: 40px;
-    padding-bottom: 40px;
+    /* padding-bottom: 40px; */
+    padding-bottom: 20px;
 }
 .category-box h3 {
     font-size: 32px;
@@ -24,8 +27,9 @@
 }
 
 .category-box p {
+    padding: 0px;
     font-size: 24px;
-    margin-top: 40px;
+    margin-top: 15px;
     color: var(--darkgray);
     text-decoration: none;
 }
@@ -48,7 +52,7 @@
     height: 1px;
 }
 .admin-box {
-    margin-left: 40px;
+    margin-left: 70px;
 }
 
 /* 페이지네이션 */
