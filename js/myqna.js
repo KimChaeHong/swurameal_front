@@ -167,12 +167,18 @@ function renderPagination() {
     for (var i = 1; i <= totalPages; i++) {
         $(".pagination").append(
             /*html*/
-            `<button class="page-link">${i}</button>`
+            `<button class="page-num">${i}</button>`
         );
     }
+
+    //현재 페이지 번호에 active 클래스 부여
+    $(".page-num").eq(`${currentPage-1}`).addClass("active");
+
 // 페이지 링크 클릭 시 해당 페이지를 렌더링하는 이벤트 등록
-    $(".page-link").on("click", function () {
+    $(document).on("click",".page-num", function () {
+
         var page = $(this).text();
+        console.log(page);
         renderMyqnaPage(page);
     });
 }

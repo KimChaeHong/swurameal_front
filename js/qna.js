@@ -142,11 +142,14 @@ function renderPagination() { // 페이지 이동버튼 생성
   for (var i = 1; i <= totalPages; i++) { // 페이지 이동버튼 생성
       $(".pagination").append(
         /*html*/
-          `<button class="page-link">${i}</button>`
+          `<button class="page-num">${i}</button>`
       );
   }
 
-  $(".page-link").on("click", function () { // 버튼 기능 부여
+  //현재 페이지 번호에 active 클래스 부여
+  $(".page-num").eq(`${currentPage-1}`).addClass("active");
+  
+  $(".page-num").on("click", function () { // 버튼 기능 부여
       var page = $(this).text();
       renderPage(page);
   });
