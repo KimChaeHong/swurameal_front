@@ -81,7 +81,7 @@ function pay() {
   let flag = true;
 
   for (let btn of btns) {
-    if (!btn.classList.contains("bi-check-square-fill")) flag = false;
+    if (btn.classList.contains("bi-check-square")) flag = false;
   }
 
   if (!flag) {

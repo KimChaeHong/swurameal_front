@@ -39,6 +39,10 @@
 	text-decoration: none;
 }
 
+#id-pw a {
+  text-decoration: none;
+}
+
 #id-pw span {
 	padding: 0 5px;
 }

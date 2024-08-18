@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../src/bootstrap/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/pay.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <script src="../src/bootstrap/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../src/favicon/site.webmanifest" />
+    
+    <!-- 공통 css, Bootstrap and Icons -->
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/pay.css">
+    <link rel="stylesheet" href="../css/style.css">
+  
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+    <script src="../src/bootstrap/bootstrap.min.js" defer></script>
     <script src="../src/jquery/jquery.min.js"></script>
     <script src="../js/back-to-top.js"></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/footer.js" defer></script>
+    <script src="../js/pay.js"></script>
     <!-- 카카오주소 api -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="/js/signup.js"></script>
-    <script src="/js/pay.js"></script>
     <title>주문 / 결제</title>
   </head>
   <body>
-    <header><h2>Header</h2></header>
-    <nav class="navbar"><h2>navbar</h2></nav>
+    <header id="header-container" class="navbar"></header>
+    <nav id="nav-container" class="navbar"></nav>
 
     <!-- 주문결제 페이지 메인 -->
     <main class="container pay">
@@ -35,27 +46,6 @@
           <!-- 주문상품 -->
           <div id="pay-items">
             <div class="title">주문상품</div>
-            <!-- <div class="item d-flex justify-content-between">
-              <img src="/src/images/411.png" alt="상품이미지" />
-              <div id="item-detail">
-                <p>[전통주] 구양주 스파클링(9도 900ml)</p>
-                <p>아홉번 담근 프리미엄 탁주</p>
-              </div>
-              <div class="item-cnt">1개</div>
-              <div class="item-price">7,000원</div>
-            </div>
-
-
-
-            <div class="item d-flex justify-content-between">
-              <img src="/src/images/412.png" alt="상품이미지" />
-              <div id="item-detail">
-                <p>[전통주] 느린마을 막걸리</p>
-                <p>빠르게 말고 느리게 마시기!</p>
-              </div>
-              <div class="item-cnt">1개</div>
-              <div class="item-price">6,500원</div>
-            </div> -->
           </div>
 
           <!-- 주문자 정보 -->
@@ -91,7 +81,6 @@
                 <i class="bi bi-square"></i>
             </div>
           </div>
-
         </div>
 
         <!-- 주문내역서 -->
@@ -116,7 +105,7 @@
       </div>
     </main>
 
-    <footer><h2>Footer</h2></footer>
+    <div class="footer-container"></div>
     <button onclick="backToTop()" id="btn-back-to-top">Top</button>
   </body>
 </html>

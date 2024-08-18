@@ -68,11 +68,10 @@ function countItem() {
 
 /* 선택 || 전체선택 버튼 */
 function checkItem() {
-  let checkBtn = $(".bi:not(#xBtn, #allBtn)");
+  let checkBtn = $(".bi:not(#xBtn, #allBtn, .bi-cart)");
 
   // 전체선택 버튼
   $("#allBtn, #allBtnTxt").click(function () {
-    // console.log($("#allBtn, .allBtn"));
     $("#allBtn").toggleClass("bi-check-circle");
     $("#allBtn").toggleClass("bi-check-circle-fill");
 
@@ -97,9 +96,17 @@ function checkItem() {
 
     // 체크된 아이템의 갯수에 따른 전체선택 버튼 toggle
     let checkedBtn = $(".bi-check-circle-fill:not(#allBtn)");
-    checkedBtn.length == $(".item").length
-      ? $("#allBtn").switchClass("bi-check-circle", "bi-check-circle-fill")
-      : $("#allBtn").switchClass("bi-check-circle-fill", "bi-check-circle");
+    if(checkedBtn.length == $(".item").length) {
+      $("#allBtn").removeClass("bi-check-circle");
+      $("#allBtn").addClass("bi-check-circle-fill");
+    } else {
+      $("#allBtn").addClass("bi-check-circle");
+      $("#allBtn").removeClass("bi-check-circle-fill");
+    }
+
+    // checkedBtn.length == $(".item").length
+    //   ? $("#allBtn").switchClass("bi-check-circle", "bi-check-circle-fill")
+    //   : $("#allBtn").switchClass("bi-check-circle-fill", "bi-check-circle");
 
     totalPriceOper();
   });
