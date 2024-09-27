@@ -1,85 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="../src/favicon/site.webmanifest" />
 
-    <!-- 공통 css, Bootstrap and Icons -->
-    <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS Files -->
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/login.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../src/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../src/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="../src/favicon/site.webmanifest" />
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
-    <script src="../src/bootstrap/bootstrap.min.js" defer></script>
-    <script src="../src/jquery/jquery.min.js"></script>
-    <script src="../js/back-to-top.js"></script>
-    <script src="/js/login.js"></script>
-    <script src="../js/nav.js" defer></script>
-    <script src="../js/header.js" defer></script>
-    <script src="../js/footer.js" defer></script>
+  <!-- 공통 css, Bootstrap and Icons -->
+  <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
-    <title>로그인</title>
-  </head>
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/search.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css" />
 
-  <body>
-    <header id="header-container" class="navbar"></header>
-    <nav id="nav-container" class="navbar"></nav>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+  <script src="../src/bootstrap/bootstrap.min.js" defer></script>
+  <script src="../src/jquery/jquery.min.js"></script>
+  <script src="../js/back-to-top.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="../js/nav.js" defer></script>
+  <script src="../js/header.js" defer></script>
+  <script src="../js/footer.js" defer></script>
 
-    <!-- 로그인 페이지 메인 -->
-    <main class="container login">
-      <h2>로그인</h2>
-      <form action="#">
-        <input
-          id="id"
-          type="text"
-          placeholder="아이디를 입력해 주세요."
-        /><br />
-        <input
-          id="pw"
-          type="password"
-          placeholder="비밀번호를 입력해 주세요."
-        /><br />
-        <div id="id-pw">
-          <a href="" onclick="findIdPw('id'); return false;">아이디 찾기</a>
-          <span> | </span>
-          <a href="" onclick="findIdPw('pw'); return false;">비밀번호 찾기</a>
-        </div>
-        <ul class="">
-          <a href="#">
-            <li id="kakao">
-              <i class="bi bi-chat-fill"></i>
-              <span>카카오계정으로 로그인</span>
-            </li>
-          </a>
-          <a href="#">
-            <li id="naver">
-              <i>N</i>
-              <span>네이버계정으로 로그인</span>
-            </li>
-          </a>
-        </ul>
-        <button class="login-btn" onclick="loginCheck(); return false;">
-          로그인</button
-        ><br />
-        <button class="signup-btn" onclick="toSignup(); return false;">
-          회원가입
-        </button>
-      </form>
-    </main>
-    <div class="footer-container"></div>
-    <button onclick="backToTop()" id="btn-back-to-top">Top</button>
-  </body>
+  <title>로그인</title>
+</head>
+
+<body>
+  <header id="header-container" class="navbar"></header>
+  <nav id="nav-container" class="navbar"></nav>
+
+  <!-- 로그인 페이지 메인 -->
+  <main class="container login">
+    <h2>로그인</h2>
+    <form action="#">
+      <input id="id" type="text" placeholder="아이디를 입력해 주세요." /><br />
+      <input id="pw" type="password" placeholder="비밀번호를 입력해 주세요." /><br />
+      <div id="id-pw">
+        <a href="" onclick="findIdPw('id'); return false;">아이디 찾기</a>
+        <span> | </span>
+        <a href="" onclick="findIdPw('pw'); return false;">비밀번호 찾기</a>
+      </div>
+      <ul class="">
+        <a href="#">
+          <li id="kakao">
+            <i class="bi bi-chat-fill"></i>
+            <span>카카오계정으로 로그인</span>
+          </li>
+        </a>
+        <a href="#">
+          <li id="naver">
+            <i>N</i>
+            <span>네이버계정으로 로그인</span>
+          </li>
+        </a>
+      </ul>
+      <button class="login-btn" onclick="loginCheck(); return false;">
+        로그인</button><br />
+      <button class="signup-btn" onclick="toSignup(); return false;">
+        회원가입
+      </button>
+    </form>
+  </main>
+  <div class="footer-container"></div>
+  <button onclick="backToTop()" id="btn-back-to-top">Top</button>
+</body>
+
 </html>
